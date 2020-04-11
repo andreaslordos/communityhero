@@ -35,3 +35,6 @@ Future plans:
    - Suggest items that are frequently bought by a user over something that was never bought
 
 Post-Corona, we still believe CommunityHero can have a significant effect, as the needs of our target market (online delivery & ordering) will still be left unmet by the current competitors in the market. Focusing on this niche market and introducing this extremely large, underserved portion of the population into the online food & delivery service will allow us to expand our business and in turn, our impact, bringing the community closer together, while also incorporating a form of community service through volunteer delivery
+
+## Screenshots
+![alt text](https://media.discordapp.net/attachments/590850442049749004/698517825240694894/Screenshot_20200411-160012.jpg?width=386&height=686)
