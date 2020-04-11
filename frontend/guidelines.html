@@ -1,0 +1,100 @@
+<!DOCTYPE html lang='en' charset='utf-8'>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+		<script>
+			const urlParams = new URLSearchParams(window.location.search);
+			order = urlParams.get('order');
+			$(document).ready(function() {
+				$('#agree-button').click(function(e){
+					window.location.href = '/deliver-receipt.html?order=' + order;
+				});
+
+
+			});
+
+		</script>
+		<style>
+			body{
+				padding:0;
+				margin:0;
+			}
+			html, body{
+				width: 100%;
+				height: 100%;
+			}
+			.content{
+				margin: min(200px, 10%);
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Community Hero</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+				  <a class="nav-link" href="#">Deliver <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">Order</a>
+				</li>
+			  </ul> 
+			  <ul class="navbar-nav my-auto my-2 my-lg-0">
+				<li class="nav-item active">
+					<button type="button" id='navbarLoginButton' class="nav-link btn">Login</button>
+				</li>
+			  </ul>
+			</div>
+		</nav>
+		<div class='content'>
+			<div class="alert alert-warning">
+				<strong>Warning!</strong> Do not complete any deliveries without following these guidelines!
+			</div>
+			
+			<h2>Health Guidelines</h2>
+			<p>Not every COVID-19 carrier is symptomatic, and we cannot completely eliminate risk. With that in mind, we have implemented the following safety guidelines to minimize any potential transmission of the novel coronavirus. </p>
+			<p>All community heroes confirm that they:</p>
+			<ul>
+				<li>Have not traveled out of the country in the last 14 days</li>
+				<li>Are not exhibiting any signs of compromised health (e.g. runny nose, cough, fever, etc.)</li>
+				<li>Have not come in contact with someone who has tested positive for COVID-19 in the last 14 days </li>
+				<li>Have been practicing social distancing</li>
+			</ul>
+
+			<p>We ask all community heroes wear latex/rubber gloves during deliveries. We also recommend that community heroes avoid touching unnecessary items and utilize a self-checkout option if available. Volunteers are additionally requested to take every government measure, including, <b>but not limited to</b>:</p>
+			<ul>
+				<li>Washing hands frequently with soap and water for a minimum of 20 seconds or using hand sanitizer</li>
+				<li>Refraining from touching their face after having been outside</li>
+				<li>Sneezing or coughing into their elbow</li>
+			</ul>
+			Practicing "social distancing" &mdash; staying indoors, avoiding crowds, staying 2 meters away from other people if you have to go outside
+			
+
+			<h2>Delivery Protocol</h2>
+			
+			<p>Volunteers make as minimal contact with the recipient as possible upon delivery:</p>
+			<ul>
+				<li>They will place items at the door and knock/ring the doorbell and/or call the recipient to inform them that their order has been delivered.</li>
+				<li>Payment may differ by city. Payment to the volunteer will be exchanged either via cash, check, Credit Card over the phone, or Paypal/Venmo/Cash App/Zelle if the senior has access to those applications.</li>
+			</ul>
+			
+			
+			
+			
+			<h4>Thank you for following these guidelines and for being a Community Hero.</h4>
+			<h4>By clicking on the button below, you agree to follow the guidelines as best you can.</h4>
+			<button id='agree-button' class="btn btn-primary">Proceed to order details</button>
+		</div>
+
+	</body>
+</html>

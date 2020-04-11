@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+		<script src='js/spinner.js'></script>
+	
+		<script>
+			var BASE_URL = 'https://rhubarb-cake-22341.herokuapp.com/api/v1/';
+			const urlParams = new URLSearchParams(window.location.search);
+			console.log(window.location.search);
+			order = urlParams.get('order');
+			$.get(BASE_URL + "orders/", {'orderId': order}, function(data, status){
+				console.log(data);
+				totalCost=0;
+
+				for(var i in data){
+					$("#card-container").append('<div class="card"><i class="fa fa-check fa-5x"></i><div class="card-body"><h5 class="card-title">' + data[i]['PriceID']['ProductID']['ProductBrandID']['BrandName'] + ' ' + data[i]['PriceID']['ProductID']['ProductName'] + '</h5><h6 class="card-subtitle mb-2 text-muted">' +data[i]["PriceID"]["ProductID"]['ProductTypeID']['ProductTypeName'] + '</h6>' + ((data[i]['Notes']!=null) ? '<p class="card-text">' + data[i]["Notes"] + '</p>' : '') + '<a onclick="mark_done(this)" class="card-link">Done</a><div class="price ml-auto">' + data[i]['Quantity'] + '&times;' + data[i]['PriceID']['Price'] +'&euro;</div></div></div>');
+					totalCost+= parseFloat(data[i]['Quantity']) * parseFloat(data[i]['PriceID']['Price']);
+				}
+				$('#price').append(totalCost.toFixed(2) + "&euro;");
+				$('#store').append(data[0]['PriceID']['ShopID']['ShopName']);
+				$('#user').append(totalCost.toFixed(2) + "&euro;");
+				$('#name').append(data[0]['OrderID']['UserID']['UserName']);
+				$('#phone').append(data[0]['OrderID']['UserID']['Userphonenumber']);
+				var mymap = L.map('mapid').setView([data[0]["OrderID"]["UserID"]["Userlatitude"], data[0]['OrderID']["UserID"]["Userlongitude"]], 10);
+				L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+					attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+					maxZoom: 18,
+					id: 'mapbox/streets-v11',
+					tileSize: 512,
+					zoomOffset: -1,
+					accessToken: 'pk.eyJ1IjoiY2ZhbGFzIiwiYSI6ImNrOGhmZDNhNTAwN3czZm1jcjdqYnVwcTYifQ.DFTZF3tuUwz8zEJ_WczQYw'
+				}).addTo(mymap);
+				var marker = L.marker([data[0]["OrderID"]["UserID"]["Userlatitude"], data[0]['OrderID']["UserID"]["Userlongitude"]]).addTo(mymap);
+
+			});
+
+			
+
+			function mark_done(e){
+				console.log('here');
+				console.log(e);
+				$(e).parent().parent().css('box-shadow', 'none');
+				$(e).parent().parent().addClass('done');
+				$(e).parent().children().each(function(){
+					$(this).css({
+						'text-decoration': 'line-through',
+						'box-shadow': 'none'
+					});
+				});
+			}
+
+		</script>
+		<style>
+			body{
+				padding:0;
+				margin:0;
+			}
+			html, body{
+				width: 100%;
+				height: 100%;
+			}
+
+			#header{
+				padding-top: 64px;
+				text-align: center;
+			}
+			.center{
+				padding-top: 64px;
+				text-align: center;
+			}
+			#card-container{
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				grid-gap: 10px;
+				padding: 10px;
+			}
+			.card{
+				-webkit-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.55);
+				-moz-box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.55);
+				box-shadow: 0px 3px 8px 1px rgba(0,0,0,0.55);
+				padding-bottom: 35px;
+			}
+			.card i{
+				opacity: 0;
+				font-size: 100px;
+				position: absolute;
+				height: 100%;
+				top: calc(50% - 50px);
+				width: 100%;
+				text-align: center;
+			}
+			.price{
+				position: absolute;
+				right: 20px;
+				bottom: 20px;
+				float: right;
+			}
+			a.card-link{
+				position: absolute;
+				bottom: 20px;
+				border: 1px solid black;
+				padding: 6px;
+				border-radius: 3px;
+			}
+			.card.done {
+				animation-name: example;
+				animation-duration: 3s;
+			}
+			.card.done i {
+				animation: fade 3s; 
+			}
+			.card.done .card-link {
+				visibility: hidden;
+			}
+			@keyframes example {
+				0%	 {background-color: white;}
+				50%  {background-color: rgb(33, 105, 33);}
+				100% {background-color: white;}
+			}
+			@keyframes fade {
+				0%	 {opacity: 0;}
+				70%  {opacity: 1;}
+				100% {opacity: 0;}
+			}
+
+			.card-center{
+				margin: 50px min(30%, 100px);
+			}
+
+			#mapid{
+				width: 100%;
+				height: 400px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Community Hero</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+		  
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+			  <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+				  <a class="nav-link" href="#">Deliver <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">Order</a>
+				</li>
+			  </ul> 
+			  <ul class="navbar-nav my-auto my-2 my-lg-0">
+				<li class="nav-item active">
+					<button type="button" id='navbarLoginButton' class="nav-link btn">Login</button>
+				</li>
+			  </ul>
+			</div>
+		</nav>
+		<h1 class='center'>Order Details</h1>
+		<h1 class='center' id='store'>Store: </h1>
+		<div id='card-container'>
+
+		</div>
+		<h2 class='center' id='price'>Total Cost: </h2>
+		<div class="card card-center">
+			<div class="card-header">
+				Owner Details
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item" id='name'><i class='fa fa-phone'></i>Name: </li>
+				<li class="list-group-item" id='phone'>Phone Number: </li>
+				<li class="list-group-item">
+					<div id='map-container'>
+						<div id="mapid">
+						</div>
+					</div>
+				
+				</li>
+			</ul>
+		</div>		
+	</body>
+</html>
