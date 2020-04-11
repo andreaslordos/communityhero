@@ -1,0 +1,58 @@
+{
+    "patterns": "",
+    "custom-icons-classes": "icon-Underpants icon-Tshirt icon-Trousers icon-Tie icon-TennisBall icon-Telesocpe icon-Stop icon-Starship icon-Starship2 icon-Speaker icon-Speaker2 icon-Soccer icon-Snikers icon-Scisors icon-Puzzle icon-Printer icon-Pool icon-Podium icon-Play icon-Planet icon-Pause icon-Next icon-MusicNote2 icon-MusicNote icon-MusicMixer icon-Microphone icon-Medal icon-ManFigure icon-Magnet icon-Like icon-Hanger icon-Handicap icon-Forward icon-Footbal icon-Flag icon-FemaleFigure icon-Dislike icon-DiamondRing icon-Cup icon-Crown icon-Column icon-Click icon-Cassette icon-Bomb icon-BatteryLow icon-BatteryFull icon-Bascketball icon-Astronaut icon-WineGlass icon-Water icon-Wallet icon-Umbrella icon-TV icon-TeaMug icon-Tablet icon-Soda icon-SodaCan icon-SimCard icon-Signal icon-Shaker icon-Radio icon-Pizza icon-Phone icon-Notebook icon-Mug icon-Mastercard icon-Ipod icon-Info icon-Icecream2 icon-Icecream1 icon-Hourglass icon-Help icon-Goto icon-Glasses icon-Gameboy icon-ForkandKnife icon-Export icon-Exit icon-Espresso icon-Drop icon-Download icon-Dollars icon-Dollar icon-DesktopMonitor icon-Corkscrew icon-CoffeeToGo icon-Chart icon-ChartUp icon-ChartDown icon-Calculator icon-Bread icon-Bourbon icon-BottleofWIne icon-Bag icon-Arrow icon-Antenna2 icon-Antenna1 icon-Anchor icon-Wheelbarrow icon-Webcam icon-Unlinked icon-Truck icon-Timer icon-Time icon-StorageBox icon-Star icon-ShoppingCart icon-Shield icon-Seringe icon-Pulse icon-Plaster icon-Plaine icon-Pill icon-PicnicBasket icon-Phone2 icon-Pencil icon-Pen icon-PaperClip icon-On-Off icon-Mouse icon-Megaphone icon-Linked icon-Keyboard icon-House icon-Heart icon-Headset icon-FullShoppingCart icon-FullScreen icon-Folder icon-Floppy icon-Files icon-File icon-FileBox icon-ExitFullScreen icon-EmptyBox icon-Delete icon-Controller icon-Compass icon-CompassTool icon-ClipboardText icon-ClipboardChart icon-ChemicalGlass icon-CD icon-Carioca icon-Car icon-Book icon-BigTruck icon-Bicycle icon-Wrench icon-Web icon-Watch icon-Volume icon-Video icon-Users icon-User icon-UploadCLoud icon-Typing icon-Tools icon-Tag icon-Speedometter icon-Share icon-Settings icon-Search icon-Screwdriver icon-Rolodex icon-Ringer icon-Resume icon-Restart icon-PowerOff icon-Pointer icon-Picture icon-OpenedLock icon-Notes icon-Mute icon-Movie icon-Microphone2 icon-Message icon-MessageRight icon-MessageLeft icon-Menu icon-Media icon-Mail icon-List icon-Layers icon-Key icon-Imbox icon-Eye icon-Edit icon-DSLRCamera icon-DownloadCloud icon-CompactCamera icon-Cloud icon-ClosedLock icon-Chart2 icon-Bulb icon-Briefcase icon-Blog icon-Agenda",
+    "custom-icons-css": "",
+    "brand-color": "#ff0000",
+    "accent-1-color": "#00ff00",
+    "accent-2-color": "#0000ff",
+    "google-fonts": "Montserrat:100,200,300,400,500,600,700,800,900\r\nMerriweather:100,300i,300,400,400i,700,700i,900",
+    "prefix": "azen",
+    "container-widths": "768px:750px\r\n992px:970px\r\n1200px:1170px",
+    "tags": {
+        "list.htm": "",
+        "map.html": "google-map",
+        "text.htm": "text",
+        "menu.html": "menu",
+        "share.htm": "",
+        "disign.htm": "",
+        "footer.html": "footer",
+        "middle.html": "header",
+        "pricing.htm": "price",
+        "isotope.html": "gallery",
+        "numbers.html": "",
+        "accordion.htm": "accordion",
+        "features.html": "",
+        "isotope2.html": "gallery",
+        "logotips.html": "",
+        "our-blog.html": "blog",
+        "purchase.html": "",
+        "our-teame.html": "",
+        "preloader.html": "preloader",
+        "geting-info.htm": "",
+        "widget-post.htm": "",
+        "flex-slider.html": "",
+        "home-slider.html": "slider",
+        "mini-carusel.htm": "slider",
+        "progress-bar.htm": "progressbar",
+        "get-in-touch.html": "",
+        "similar-works.htm": "",
+        "creative-title.htm": "",
+        "section-groam.html": "",
+        "clean-and-modern.htm": "",
+        "creative-service.htm": "",
+        "progress-bar-two.htm": "progressbar",
+        "get-in-touch-two.html": "",
+        "custom-information.htm": "",
+        "wath-the-intro-video.html": ""
+    },
+    "child-suggestions": {
+        "forms/form-container.htm": [
+            "forms/input-field.htm",
+            "forms/dropdown-list.htm",
+            "forms/big-text-field.htm",
+            "forms/form-container.htm"
+        ]
+    },
+    "elements-widths": {
+    }
+}

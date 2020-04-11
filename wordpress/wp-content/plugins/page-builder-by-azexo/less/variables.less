@@ -1,0 +1,315 @@
+//@brand-color
+//@accent-1-color
+//@accent-2-color
+
+@white-darker:            #e5e5e5;
+@white-dark:              #f0f0f0;
+@white:                   #f5f5f5;
+@white-light:             #f8f8f8;
+@white-lighter:           #ffffff;
+
+@gray-darker:            #999;
+@gray-dark:              #aaa;
+@gray:                   #bbb;
+@gray-light:             #ccc;
+@gray-lighter:           #ddd;
+
+@black-darker:            #000;
+@black-dark:              #222;
+@black:                   #333;
+@black-light:             #666;
+@black-lighter:           #888;
+
+// 2009 flexbox syntax https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/
+.vendor(@property, @value) when (@property = display) and (@value = flex) {
+    display: -webkit-box;
+}
+.vendor(@property, @value) when (@property = display) and (@value = inline-flex) {
+    display: -webkit-inline-box;
+}
+.vendor(@property, @value) when (@property = align-items)  {
+    -webkit-box-align: @value;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) {
+    -webkit-box-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) {
+    -webkit-box-align: end;
+}
+
+.vendor(@property, @value) when (@property = justify-content)  {
+    -webkit-box-pack: @value;
+    -moz-box-pack: @value;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-start)  {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-end)  {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = space-between)  {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;    
+}
+
+.vendor(@property, @value) when (@property = order) {
+    -webkit-box-ordinal-group: @value + 1;
+    -moz-box-ordinal-group: @value + 1;
+    -ms-box-ordinal-group: @value + 1;
+    -o-box-ordinal-group: @value + 1;
+    box-ordinal-group: @value + 1;    
+}
+
+.vendor(@property, @value) when (@property = flex-direction) and (@value = row)  {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    box-orient: horizontal;   
+}
+.vendor(@property, @value) when (@property = flex-direction) and (@value = row-reverse)  {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    -o-box-direction: reverse;
+    box-direction: reverse;
+}
+.vendor(@property, @value) when (@property = flex-direction) and (@value = column)  {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+}
+.vendor(@property, @value) when (@property = flex-direction) and (@value = column-reverse)  {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    -o-box-direction: reverse;
+    box-direction: reverse;
+}
+
+.vendor(@property, @value) when (@property = flex-wrap) and (@value = wrap) {
+    -webkit-lines: multiple;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-box-lines: multiple;
+    -o-box-lines: multiple;
+    box-lines: multiple;
+}
+
+.vendor(@property, @value) when (@property = flex-wrap) and (@value = wrap-reverse) {
+    -webkit-lines: multiple;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-box-lines: multiple;
+    -o-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    -o-box-direction: reverse;
+    box-direction: reverse;
+}
+
+.vendor(@property, @value) when (@property = flex-wrap) and (@value = nowrap) {    
+    -webkit-lines: single;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -ms-box-lines: single;
+    -o-box-lines: single;
+    box-lines: single;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) {    
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-box-align: start;
+    -o-box-align: start;
+    box-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) { 
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-box-align: end;
+    -o-box-align: end;
+    box-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = center), (@property = align-items) and (@value = baseline), (@property = align-items) and (@value = stretch){
+    -webkit-box-align: @value;
+    -moz-box-align: @value;
+    -ms-box-align: @value;
+    -o-box-align: @value;
+    box-align: @value;
+}
+
+.vendor(@property, @value) when (@property = flex-grow)  {
+    -webkit-box-flex: @value;
+}
+
+
+// 2012 flexbox syntax https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/
+.vendor(@property, @value) when (@property = display) and (@value = flex) {
+    display: -ms-flexbox;
+}
+
+.vendor(@property, @value) when (@property = align-items)  {
+    -ms-flex-align: @value;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) {
+    -ms-flex-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) {
+    -ms-flex-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = flex-start)  {
+    -ms-flex-line-pack: start;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = flex-end)  {
+    -ms-flex-line-pack: end;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = space-between)  {
+    -ms-flex-line-pack: justify;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = space-around)  {
+    -ms-flex-line-pack: distribute;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = center), (@property = align-content) and (@value = stretch)  {
+    -ms-flex-line-pack: @value;
+}
+
+.vendor(@property, @value) when (@property = justify-content)  {
+    -ms-flex-pack: @value;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-start)  {
+    -ms-flex-pack: start;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-end)  {
+    -ms-flex-pack: end;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = space-between)  {
+    -ms-flex-pack: justify;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = space-around)  {
+    -ms-flex-pack: distribute;
+}
+
+.vendor(@property, @value) when (@property = order) {
+    -ms-flex-order: @value;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) { 
+    -ms-flex-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) { 
+    -ms-flex-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = center), (@property = align-items) and (@value = baseline), (@property = align-items) and (@value = stretch){
+    -ms-flex-align: @value;
+}
+
+.vendor(@property, @value) when (@property = align-self) and (@value = flex-start) { 
+    -ms-flex-item-align: start;
+    flex-item-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-self) and (@value = flex-end) {
+    -ms-flex-item-align: end;
+    flex-item-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-self) and (@value = auto), (@property = align-self) and (@value = center), (@property = align-items) and (@value = baseline), (@property = align-items) and (@value = stretch){
+    -ms-flex-item-align: @value;
+    flex-item-align: @value;
+}
+
+
+.vendor(@property, @value) when (isstring(@value) = false) {
+    -webkit-@{property}: @value;
+    -khtml-@{property}: @value;
+    -moz-@{property}: @value;
+    -ms-@{property}: @value;
+    @{property}: @value;
+}
+
+.vendor(@property, @value) when (isstring(@value) = true) {
+    -webkit-@{property}: e(@value);
+    -khtml-@{property}: e(@value);
+    -moz-@{property}: e(@value);
+    -ms-@{property}: e(@value);
+    @{property}: e(@value);
+}
+
+.placeholder(@property, @value) when (isstring(@value) = false) {
+    &:placeholder {
+        @{property}: @value;
+    }
+    &::placeholder {
+        @{property}: @value;
+    }
+    &::-webkit-input-placeholder {
+        @{property}: @value;
+    }
+    &::-moz-placeholder {
+        @{property}: @value;
+    }
+    &:-moz-placeholder {
+        @{property}: @value;
+    }
+    &:-ms-input-placeholder {
+        @{property}: @value;
+    }     
+}
+
+.placeholder(@property, @value) when (isstring(@value) = true) {
+    &:placeholder {
+        @{property}: e(@value);
+    }
+    &::placeholder {
+        @{property}: e(@value);
+    }
+    &::-webkit-input-placeholder {
+        @{property}: e(@value);
+    }
+    &::-moz-placeholder {
+        @{property}: e(@value);
+    }
+    &:-moz-placeholder {
+        @{property}: e(@value);
+    }
+    &:-ms-input-placeholder {
+        @{property}: e(@value);
+    }     
+}

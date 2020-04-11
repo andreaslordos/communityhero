@@ -1,0 +1,192 @@
+@import "variables.less";
+
+.ui-datepicker {
+    background-color: @white-lighter;
+    display: none;
+    .ui-datepicker-header {
+        background-color: @white-lighter;
+        position: relative;
+        line-height: @input-height;
+        border: 1px solid @white-darker;
+        .ui-datepicker-prev, .ui-datepicker-next {
+            position: absolute;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: @font-size-base;
+            display: block;
+            width: 20%;
+            text-align: center;
+        }        
+        .ui-datepicker-prev {
+            left: 0;            
+            top: 0;            
+        }
+        .ui-datepicker-next {
+            right: 0;
+            top: 0;
+        }
+        .ui-datepicker-prev-hover {
+        }
+        .ui-datepicker-next-hover {
+        }
+        .ui-datepicker-title {
+            text-align: center;
+            font-size: @font-size-base;
+            font-weight: 700;
+            color: @black;
+            text-transform: uppercase;
+            select {
+            }
+        }
+    }
+    select.ui-datepicker-year, select.ui-datepicker-month {
+        .control();
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+        padding-right: 0;
+    }
+    table.ui-datepicker-calendar {
+        .table(15px);
+        line-height: 1;
+        font-size: @font-size-base;
+        table-layout: fixed;
+        width: auto;
+        a {
+            color: @gray-darker;
+        }
+        thead {
+            tr {
+                th {
+                    text-align: center;
+                }
+            }            
+        }
+        tbody {
+            tr {
+                td {
+                    text-align: center;
+                    span {
+                        display: block;
+                    }
+                    a {
+                        display: block;
+                        text-align: center;                
+                    }
+                    &:not(.ui-state-disabled):hover {
+                        background-color: @brand-color;
+                        a {
+                            color: @white-lighter;
+                        }
+                    }
+                    &.highlight {
+                        background-color: @brand-color;                        
+                        a {
+                            color: @white-lighter;
+                        }
+                    }
+                    &.reserved {
+                        background-color: @accent-1-color;
+                        a {
+                            color: @white-lighter;
+                        }                        
+                    }
+                }            
+            }
+        }
+    }
+    .ui-datepicker-buttonpane {
+        padding: 10px 20px 20px 20px;
+        button {
+            .small-button(@white-lighter, @accent-1-color, @brand-color);
+            float: right;
+        }
+        button.ui-datepicker-current {
+            float: left;
+        }
+        &::after {
+            content:"";
+            display:table;
+            clear:both;
+        }
+    }
+    &.ui-datepicker-multi {
+        width: auto;
+        .ui-datepicker-group {
+        }
+        .ui-datepicker-group-last {
+            .ui-datepicker-header {
+                border-left-width: 0;
+            }
+        }
+        .ui-datepicker-group-middle {
+            .ui-datepicker-header {
+                border-left-width: 0;
+            }
+        }
+        .ui-datepicker-buttonpane {
+            clear: left;
+        }
+        .ui-datepicker-row-break {
+            clear: both;
+            font-size: 0;
+            width: 100%;
+        }
+    }
+}
+
+.ui-timepicker-div {
+    font-size: @font-size-small + 2px;
+    width: 200px;
+    border: 1px solid @white-darker;
+    border-bottom: none;
+    padding: 15px 20px 0 20px;
+    .ui-widget-header {
+        text-align: center;
+        .ui-datepicker-title {
+            font-weight: 600;
+        }
+    }
+    dl {
+        line-height: @input-height;
+        margin-bottom: 0;
+        text-align: left;
+        dt {
+            clear: left;
+            float: left;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: 'Droid Serif', sans-serif;
+            color: @black-light;
+        }
+        dd {
+            display: none;
+            &.ui_tpicker_time {                
+                display: block;
+                margin: 0 0 0 50%;
+            }
+            &.ui_tpicker_hour, &.ui_tpicker_minute {
+                display: block;
+                margin: 0 0 10px 50%;
+            }
+        }        
+    }
+    select {
+        .control();
+        padding-right: 0;
+    }
+}
+.ui-timepicker-rtl {
+    direction: rtl;
+    dl {
+        padding: 0 5px 0 0;
+        text-align: right;
+        dt {
+            clear: right;
+            float: right;
+        }
+        dd {
+            margin: 0 40% 10px 10px;
+        }
+    }
+}

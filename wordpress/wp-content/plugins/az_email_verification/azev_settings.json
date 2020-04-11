@@ -1,0 +1,16 @@
+{
+    "restrict_roles": {
+        "administrator": "1"
+    },
+    "registration_success": "<strong>Success:<\/strong> Account created successfully. Please check your email address to verify account.",
+    "verification_success": "<strong>Success:<\/strong> Your account is verified. Try login now.",
+    "verification_fail": "<strong>Error:<\/strong> Invalid verification credentials. Try login to get new verificaton key.",
+    "new_verification_link": "<strong>Success:<\/strong> Check email for new verification link.",
+    "fail_login": "<strong>ERROR:<\/strong> Please verify your account before login. {{resend_verification_link}}.",
+    "resend_link_text": "Resend Verification Link",
+    "resend_email_heading": "New verification key",
+    "resend_email_subject": "New verification key",
+    "resend_email_body": "<p>Click below link to verify your account.<\/p>\r\n<p>{{verification_link}}<\/p>",
+    "registration_email_body": "<p>Thanks for creating an account with us. Your username is <strong>{{user_login}}<\/strong>.<\/p>\r\n<p>Click below link to verify your account.<\/p>\r\n<p>{{verification_link}}<\/p>\r\n{{user_pass}}",
+    "password_message": "Your password has been automatically generated:"
+}

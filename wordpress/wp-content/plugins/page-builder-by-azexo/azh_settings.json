@@ -1,0 +1,11 @@
+{
+    "post-types": {
+        "page": 1,
+        "azh_widget": 1
+    },
+    "patterns": "dropdown_patterns\ndata-column-padding=['\"]([^'\"]+)['\"]\n0:0px|5:5px|10:10px|15:15px|20:20px|25:25px|30:30px|40:40px|50:50px|60:60px|70:70px\ndata-background-mode=['\"]([^'\"]+)['\"]\nnone:None|cover:Cover|semi-transparent-color:Semi-transparent color|contain:Contain|no-repeat:No repeat|repeat:Repeat\ntext-align: ?((left|center|right)\\[\\[[^\\]]+\\]\\]|(left|center|right))\nleft:Left|center:Center|right:Right\nfont-weight: ?([1-9]00\\[\\[[^\\]]+\\]\\]|[1-9]00)\n100:100|200:200|300:300|400:400|500:500|600:600|700:700|800:800|900:900\nfont-style: ?((normal|italic|oblique)\\[\\[[^\\]]+\\]\\]|(normal|italic|oblique))\nnormal:Normal|italic:Italic|oblique:Oblique\ntext-decoration: ?((none|underline|overline|line-through)\\[\\[[^\\]]+\\]\\]|(none|underline|overline|line-through))\nnone:None|underline:Underline|overline:Overline|line-through:Line-through",
+    "custom-icons-classes": "",
+    "custom-icons-css": "",
+    "google-fonts": "",
+    "container-widths": "768px:750px\r\n992px:970px\r\n1200px:1170px"
+}

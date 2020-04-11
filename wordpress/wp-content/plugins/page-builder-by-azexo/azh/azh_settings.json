@@ -1,0 +1,184 @@
+{
+    "patterns": "",
+    "custom-icons-classes": "",
+    "custom-icons-css": "",
+    "container-widths": "768px:750px\r\n992px:970px\r\n1200px:1170px",
+    "tags": {
+        "general/form-container.htm": "form"
+    },
+    "child-suggestions": {
+        "free-positioning/free-positioning.htm": [
+            "free-positioning/polygone.htm",
+            "free-positioning/polygone-with-tooltip.htm",
+            "free-positioning/hotspot.htm"
+        ],
+        "forms/form-container.htm": [
+            "forms/file-field.htm",
+            "forms/checkboxes.htm",
+            "forms/input-field.htm",
+            "forms/number-range.htm",
+            "forms/hidden-field.htm",
+            "forms/dropdown-list.htm",
+            "forms/multi-select.htm",
+            "forms/radio-buttons.htm",
+            "forms/recaptcha.htm",
+            "forms/big-text-field.htm"
+        ]
+    },
+    "files_settings": {
+        "forms/form-container.htm": {
+            "wrapper_classes": ["az-bottom-left-controls"],
+            "order": "-11"
+        },
+        "forms/input-field.htm": {
+            "order": "-10"
+        },
+        "forms/dropdown-list.htm": {
+            "order": "-9"
+        },
+        "forms/big-text-field.htm": {
+            "order": "-8"
+        },
+        "forms/multi-select.htm": {
+            "order": "-7"
+        },
+        "forms/checkboxes.htm": {
+            "order": "-6"
+        },
+        "forms/radio-buttons.htm": {
+            "order": "-5"
+        },
+        "forms/recaptcha.htm": {
+            "order": "-4"
+        },
+        "forms/file-field.htm": {
+            "order": "-3"
+        },
+        "forms/number-range.htm": {
+            "order": "-2"
+        },
+        "forms/hidden-field.htm": {
+            "order": "-1"
+        },
+        "layout/row.htm": {
+            "wrapper_classes": ["az-top-right-controls"],
+            "order": "0"
+        },
+        "layout/horizontal-elements.htm": {
+            "wrapper_classes": ["az-top-right-controls"],
+            "order": "1"
+        },
+        "content/text.htm": {
+            "order": "2"
+        },
+        "content/image.htm": {
+            "order": "3"
+        },
+        "content/svg.htm": {
+            "order": "3"
+        },
+        "layout/hyperlink.htm": {
+            "wrapper_classes": ["az-top-right-controls"],
+            "order": "4"
+        },
+        "content/heading.htm": {
+            "order": "5"
+        },
+        "layout/background.htm": {
+            "wrapper_classes": ["az-top-right-controls"],
+            "order": "6"
+        },
+        "content/icon.htm": {
+            "order": "7"
+        },
+        "content/shape.htm": {
+            "order": "7"
+        },
+        "content/button.htm": {
+            "order": "8"
+        },
+        "content/spacer.htm": {
+            "order": "9"
+        },
+        "content/separator.htm": {
+            "order": "10"
+        },
+        "content/icon-list.htm": {
+            "order": "11"
+        },
+        "content/ordered-list.htm": {
+            "order": "12"
+        },
+        "content/unordered-list.htm": {
+            "order": "12"
+        },
+        "content/table.htm": {
+            "order": "13"
+        },
+        "content/blockquote.htm": {
+            "order": "14"
+        },
+        "content/video.htm": {
+            "order": "15"
+        },
+        "content/self-hosted-video.htm": {
+            "order": "15"
+        },
+        "content/gmap.htm": {
+            "order": "16"
+        },
+        "content/shortcode.htm": {
+            "order": "17"
+        },
+        "content/table.htm": {
+            "order": "19"
+        },
+        "layout/free-positioning.htm": {
+            "order": "20"
+        },
+        "layout/slider.htm": {
+            "wrapper_classes": ["az-top-right-controls"],
+            "order": "21"
+        },
+        "layout/grid.htm": {
+            "order": "22"
+        },
+        "content/anchors-menu.htm": {
+            "order": "23"
+        },
+        "content/anchor.htm": {
+            "order": "24"
+        },
+        "layout/hover-overlay.htm": {
+            "wrapper_classes": ["az-bottom-right-controls"],
+            "order": "25"
+        },
+        "layout/magnific-popup.htm": {
+            "wrapper_classes": ["az-top-right-controls"],
+            "order": "26"
+        },
+        "layout/modal.htm": {
+            "wrapper_classes": ["az-top-right-controls"],
+            "order": "27"
+        },
+        "free-positioning/free-positioning.htm": {
+            "wrapper_classes": ["az-fixed-controls"],
+            "order": "27"
+        },
+        "free-positioning/hotspot.htm": {
+            "order": "28"
+        },
+        "free-positioning/polygone.htm": {
+            "order": "28"
+        },
+        "free-positioning/polygone-with-tooltip.htm": {
+            "order": "28"
+        },
+        "free-positioning/click-trigger.htm": {
+            "order": "29"
+        },
+        "free-positioning/hover-trigger.htm": {
+            "order": "30"
+        }
+    }
+}

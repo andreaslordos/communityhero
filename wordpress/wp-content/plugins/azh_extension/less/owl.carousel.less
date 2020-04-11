@@ -1,0 +1,213 @@
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; 
+    } 
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; 
+    } 
+}
+
+@color0: #869791;
+@color1: #ffffff;
+@color2: #d6d6d6;
+
+.owl-carousel() {
+    .az-owl-carousel {
+        -webkit-tap-highlight-color: transparent;
+        display: none;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        .az-owl-stage {
+            -ms-touch-action: pan-Y;
+            position: relative;
+            &:after {
+                clear: both;
+                content: ".";
+                display: block;
+                height: 0;
+                line-height: 0;
+                visibility: hidden;
+            }
+        }
+        .az-owl-stage-outer {
+            -webkit-transform: translate3d(0px, 0px, 0px);
+            overflow: hidden;
+            position: relative;
+        }
+        .az-owl-item {
+            -webkit-backface-visibility: hidden;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            float: left;
+            min-height: 1px;
+            position: relative;
+            img {
+                -webkit-transform-style: preserve-3d;
+                display: block;
+                width: 100%;
+            }
+            .az-owl-lazy {
+                opacity: 0;
+                transition: opacity 400ms ease;
+            }
+            img.az-owl-lazy {
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+            }
+        }
+        .az-owl-nav.disabled {
+            display: none;
+        }
+        .az-owl-dots.disabled {
+            display: none;
+        }
+        .az-owl-nav {
+            .az-owl-prev {
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
+                cursor: hand;
+                cursor: pointer;
+                user-select: none;
+            }
+            .az-owl-next {
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
+                cursor: hand;
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+        .az-owl-dot {
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+            cursor: hand;
+            cursor: pointer;
+            user-select: none;
+        }
+        .animated {
+            -webkit-animation-duration: 1000ms;
+            -webkit-animation-fill-mode: both;
+            animation-duration: 1000ms;
+            animation-fill-mode: both;
+        }
+        .az-owl-animated-in {
+            z-index: 0;
+        }
+        .az-owl-animated-out {
+            z-index: 1;
+        }
+        .fadeOut {
+            -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+        }
+        .az-owl-video-wrapper {
+            background: #000000;
+            height: 100%;
+            position: relative;
+        }
+        .az-owl-video-play-icon {
+            -webkit-backface-visibility: hidden;
+            //background: url("owl.video.play.png") no-repeat;
+            cursor: pointer;
+            height: 80px;
+            left: 50%;
+            margin-left: -40px;
+            margin-top: -40px;
+            position: absolute;
+            top: 50%;
+            transition: -webkit-transform 100ms ease;
+            transition: transform 100ms ease;
+            width: 80px;
+            z-index: 1;
+            &:hover {
+                -ms-transform: scale(1.3, 1.3);
+                -webkit-transform: scale(1.3, 1.3);
+                transform: scale(1.3, 1.3);
+            }
+        }
+        .az-owl-video-playing {
+            .az-owl-video-tn {
+                display: none;
+            }
+            .az-owl-video-play-icon {
+                display: none;
+            }
+        }
+        .az-owl-video-tn {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 400ms ease;
+        }
+        .az-owl-video-frame {
+            height: 100%;
+            position: relative;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+    .az-owl-carousel.az-owl-loaded {
+        display: block;
+    }
+    .az-owl-carousel.az-owl-loading {
+        display: block;
+        opacity: 0;
+    }
+    .az-owl-carousel.az-owl-hidden {
+        opacity: 0;
+    }
+    .az-owl-carousel.az-owl-refresh {
+        .az-owl-item {
+            visibility: hidden;
+        }
+    }
+    .az-owl-carousel.az-owl-drag {
+        .az-owl-item {
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+    }
+    .az-owl-carousel.az-owl-grab {
+        cursor: grab;
+        cursor: move;
+    }
+    .az-owl-carousel.az-owl-rtl {
+        direction: rtl;
+        .az-owl-item {
+            float: right;
+        }
+    }
+    .no-js {
+        .az-owl-carousel {
+            display: block;
+        }
+    }
+    .az-owl-height {
+        transition: height 500ms ease-in-out;
+    }    
+}
+
+.owl-carousel();
+div.azen.azen1.azen2.azen3 {
+    .owl-carousel();
+}

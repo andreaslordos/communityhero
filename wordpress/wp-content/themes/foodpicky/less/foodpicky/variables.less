@@ -1,0 +1,826 @@
+//@brand-color
+//@accent-1-color
+//@accent-2-color
+
+
+@star-rating-color:       @brand-color;
+@brand-dark:              #1976d2;
+@brand-light:             #bbdefb;
+
+
+@positive-color:          #91b622;
+@negative-color:          #db304c;
+//myvars
+@white-lighter:           #ffffff;
+@white:                   #fcfbf9;
+@white-dark:              #faf9f7;
+@white-darker:            #f2f1f3;
+
+@gray-lighter:            #ededed;
+@gray-light:              #bebac2;
+@gray:                    #bbbcc0;
+@gray-dark:               #a2a2a3;
+
+@gray-darker:             #999;
+
+@black-lighter:           #748796;
+@black-light:             #7d7885;
+@black:                   #414551;
+@black-dark:              #121924;
+@black-darker:            #000;
+
+@button-gradient: linear-gradient(to bottom, #f5f5f5, #efefef);
+
+@font-size-small:         12px;
+@font-size-base:          14px;
+@font-size-large:         16px;
+@font-size-simple-title:  14px;
+@font-size-page-title:    34px;
+@font-size-footer-title:  20px;
+
+@menu-height:   91px;
+@menu-item-v-padding:   13px;
+@menu-item-h-padding: 30px;
+@menu-item-padding:  15px;
+
+@secondary-menu-height:   33px;
+@secondary-menu-item-v-padding:   0px;
+@secondary-menu-item-h-padding: 15px;
+
+@input-height: 40px;
+@input-border-radius: 20px;
+@input-padding: 0 15px;
+@input-vertical-padding: 15px;
+
+@border-radius: 3px;
+
+
+// 2009 flexbox syntax https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/
+.vendor(@property, @value) when (@property = display) and (@value = flex) {
+    display: -webkit-box;
+}
+.vendor(@property, @value) when (@property = display) and (@value = inline-flex) {
+    display: -webkit-inline-box;
+}
+.vendor(@property, @value) when (@property = align-items)  {
+    -webkit-box-align: @value;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) {
+    -webkit-box-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) {
+    -webkit-box-align: end;
+}
+
+.vendor(@property, @value) when (@property = justify-content)  {
+    -webkit-box-pack: @value;
+    -moz-box-pack: @value;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-start)  {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-end)  {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = space-between)  {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;    
+}
+
+.vendor(@property, @value) when (@property = order) {
+    -webkit-box-ordinal-group: @value + 1;
+    -moz-box-ordinal-group: @value + 1;
+    -ms-box-ordinal-group: @value + 1;
+    -o-box-ordinal-group: @value + 1;
+    box-ordinal-group: @value + 1;    
+}
+
+.vendor(@property, @value) when (@property = flex-direction) and (@value = row)  {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    box-orient: horizontal;   
+}
+.vendor(@property, @value) when (@property = flex-direction) and (@value = row-reverse)  {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -o-box-orient: horizontal;
+    box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    -o-box-direction: reverse;
+    box-direction: reverse;
+}
+.vendor(@property, @value) when (@property = flex-direction) and (@value = column)  {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+}
+.vendor(@property, @value) when (@property = flex-direction) and (@value = column-reverse)  {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    -o-box-direction: reverse;
+    box-direction: reverse;
+}
+
+.vendor(@property, @value) when (@property = flex-wrap) and (@value = wrap) {
+    -webkit-lines: multiple;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-box-lines: multiple;
+    -o-box-lines: multiple;
+    box-lines: multiple;
+}
+
+.vendor(@property, @value) when (@property = flex-wrap) and (@value = wrap-reverse) {
+    -webkit-lines: multiple;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -ms-box-lines: multiple;
+    -o-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-box-direction: reverse;
+    -moz-box-direction: reverse;
+    -ms-box-direction: reverse;
+    -o-box-direction: reverse;
+    box-direction: reverse;
+}
+
+.vendor(@property, @value) when (@property = flex-wrap) and (@value = nowrap) {    
+    -webkit-lines: single;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -ms-box-lines: single;
+    -o-box-lines: single;
+    box-lines: single;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) {    
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-box-align: start;
+    -o-box-align: start;
+    box-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) { 
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-box-align: end;
+    -o-box-align: end;
+    box-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = center), (@property = align-items) and (@value = baseline), (@property = align-items) and (@value = stretch){
+    -webkit-box-align: @value;
+    -moz-box-align: @value;
+    -ms-box-align: @value;
+    -o-box-align: @value;
+    box-align: @value;
+}
+
+.vendor(@property, @value) when (@property = flex-grow)  {
+    -webkit-box-flex: @value;
+}
+
+
+// 2012 flexbox syntax https://www.w3.org/TR/2012/WD-css3-flexbox-20120322/
+.vendor(@property, @value) when (@property = display) and (@value = flex) {
+    display: -ms-flexbox;
+}
+
+.vendor(@property, @value) when (@property = align-items)  {
+    -ms-flex-align: @value;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) {
+    -ms-flex-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) {
+    -ms-flex-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = flex-start)  {
+    -ms-flex-line-pack: start;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = flex-end)  {
+    -ms-flex-line-pack: end;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = space-between)  {
+    -ms-flex-line-pack: justify;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = space-around)  {
+    -ms-flex-line-pack: distribute;
+}
+
+.vendor(@property, @value) when (@property = align-content) and (@value = center), (@property = align-content) and (@value = stretch)  {
+    -ms-flex-line-pack: @value;
+}
+
+.vendor(@property, @value) when (@property = justify-content)  {
+    -ms-flex-pack: @value;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-start)  {
+    -ms-flex-pack: start;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = flex-end)  {
+    -ms-flex-pack: end;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = space-between)  {
+    -ms-flex-pack: justify;
+}
+
+.vendor(@property, @value) when (@property = justify-content) and (@value = space-around)  {
+    -ms-flex-pack: distribute;
+}
+
+.vendor(@property, @value) when (@property = order) {
+    -ms-flex-order: @value;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-start) { 
+    -ms-flex-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = flex-end) { 
+    -ms-flex-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-items) and (@value = center), (@property = align-items) and (@value = baseline), (@property = align-items) and (@value = stretch){
+    -ms-flex-align: @value;
+}
+
+.vendor(@property, @value) when (@property = align-self) and (@value = flex-start) { 
+    -ms-flex-item-align: start;
+    flex-item-align: start;
+}
+
+.vendor(@property, @value) when (@property = align-self) and (@value = flex-end) {
+    -ms-flex-item-align: end;
+    flex-item-align: end;
+}
+
+.vendor(@property, @value) when (@property = align-self) and (@value = auto), (@property = align-self) and (@value = center), (@property = align-items) and (@value = baseline), (@property = align-items) and (@value = stretch){
+    -ms-flex-item-align: @value;
+    flex-item-align: @value;
+}
+
+
+.vendor(@property, @value) when (isstring(@value) = false) {
+    -webkit-@{property}: @value;
+    -khtml-@{property}: @value;
+    -moz-@{property}: @value;
+    -ms-@{property}: @value;
+    @{property}: @value;
+}
+
+.vendor(@property, @value) when (isstring(@value) = true) {
+    -webkit-@{property}: e(@value);
+    -khtml-@{property}: e(@value);
+    -moz-@{property}: e(@value);
+    -ms-@{property}: e(@value);
+    @{property}: e(@value);
+}
+
+
+.more-style(@color, @bg_color, @offset) {
+    background-color: @bg_color;    
+    color: @color;
+    font-size: @font-size-small;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding: 0 @offset;
+    line-height: @input-height * 0.7;
+}
+
+
+.more-button(@color, @bg_color, @offset) {
+    background-color: @bg_color;    
+    color: @color;
+    outline: 0;
+    outline-offset: 0;
+    display: inline-block;
+    width: auto;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: @font-size-small;
+    letter-spacing: 1px;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    .vendor(touch-action, manipulation);
+    cursor: pointer;
+    .vendor(user-select, none);
+    background-image: none;
+    margin: 0;
+    text-decoration: none;
+    text-transform: none;
+    padding-left: @offset;
+    border: none;
+    position: relative;
+    line-height: @input-height * 0.7;
+    &:focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+    &::after {
+        content: "\f178";
+        font-family: FontAwesome;
+        padding: 0 @offset;
+        margin-left: @offset;
+        display: inline-block;
+        border-left: 1px solid @gray-lighter;
+    }
+}
+
+.big-button(@color, @bg_color) {
+    background-color: @bg_color;    
+    color: @color;
+    outline: 0;
+    outline-offset: 0;
+    display: inline-block;
+    width: auto;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    .vendor(touch-action, manipulation);
+    cursor: pointer;
+    .vendor(user-select, none);
+    background-image: none;
+    margin: 0;
+    text-decoration: none;
+    box-shadow: none;
+    padding: 0 50px !important;
+    border: none;
+    border-radius: 4px !important;
+    position: relative;
+    line-height: @input-height * 1.5;
+    &:focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+}
+
+.button(@color, @bg_color) {
+    font-weight: 600;
+    font-size: @font-size-small;
+    background-color: @bg_color;    
+    color: @color;
+    outline: 0;
+    outline-offset: 0;
+    display: inline-block;
+    width: auto;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    .vendor(touch-action, manipulation);
+    cursor: pointer;
+    .vendor(user-select, none);
+    background-image: none;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: none;
+    padding: 0 30px;
+    border: none;
+    border-radius: @input-height / 2;
+    position: relative;
+    line-height: @input-height;
+    &:focus {
+        outline: 0;
+        outline-offset: 0;
+    }
+}
+
+.solid-hover-button(@color, @bg_color) {
+    .button(@color, transparent);
+    border: 1px solid @color;    
+    line-height: @input-height - 2px;
+    .vendor(transition, all .3s);
+    &:hover, &:focus {
+        color: @white-lighter;
+        background-color: @bg_color;
+        border: 1px solid @bg_color;
+    }
+}
+
+.hover-button(@color, @bg_color) {
+    .button(@color, transparent);
+    border: 1px solid @color;
+    line-height: @input-height - 2px;
+    .vendor(transition, all .3s);
+    &:hover, &:focus {
+        color: @bg_color;
+        border: 1px solid @bg_color;
+    }
+}
+
+.container-width() {
+    @media (min-width: 768px) {
+        max-width: 750px !important;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 970px !important;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1170px !important;
+    }
+}
+
+.container() {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;    
+    @media (max-width: 768px) {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+    }
+    .container-width();
+}
+
+.table(@padding) {
+    border-spacing: 0;
+    table-layout: auto;
+    width: 100%;
+    text-align: left;
+    border: 1px solid @gray-lighter;
+    background-color: @white-lighter;
+    caption {
+        margin-bottom: 20px;
+        color: @black;
+        line-height: 1;
+        text-transform: uppercase;
+        font-size: @font-size-base;
+        background-color: @white-darker;
+    }
+    font-size: @font-size-base;
+    thead {
+        background-color: @white-darker;
+        color: @black;
+        border: 1px solid @gray-lighter;
+        font-weight: 600;
+        tr {
+            th, td {
+                padding: @padding;
+            }
+        }
+    }
+    tr {
+        border-top: 1px solid @gray-lighter;
+        td, th {
+            border-right: 1px solid @gray-lighter;
+        }
+    }
+    tbody {
+        tr {
+            th, td {
+                padding: @padding;
+                vertical-align: middle;
+                a {                                
+
+                }
+            }
+        }
+    }
+    tfoot {
+        tr {
+            th, td {
+                padding: @padding;
+                a {
+                    color: @brand-color;
+                }
+            }
+        }
+    }
+}
+
+.social-bg-colors() {
+    color: @gray-light;
+    border-radius: @border-radius;
+    background-color: transparent;
+    border: 1px solid @gray-lighter;
+    text-align: center;
+    vertical-align: middle;
+    .vendor(transition, all 250ms);
+    &:hover {
+        background-color: @accent-1-color;
+        color: @white-lighter;
+        border-color: @accent-1-color;
+    }
+}
+
+
+.control() {
+    background-color: @white-lighter;
+    display: block;
+    width: 100%;
+    height: @input-height;
+    border: 1px solid @gray-lighter;
+    background-image: none;
+    box-shadow: none;
+    color: @black;
+    box-sizing: border-box;
+    padding: @input-padding;
+    font-weight: 300;
+    font-size: 14px;
+    border-radius: @border-radius;
+    font-family: 'Open Sans', sans-serif;
+    .placeholder(color, @black-lighter);
+    &:focus {
+        .vendor(outline, none);
+    }
+}
+
+.placeholder(@property, @value) when (isstring(@value) = false) {
+    &:placeholder {
+        @{property}: @value;
+    }
+    &::placeholder {
+        @{property}: @value;
+    }
+    &::-webkit-input-placeholder {
+        @{property}: @value;
+    }
+    &::-moz-placeholder {
+        @{property}: @value;
+    }
+    &:-moz-placeholder {
+        @{property}: @value;
+    }
+    &:-ms-input-placeholder {
+        @{property}: @value;
+    }     
+}
+
+.placeholder(@property, @value) when (isstring(@value) = true) {
+    &:placeholder {
+        @{property}: e(@value);
+    }
+    &::placeholder {
+        @{property}: e(@value);
+    }
+    &::-webkit-input-placeholder {
+        @{property}: e(@value);
+    }
+    &::-moz-placeholder {
+        @{property}: e(@value);
+    }
+    &:-moz-placeholder {
+        @{property}: e(@value);
+    }
+    &:-ms-input-placeholder {
+        @{property}: e(@value);
+    }     
+}
+
+.star-rating(@top, @left, @font-size) {
+    // overflow: hidden;
+    position: relative;
+    height: @font-size * 1.5;
+    line-height: @font-size * 1.5px;
+    width: @font-size * 5.8;
+    vertical-align: middle;
+    font-size: 0;
+    color: transparent;
+    span {
+        overflow: hidden;
+        top: @top;
+        left: @left;
+        position: absolute;
+        // padding-top: @font-size * 1.5;
+        &:before {
+            font-size: @font-size;
+            content: "\f005\00a0\f005\00a0\f005\00a0\f005\00a0\f005";
+            position: absolute;
+            font-family: FontAwesome;
+            top: 0;
+            left: 0;
+            color: @star-rating-color;
+        }
+    }
+    &::before {
+        font-size: @font-size;
+        content: "\f006\00a0\f006\00a0\f006\00a0\f006\00a0\f006";
+        color: @star-rating-color;
+        font-family: FontAwesome;
+        top: @top;
+        left: @left;
+        position: absolute;
+    }    
+}
+
+.star-rating:not(.mark):not(.review) {
+    .star-rating(0, 0, @font-size-base + 1);
+}
+
+
+.widget-title() {
+    .widget-title {
+        h3 {
+            margin: 0 0 20px;
+            font-weight: 600;
+            font-size: @font-size-small;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.small-button(@text-color, @bg-color, @hover-color) {
+    display: inline-block;
+    background-color: @bg-color;
+    color: @text-color;
+    line-height: @input-height;
+    height: @input-height;
+    font-weight: 400;
+    font-size: 14px;
+    padding: @input-padding;
+    border-radius: @border-radius;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    .vendor(transition, all 0.2s ease);
+    &:hover {
+        background-color: @hover-color;
+        color: @white-lighter;
+    }
+}
+.border-button(@color, @hover-color) {
+    color: @color;
+    line-height: @input-height - 4px;
+    height: @input-height;
+    font-size: @font-size-base;
+    background-color: transparent;
+    border-radius: @border-radius;
+    border: 2px dashed @color;
+    padding: @input-padding;
+    display: inline-block;
+    text-align: center;
+    font-weight: 300;
+    box-sizing: border-box;
+    &:hover, &:active {
+        background-color: @hover-color;
+        border-color: @hover-color;
+        color: @white-lighter;
+    }
+}
+
+.scroll-down(@color, @bg-color, @white-darker) {
+    width: 36px;
+    height: 36px;
+    border-radius: @border-radius;
+    background-color: @bg-color;
+    border: 1px solid @white-darker;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    z-index: 1;
+    .vendor(transform, translateX(-50%) rotate(45deg));
+    &::before {
+        content: "\f107";
+        font-family: FontAwesome;
+        line-height: 36px;
+        display: inline-block;
+        color: @color;
+        .vendor(transform, rotate(-45deg));
+        font-size: 22px;
+    }
+}
+
+.tag-elements() {
+    font-size: 0;
+    a, div:not(.widget-title):not(.tagcloud) {
+        display: inline-block;
+        margin: 0 7px 7px 0;
+        padding: 6px 15px;
+        line-height: 1;
+        color: @black;
+        font-size: @font-size-small !important;
+        font-weight: 400;
+        background-color: @white-darker;
+        cursor: pointer;
+        &:hover {
+            color: @brand-color;
+        }
+    }
+}
+
+
+.social(@size, @font-size, @margin) {
+    display: inline-block;
+    width: @size;
+    height: @size;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    margin: @margin;
+    i.fa {
+        display: block;
+        line-height: @size;
+        color: @white-lighter;
+        font-size: @font-size;
+        background-color: @brand-color;
+    }
+}
+
+.meta-field-taxonomy() {
+    .meta-field, .taxonomy {
+        display: block;
+        line-height: 1.5;
+        padding: 4px 0;
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        &.empty {
+            display: none;
+        }
+        img {
+            height: auto;
+            width: 100%;
+            margin-right: 10px;
+            max-width: 10px;
+            max-height: 10px;
+            display: inline-block;
+            float: left;
+            margin-top: 6px;
+        }
+        label, .value, .links, img {
+            vertical-align: middle;
+        }
+        label {
+            margin-bottom: 0;
+            float: left;
+            width: 90px;
+        }
+        label {
+            + .value, + .links {
+                float: right;
+                width: calc(~"100% - 120px");
+            }
+        }
+        .value, .links {
+            float: left;
+            width: calc(~"100% - 20px");
+        }
+        .star-rating {
+            display: inline-block;
+        }
+    }
+}
+
+.ribbed() {
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 5px;
+        z-index: 3;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAFCAYAAABxeg0vAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGZJREFUeNpi/P//PwMy+PvnFw+QWgjET4G4gpmF7RuKApAGGP7z+6cSEF8C4v9QfAeIbZHVICt2BOLXSIph+C8Q9wMxF0gdI4gAOiMLaNkEIGZlwA1uA3ESI1DnUiAjioE48A8gwABE92fYusK+KwAAAABJRU5ErkJggg==') left bottom repeat-x;
+    }
+}
+
+.light-button() {
+    color: @brand-color;
+    background-color: @white;
+    border: 1px solid @gray-lighter;
+    border-radius: @border-radius;
+    padding: 0 20px;
+    line-height: 30px;
+    height: 30px;
+    font-weight: 600;
+}

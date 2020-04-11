@@ -1,0 +1,10 @@
+.pw-map {
+	height: 400px;
+	width: 100%;
+	margin-top: 5px;
+	border: solid 1px #DDD;
+	box-sizing: border-box;
+}
+.pw-map img {
+	max-width: none;
+}

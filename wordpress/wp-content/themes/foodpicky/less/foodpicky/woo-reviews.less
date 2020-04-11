@@ -1,0 +1,253 @@
+@import "variables.less";
+
+#reviews {
+    background-color: @white;
+    border-radius: @border-radius;
+    border: 1px solid @gray-lighter;
+    padding: 20px;
+    #comments {
+        margin: 0;
+        padding: 0;
+        h2 {
+            margin: 0;
+            font-size: @font-size-large + 2px;
+            font-weight: 600;
+        }
+        > p {
+        }
+        ol.commentlist {
+            li {
+                .comment_container {
+                    background-color: @white-lighter;
+                    border: 1px solid @gray-lighter;
+                    padding: 10px 20px 15px;
+                    border-radius: @border-radius;
+                    margin: 20px 0;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;                       
+                        float: left;
+                        margin-right: 25px;
+                        display: none;
+                    }
+                    .comment-text {
+                        position: relative;
+                        width: 100%;
+                        .vendor(display, flex);
+                        .vendor(flex-wrap, wrap);
+                        .vendor(justify-content, space-between);
+                        .meta {
+                            order: 0;
+                            margin: 0;
+                            overflow: hidden;
+                            strong {
+                                font-weight: 600;
+                                font-style: normal;
+                                margin-right: 10px;
+                                color: @black;
+                                line-height: 1;
+                            }
+                            time {
+                                margin-right: 10px;
+                                line-height: 1;
+                            }
+                        }
+                        .ratings {
+                            order: 1;
+                            margin: 0;
+                            .star-rating {
+                                display: inline-block;
+                                vertical-align: top;
+                                .star-rating(0, 0, @font-size-large);
+                                width: auto !important;
+                                &::before {
+                                    position: static;
+                                }
+                            }
+                        }
+                        .description {
+                            order: 2;
+                            margin: 15px 0 0;
+                            width: 100%;
+                            p:last-child {
+                                margin: 0;
+                            }
+                        }
+                        .like {
+                            position: absolute;
+                            top: 100%;
+                            right: 20%;
+                            font-weight: 300;
+                            line-height: 1em;
+                            .like(@accent-1-color);
+                        }
+                    }
+                    &::after {
+                        content:"";
+                        display:table;
+                        clear:both;
+                    }
+                }
+            }
+        }
+    }
+    #review_form_wrapper {
+        #review_form {
+            label {
+                margin-bottom: 0;
+                text-transform: capitalize;
+            }
+            .comment-reply-title {
+                display: none;
+            }
+            #commentform {
+                position: relative;
+                overflow: hidden;
+                input {
+                    box-sizing: border-box;
+                }
+                .review-fields {
+                }
+                .comment-form-author {
+                    float: left;
+                    width: 50%;
+                    padding-right: 15px;
+                    box-sizing: border-box;
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                }
+                .comment-form-email {
+                    float: left;
+                    width: 50%;
+                    padding-left: 15px;
+                    box-sizing: border-box;
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                }
+                .comment-form-rating {
+                    float: left;
+                    margin-top: 0;
+                    margin-bottom: 25px;
+                }
+                .comment-form-rating, .comment-form-mark, .comment-form-comment {
+                    width: 100%;
+                }
+                .comment-form-rating, .comment-form-mark {
+                    margin-bottom: 15px;
+                    label {
+                        float: left;
+                        margin-right: 15px;
+                        font-weight: 400;
+                        margin-top: 2px;
+                    }
+                    &::after {
+                        content: '';
+                        clear: both;
+                        display: table;
+                    }
+                    .stars {
+                        margin: 0;
+                        float: left;
+                        span {
+                            a {
+                                display: inline-block;
+                                margin-right: 0;
+                                text-indent: -9999px;
+                                position: relative;
+                                border-bottom: 0!important;
+                                outline: 0;
+                                border: none;
+                                font-size: @font-size-large;
+                                &.star-1, &.star-2, &.star-3, &.star-4, &.star-5{
+                                    &::after {
+                                        text-indent: 0;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        font-family: FontAwesome;
+                                        font-weight: 400;
+                                        color: @star-rating-color;
+                                    }
+                                    &.active::after {
+                                        color: @star-rating-color;
+                                    }                                
+                                }                              
+                                &.star-1 {
+                                    width: 1.5em;
+                                    &::after {
+                                        content: "\f006";
+                                    }
+                                    &.active::after {
+                                        content: "\f005";
+                                    }
+                                }
+                                &.star-2 {
+                                    width: 2.5em;
+                                    &::after {
+                                        content: "\f006\f006";
+                                    }
+                                    &.active::after {
+                                        content: "\f005\f005";
+                                    }
+                                }
+                                &.star-3 {
+                                    width: 3.5em;
+                                    &::after {
+                                        content: "\f006\f006\f006";
+                                    }
+                                    &.active::after {
+                                        content: "\f005\f005\f005";
+                                    }
+                                }
+                                &.star-4 {
+                                    width: 4.5em;
+                                    &::after {
+                                        content: "\f006\f006\f006\f006";
+                                    }
+                                    &.active::after {
+                                        content: "\f005\f005\f005\f005";
+                                    }
+                                }
+                                &.star-5 {
+                                    width: 5.5em;
+                                    &::after {
+                                        content: "\f006\f006\f006\f006\f006";
+                                    }
+                                    &.active::after {
+                                        content: "\f005\f005\f005\f005\f005";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .comment-form-comment {
+                    margin: 0;
+                    textarea {
+                        padding: 15px;
+                    }
+                }
+                .form-submit {     
+                    margin: 20px 0 0;               
+                }
+            }
+            .social_connect_ui  {
+                .comment-form-social-connect {
+                    margin: 0;
+                }
+            }        
+        }
+        @media (max-width: 480px) {
+            padding: 0 20px 15px;
+        }
+    }
+}
+.woocommerce-Tabs-panel--reviews {
+    #review_form_wrapper {
+        margin: 0 -40px -25px;
+        @media (max-width: 480px) {
+            margin: 0 -20px -15px;
+        }
+    }
+}

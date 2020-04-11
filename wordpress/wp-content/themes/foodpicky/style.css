@@ -1,0 +1,138 @@
+/*
+Theme Name: Foodpicky
+Theme URI: http://www.azexo.com/foodpicky
+Version: 1.27
+Author: AZEXO
+Author URI: http://www.azexo.com
+Text Domain: foodpicky
+Description: Food Delivery Restaurant Directory
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+
+/*------------------------------------------------------------------
+
+CONTENTS
+All less files compiled automatically via WP Less library
+
+1. less/foodpicky/variables.less - less variables
+2. less/foodpicky/general.less - main layout
+3. less/foodpicky/typography.less - typography and base HTML/WP tags
+4. less/foodpicky/comments.less - WP comments
+5. less/foodpicky/post.less - WP post
+6. less/foodpicky/header.less - WP header
+7. less/foodpicky/menu.less - WP site menu
+8. less/foodpicky/pagination.less - WP pagination
+9. less/foodpicky/sidebar.less - WP sidebars
+10. less/foodpicky/widgets.less - WP widgets
+11. less/foodpicky/archive.less - WP archive page title
+12. less/foodpicky/templates.less - various post templates
+13. less/foodpicky/helpers.less - reusable classes
+14. less/foodpicky/visual-composer.less - visual composer shortcodes
+15. less/foodpicky/like.less - post like feature
+16. less/foodpicky/content.less - styles to use it inside post content
+17. less/foodpicky/woo-cart.less - WooCommerce cart page
+18. less/foodpicky/woo-checkout.less - WooCommerce checkout page
+19. less/foodpicky/woocommerce.less - WooCommerce general styles
+20. less/foodpicky/woo-product.less - WooCommerce single product page
+21. less/foodpicky/woo-reviews.less - WooCommerce reviews
+22. less/foodpicky/woo-templates.less - WooCommerce product templates
+23. less/foodpicky/woo-widgets.less - WooCommerce widgets
+
+-------------------------------------------------------------------*/
+
+.wp-caption { 
+    width: auto;
+}
+
+.wp-caption .wp-caption-text { 
+    font-weight: 600;
+}
+
+.wp-caption img { 
+}
+
+.gallery-caption { 
+    font-weight: 600;
+}
+
+.bypostauthor {
+    font-weight: 600;
+}
+
+.sticky {
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+body {
+	background-image: url(images/foodpicky/body-pattern.jpg);
+	background-repeat: repeat;
+	background-position: top left;
+}
+
+#masthead, #colophon {
+	background-image: url(images/foodpicky/dark-pattern.jpg);
+	background-repeat: repeat;
+	background-position: top left;
+}
+
+.site-main {
+	background-image: url(images/foodpicky/list.png);
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: relative;
+}
+
+.site-main::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -15px;
+	height: 16px;
+	background-image: url(images/foodpicky/bottom-pattern.png);
+	background-repeat: repeat-x;
+	background-position: top left;
+}

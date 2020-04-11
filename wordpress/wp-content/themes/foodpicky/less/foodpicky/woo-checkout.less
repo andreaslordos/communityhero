@@ -1,0 +1,147 @@
+@import "variables.less";
+
+#content {
+    form.woocommerce-checkout {
+        .place-order [type="submit"] {
+            float: right;
+            margin-left: 20px;            
+        }
+        #payment {
+            ul.payment_methods {
+                li {
+                    &::before {
+                        content: none;
+                    }
+                    padding: 0;
+                    margin0: 0;
+                }
+            }
+        }
+    }
+}
+
+#payment {
+    ul.payment_methods {
+        text-align: left;
+        padding: 15px 0;
+        border-bottom: 1px solid @white-darker;
+        margin: 0;
+        list-style: none outside;
+
+        li {
+            line-height: 2;
+            text-align: left;
+            margin: 0;
+            font-weight: normal;
+
+            input {
+                margin: 0 1em 0 0;
+            }
+
+            img {
+                vertical-align: middle;
+                margin: -2px 0 0 .5em;
+                padding: 0;
+                position: relative;
+                box-shadow: none;
+            }
+
+            img + img {
+                margin-left: 2px;
+            }
+        }
+        &::after {
+            content:"";
+            display:table;
+            clear:both;
+        }
+    }
+
+    div.form-row {
+        padding: 25px 0;
+    }
+
+    div.payment_box {
+        position: relative;
+        width: 96%;
+        padding: 1em 2%;
+        margin: 1em 0 1em 0;
+        font-size: 0.92em;
+        border-radius: 2px;
+        line-height: 1.5;
+        background-color: @white-darker;
+        color: @black;
+
+        input.input-text, textarea {
+            border-color: darken( @white, 15% );
+            border-top-color: darken( @white, 20% );
+        }
+
+        .placeholder(color, darken( @white, 20% ));
+
+        .wc-credit-card-form-card-number,
+        .wc-credit-card-form-card-expiry,
+        .wc-credit-card-form-card-cvc {
+            font-size: 1.5em;
+            padding: 8px;
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        span.help {
+            font-size: .857em;
+            color: @gray;
+            font-weight: normal;
+        }
+
+        .form-row {
+            margin: 0 0 1em;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            border: 8px solid @white-darker; /* arrow size / color */
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            position: absolute;
+            top: -2px;
+            left: 0;
+            margin: -1em 0 0 2em;
+        }
+    }
+
+    .payment_method_paypal {
+        .about_paypal {
+            float: right;
+            line-height: 52px;
+            font-size: 0.83em;
+            padding-left: 10px;
+        }
+
+        img {
+            max-height: 52px;
+            vertical-align: middle;
+        }
+    }
+    &:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+@media (max-width: 768px) {
+    #payment {
+        .payment_method_paypal {
+            .about_paypal {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SOFT79 Cart Links for WooCommerce\n"
+"POT-Creation-Date: 2015-11-28 14:58+0100\n"
+"PO-Revision-Date: 2017-10-08 12:39+0200\n"
+"Last-Translator: \n"
+"Language-Team: Soft79 <admin@soft79.nl>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: _e;__;_x:1,2c;_n:1,2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: languages\n"
+
+#: soft79-wc-cart-links.php:66
+msgid "Link to this cart:"
+msgstr "Ссылка на эту корзину:"
+
+#: soft79-wc-cart-links.php:136
+#, php-format
+msgid "Unknown product &quot;%d&quot;."
+msgstr "Неизвестный товар &quot;%d&quot;."
+
+#: soft79-wc-cart-links.php:147
+#, php-format
+msgid "Can not add %d &quot;%s&quot; because it is not available."
+msgstr "Невозможно добавить %d &quot;%s&quot;, так как этот товар закончился."
+
+#: soft79-wc-cart-links.php:150
+#, php-format
+msgid ""
+"Reduced quantity of &quot;%s&quot; from %d to %d because there's not enough "
+"stock."
+msgstr ""
+"Добавлено меньше &quot;%s&quot; не %d, а %d, так как недостаточно этого "
+"товара на складе."
+
+#: soft79-wc-cart-links.php:179
+msgid "Something went wrong populating your cart:"
+msgstr "Что-то пошло не так при заполнении корзины:"

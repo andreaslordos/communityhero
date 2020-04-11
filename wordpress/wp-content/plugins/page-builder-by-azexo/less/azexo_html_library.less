@@ -1,0 +1,411 @@
+body.azexo-html-library {
+    background: white;
+}
+
+#azexo-html-library {
+    margin: 50px 0 500px 0;    
+}
+
+.azh-structure {
+    position: fixed !important;
+    right: 50px;
+    top: 50px;
+    padding: 40px 20px 20px 20px;
+    min-width: 250px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);    
+    z-index: 2;
+    text-align: center;
+    max-width: 250px;
+}
+
+.azh-structure .azh-sections {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.azh-structure button ~ .azh-sections {
+    height: ~"calc(100% - 60px)";
+}
+
+.azh-structure button ~ button ~ .azh-sections {
+    height: ~"calc(100% - 120px)";
+}
+
+.azh-structure .azh-section {
+    width: 100% !important;
+    cursor: move;
+    display: block;    
+}
+
+.azh-structure .azh-section:last-child {
+    margin: 0;
+}
+
+
+.azh-structure button {
+    background-color: green;
+    border: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0 0 20px 0;
+    display: none;
+    text-transform: uppercase;
+}
+
+
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block;}
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}
+
+.azh-handle {
+    cursor: move;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 20px;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    background-size: 3px 3px;
+}
+
+.ui-sortable-helper {
+}
+
+
+.azh-placeholder {
+    background-image: 
+        -webkit-repeating-linear-gradient(45deg,
+        rgba(0,0,0,0.1) 0px, 
+        rgba(0,0,0,0.1) 5px, 
+        transparent 5px, 
+        transparent 10px);
+    background-image: 
+        repeating-linear-gradient(45deg,
+        rgba(0,0,0,0.1) 0px, 
+        rgba(0,0,0,0.1) 5px, 
+        transparent 5px, 
+        transparent 10px);
+}
+
+.azh-counter {
+    margin-top: 10px;
+}
+
+.azh-section {
+    margin-bottom: 20px;
+    width: ~"calc( (100% - (20px * (5 - 1) ) - 0.1px) / 5 )" !important;
+    /*height: 100px !important;*/
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: none !important;
+    text-align: center;
+    box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.azh-section img {
+    max-width: 100%;
+    max-height: 200px;
+    margin: auto;
+}
+
+.azh-section.no-image {
+    padding: 20px;
+}
+.azh-section.no-image img {
+    display: none;
+}
+
+.azh-section.no-image div {
+    display: block;        
+}
+
+@media (max-width: 992px) {
+    .azh-section {
+        width: ~"calc( (100% - (20px * (3 - 1) ) - 0.1px) / 3 )" !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .azh-section {
+        width: ~"calc( (100% - (20px * (2 - 1) ) - 0.1px) / 2 )" !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .azh-section {
+        width: 100%;
+    }
+}
+
+
+.azh-element {
+    margin-bottom: 20px;
+    width: ~"calc( (100% - (20px * (5 - 1) ) - 0.1px) / 5 )" !important;
+    height: 100px !important;
+    display: inline-block;
+    vertical-align: top;
+    background-color: white;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.azh-element.no-image {
+    padding: 20px;
+}
+
+@media (max-width: 992px) {
+    .azh-element {
+        width: ~"calc( (100% - (20px * (3 - 1) ) - 0.1px) / 3 )" !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .azh-element {
+        width: ~"calc( (100% - (20px * (2 - 1) ) - 0.1px) / 2 )" !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .azh-element {
+        width: 100%;
+    }
+}
+
+
+.azh-section div, .azh-element div {
+    display: none;
+}
+
+
+
+.azh-hover {
+    pointer-events: none;
+    position: fixed;
+    z-index: 100000;        
+    background-color: white;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+    transform-origin: left top;
+    transform: scale(0.3);
+}
+
+.azh-loading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+}
+
+.azh-spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }    
+}
+
+@-webkit-keyframes spin {
+    to { transform: rotate(360deg); }    
+}
+
+.azh-spinner::before {
+    display: block;
+    font-family: FontAwesome;
+    font-size: 500px;
+    color: whitesmoke;
+    content: "\f021";    
+    animation: spin 1s infinite linear;
+}
+
+.azh-hover iframe {
+    border: 0;
+    width: 2000px !important;
+    height: 1500px !important;  
+    margin: 0;
+    max-width: none;
+}
+
+#sections:not(:checked) ~ .azh-library .azh-sections, #sections:not(:checked) ~ .azh-library .azh-library-filters {
+    display: none !important;
+}
+
+#sections:checked ~ .azh-library .azh-sections, #sections:checked ~ .azh-library .azh-library-filters {
+    display: block !important;
+}
+
+#elements:not(:checked) ~ .azh-library .azh-elements, #elements:not(:checked) ~ .azh-library .azh-elements-filters {
+    display: none !important;
+}
+
+#elements:checked  ~ .azh-library .azh-elements, #elements:checked ~ .azh-library .azh-elements-filters {
+    display: block !important;
+}
+
+.sections-elements {
+    border-bottom: 1px solid whitesmoke;
+    text-align: center;
+    word-spacing: 10px;
+}
+.sections-elements label{
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid whitesmoke;
+    background-color: white;
+    padding: 25px 40px;
+    line-height: 1;
+    font-size: 20px;
+    color: lightgray;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: -1px;
+}
+
+#sections:checked ~ .sections-elements label[for="sections"] {
+    color: black;    
+    border-bottom: 1px solid transparent;
+}
+#elements:checked ~ .sections-elements label[for="elements"] {
+    color: black;    
+    border-bottom: 1px solid transparent;
+}
+
+.azh-library-filters, .azh-elements-filters {
+    text-align: center;
+    margin: 30px 0;    
+}
+
+.azh-library select {
+    background-color: white;    
+    border: 1px solid whitesmoke;       
+    padding: 10px 20px;
+    line-height: 1;
+    font-size: 20px;
+    color: black;
+    font-weight: 400;
+    margin: 0;    
+    text-transform: uppercase;
+    display: inline-block;
+    width: 300px;
+}
+
+
+.azh-center {
+    margin-top: 50vh; 
+    transform: translate(0, -50%);
+}
+
+.azh-variations { 
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    padding: 20px;
+    min-width: 250px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    max-width: 250px;
+    .azh-variation { 
+        line-height: 30px;
+        span {
+            display: inline-block;        
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+    }
+}
+
+input[type="checkbox"] {
+    position: absolute; 
+    clip: rect(0, 0, 0, 0);
+    + .azh-checkbox {
+        position: relative;
+        transition: all 0.4s ease-in-out;
+        background-color: #ddd;
+        display: inline-block;
+        vertical-align: middle;
+        height: 20px;
+        width: 35px;
+        border-radius: 10px;
+        label {
+            position: absolute;                                    
+            cursor: pointer;
+            display: block;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            &::before {
+                content: "";
+                position: absolute;  
+                background-color: white;
+                display: inline-block;
+                transition: all 0.2s ease-in-out;
+                border-radius: 10px;
+                height: 16px;
+                width: 16px;
+                top: 2px; 
+                left: 2px;
+            }
+        }
+    }
+    &:checked + .azh-checkbox {
+        background-color: blueviolet;
+        label::before {
+            left: 17px;
+        }                                    
+    }
+}
+
+.azexo-html-library[data-inverted-styles="true"] {
+    background-color: #222;
+    [data-full-width][style*="linear-gradient"], [data-full-width][class*="linear-gradient"] { 
+        background-image: none !important;
+    }
+    .azen-background-inverted[data-inverted-styles="true"] {
+        background-color: #222 !important;
+        background-image: none !important;
+        border: 0 !important;
+    }
+    [data-inverted-styles="true"] {
+        background-color: #222;
+        .az-shape-top svg, .az-shape-bottom svg {
+            display: none;
+        }
+        .azen-elastic-linear-gradient {
+            background-image: none;
+        }
+    }
+}
+

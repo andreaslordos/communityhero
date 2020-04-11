@@ -1,0 +1,51 @@
+@import "variables.less";
+
+.loop-pagination() {
+    span.current, span.dots, a {
+        display: inline-block;
+        margin: 0 5px 0 0;
+        width: 40px;
+        text-align: center;
+        color: @black;
+        line-height: 40px;
+        height: 40px;
+        background-color: @white-lighter;
+        border: 1px solid @gray-lighter;
+        border-radius: @border-radius;
+        &.prev, &.next {
+            span {
+                display: none;
+            }         
+            i {
+                &::before {
+                    font-size: 16px;
+                    font-family: FontAwesome;
+                }
+            }
+        }
+        &.prev {
+            i {
+                &::before {
+                    content: "\f104";
+                }
+            }
+        }
+        &.next {
+            margin-right: 0;
+           i {
+               &::before {
+                   content: "\f105";
+               }
+           }
+        }
+    }
+    span.current, a:hover {
+        color: @brand-color;
+    }
+}
+
+nav.paging-navigation {
+    .loop-pagination {
+        .loop-pagination();
+    }
+}

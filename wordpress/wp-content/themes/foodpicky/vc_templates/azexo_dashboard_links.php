@@ -1,0 +1,28 @@
+<?php
+
+if (function_exists('vc_map_get_attributes')) {
+    $atts = vc_map_get_attributes($this->getShortcode(), $atts);
+}
+
+$output = $el_class = '';
+extract(shortcode_atts(array(
+    'el_class' => '',
+                ), $atts));
+extract($atts);
+
+
+$output = '<div class="azexo_dashboard_links wpb_content_element' . esc_attr($el_class) . '">';
+$type = 'AZEXO_Dashboard_Links';
+$args = array();
+global $wp_widget_factory, $azexo_dashboard_links;
+$azexo_dashboard_links = true;
+// to avoid unwanted warnings let's check before using widget
+if (is_object($wp_widget_factory) && isset($wp_widget_factory->widgets, $wp_widget_factory->widgets[$type])) {
+    ob_start();
+    the_widget($type, $atts, $args);
+    $output .= ob_get_clean();
+
+    $output .= '</div>';
+
+    print $output;
+}

@@ -1,0 +1,55 @@
+@import "variables.less";
+
+.ui-tabs {
+    ul.ui-tabs-nav {
+        margin-bottom: 40px;
+        li {
+            margin: 0;
+            display: inline-block;
+            border: 1px solid @white-darker;
+            border-right-width: 0; 
+            &:first-child {
+                border-radius: @input-border-radius 0 0 @input-border-radius;
+            }
+            &:last-child {
+                border-radius: 0 @input-border-radius @input-border-radius 0;
+                border-right-width: 1px;
+            }
+            a {
+                color: @gray-darker;
+                padding-left: 45px;
+                padding-right: 45px;
+                text-align: center;
+                display: block;
+                height: @input-height;
+                line-height: @input-height;
+                font-weight: 500;
+                font-size: @font-size-base;
+                text-transform: none;
+                .icon {
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+            &.ui-state-active {                                     
+                background-color: @brand-color;
+                border-color: @brand-color;
+                a {
+                    color: @white-lighter;
+                }                          
+            }
+            p {
+                display: none;
+            }
+            @media (max-width: 768px) {
+                display: block;
+                margin-bottom: 10px;
+                border-radius: @input-height + 5px !important;
+                border-right: 1px solid @white-darker;
+                a {
+                    display: block;
+                }
+            }
+        }
+    } 
+}

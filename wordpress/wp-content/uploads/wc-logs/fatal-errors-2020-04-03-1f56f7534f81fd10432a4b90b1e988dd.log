@@ -1,0 +1,11 @@
+2020-04-03T23:49:00+00:00 CRITICAL Uncaught UnexpectedValueException: RecursiveDirectoryIterator::__construct(/var/www/html/wordpress/wp-content/uploads/wp-less): failed to open dir: No such file or directory in /var/www/html/wordpress/wp-content/plugins/wp-less/lib/Garbagecollector.class.php:47
+Stack trace:
+#0 /var/www/html/wordpress/wp-content/plugins/wp-less/lib/Garbagecollector.class.php(47): RecursiveDirectoryIterator->__construct('/var/www/html/w...')
+#1 /var/www/html/wordpress/wp-content/plugins/wp-less/lib/Garbagecollector.class.php(28): WPLessGarbagecollector->getOutdatedFiles(432000)
+#2 /var/www/html/wordpress/wp-includes/class-wp-hook.php(287): WPLessGarbagecollector->clean()
+#3 /var/www/html/wordpress/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#4 /var/www/html/wordpress/wp-includes/plugin.php(544): WP_Hook->do_action(Array)
+#5 /var/www/html/wordpress/wp-cron.php(138): do_action_ref_array('wp-less-garbage...', Array)
+#6 {main}
+  thrown in /var/www/html/wordpress/wp-content/plugins/wp-less/lib/Garbagecollector.class.php on line 47
+

@@ -1,0 +1,35 @@
+.availability-calendar {
+    margin: 0 -15px;
+}
+
+.availability-calendar::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.availability-calendar .calendar, .availability-calendar .day-data {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .availability-calendar .calendar {
+        margin-bottom: 20px;
+    }
+    .availability-calendar .calendar, .availability-calendar .day-data {
+        float: none;
+        width: 100%;
+    }
+}
+
+.ui-tooltip {
+    padding: 8px;
+    position: absolute;
+    z-index: 9999;
+    max-width: 300px;
+    background-color: white;
+    border: 1px solid lightgrey;
+}

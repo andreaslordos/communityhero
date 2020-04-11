@@ -1,0 +1,316 @@
+
+/***** TABS & SECTIONS ******
+****************************/
+.thpladmin-tabs a{
+    font-size: 16px;
+}
+.thpladmin-sections {
+    list-style: outside none none;
+    margin: 8px 0 0;
+    padding: 0;
+    font-size: 15px;
+    color: #666;
+}
+.thpladmin-sections li {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    white-space: nowrap;
+}
+.thpladmin-sections a {
+    line-height: 2;
+    padding: 0.2em;
+    text-decoration: none;
+}
+.thpladmin-sections a.current {
+    font-weight: 600;
+    border: medium none;
+    color: #000;
+}
+
+/***** FIELDS TABLE ******
+*************************/
+.err_msgs{
+    color: #FF0000;
+}
+
+table.thpladmin_fields_table{
+    position: relative;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    border-spacing: 0;
+    width: 100%;
+    clear: both;
+    margin: 0;
+}
+
+table.thpladmin_fields_table thead th,
+table.thpladmin_fields_table tfoot th {
+    color: #32373c;
+    font-weight: 400;
+    text-align: left;
+    font-size: 14px;
+}
+table.thpladmin_fields_table thead th {
+    border-bottom: 1px solid #e1e1e1;
+    border-bottom-color: rgb(225, 225, 225);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.thpladmin_fields_table tfoot td, 
+.thpladmin_fields_table tfoot th {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: none;
+}
+
+table.thpladmin_fields_table td{
+    color: #555;
+}
+table.thpladmin_fields_table tr:nth-child(2n+1) td{
+    background: #f9f9f9;
+}
+
+table.thpladmin_fields_table td, 
+table.thpladmin_fields_table th{
+    display: table-cell !important;
+    padding: 13px !important;
+    vertical-align: top;
+    line-height: 22px;
+}
+
+table.thpladmin_fields_table thead th.status,
+table.thpladmin_fields_table tfoot th.status,
+table.thpladmin_fields_table tbody td.status {
+    text-align: center;
+}
+
+table.thpladmin_fields_table td.sort{
+    cursor: move;
+    font-size: 20px !important;
+    padding: 13px !important;
+    text-align: center;
+}
+table.thpladmin_fields_table td.sort::before{
+    content: '\f333';
+    font-family: Dashicons;
+    text-align: center;
+    line-height: 1;
+    color: #999;
+    display: block;
+    width: 17px;
+    float: left;
+    height: 100%;
+    line-height: 24px;
+}
+
+table.thpladmin_fields_table td.action{
+    padding: 10px 12px !important;
+}
+table.thpladmin_fields_table td.action .action-btn{
+    padding: 2px 4px;
+    line-height: 15px;
+    height: 22px;
+    /*background-color: #f7f7f7;*/
+}
+
+table.thpladmin_fields_table tr.thpladmin-strikeout td {
+    background: rgba(255, 0, 0, .4)!important;
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+table.thpladmin_fields_table tr.thpladmin-disabled td {
+    opacity: 0.4;
+}
+table.thpladmin_fields_table tr.thpladmin-disabled td.td_select {
+    opacity: 1;
+}
+
+.thpladmin-dynamic-row-table .action-cell{
+    width: 30px;
+    text-align: center;
+}
+.thpladmin-dynamic-row-table .action-cell a.btn{
+    background-color:#00A0D2;
+    border:1px solid #0073AA;
+    color:#FFFFFF;
+    padding:2px 5px;  
+    border-radius: 3px;
+    font-size:12px;
+    text-decoration:none;
+}
+.thpladmin-dynamic-row-table .action-cell a.btn-blue{
+    background-color:#00A0D2;
+    border:1px solid #0073AA;
+}
+.thpladmin-dynamic-row-table .action-cell a.btn-red{
+    background-color:#ff6666;
+    border:1px solid #ff4c4c;
+}
+
+.thpladmin-dynamic-row-table .action-cell a.dashicons{
+    line-height: inherit;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 #ccc;
+}
+.thpladmin-dynamic-row-table .action-cell a.dashicons-plus{
+    background-color:#00A0D2;
+    border:1px solid #0073AA;
+}
+.thpladmin-dynamic-row-table .action-cell a.dashicons-no-alt{
+    background-color:#ff6666;
+    border:1px solid #ff4c4c;
+}
+
+/***** PREMIUM NOTICE ******
+****************************/
+.thpladmin-notice a {
+    display:block;
+    padding:0;
+    height: 63px;
+}
+.thpladmin-notice p {
+    margin-bottom:0px;
+}
+.thpladmin-notice ul {
+    list-style-type: none;
+  margin: 0px;
+}
+.thpladmin-notice ul li {
+    background:url("tick.png") no-repeat 0 50%;
+    padding-left: 20px;
+}
+
+/***** SELECT2 OVERRIDE ******
+****************************/
+.select2-drop-mask {
+    z-index: 99999998!important;
+}
+.select2-drop {
+    z-index: 99999999!important;
+}
+.select2-container {
+    z-index: 99999999!important;
+}
+.select2-container .select2-search--inline .select2-search__field {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.select2-container .select2-search__field{
+    min-width: 0 !important;
+}
+
+
+
+.woocommerce-message {
+  margin-top: 10px;
+}
+#wc_checkout_fields {
+  margin-top: 10px;
+}
+#wc_checkout_fields thead th input {
+  margin: 2px 0 0 0 !important;
+}
+#wc_checkout_fields tbody .description {
+  display: none;
+  color: #999;
+}
+#wc_checkout_fields tbody td {
+  overflow: visible !important;
+  padding: 7px;
+  cursor: move;
+  vertical-align: middle;
+}
+#wc_checkout_fields tbody td:last-child,
+#wc_checkout_fields tbody th:last-child {
+  padding-right: 14px;
+}
+#wc_checkout_fields tbody input.input-text,
+#wc_checkout_fields tbody td select {
+  width: 100%;
+}
+#wc_checkout_fields tfoot .description {
+  color: #999;
+}
+#wc_checkout_fields .check-column {
+  padding: 7px 0 7px 14px;
+}
+#wc_checkout_fields strong.core-field {
+  color: #a4688d;
+}
+#wc_checkout_fields .field-type,
+#wc_checkout_fields .field-options,
+#wc_checkout_fields span.na,
+#wc_checkout_fields .field-validation {
+  text-align: center;
+  color: #aaa;
+}
+#wc_checkout_fields .field-type select,
+#wc_checkout_fields .field-options select,
+#wc_checkout_fields span.na select,
+#wc_checkout_fields .field-validation select,
+#wc_checkout_fields .field-type div,
+#wc_checkout_fields .field-options div,
+#wc_checkout_fields span.na div,
+#wc_checkout_fields .field-validation div,
+#wc_checkout_fields .field-type input,
+#wc_checkout_fields .field-options input,
+#wc_checkout_fields span.na input,
+#wc_checkout_fields .field-validation input {
+  text-align: left;
+}
+#wc_checkout_fields span.na {
+  display: block;
+}
+#wc_checkout_fields .clear {
+  text-align: center;
+}
+#wc_checkout_fields tr.disabled td {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+#wc_checkout_fields tr.disabled td:first-child {
+  opacity:1;
+}
+tr.strikeout1 td:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-bottom: 1px solid #FF0000;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.wcfd_popup_wrapper input[type="text"]:disabled, .wcfd_popup_wrapper select:disabled {
+    background: #f6f6f6;
+}
+
+h1.nav-tab-wrapper, h2.nav-tab-wrapper, h3.nav-tab-wrapper {
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 0px;
+    padding-left: 10px;
+}
+
+.woocommerce_page_checkout_form_designer .ui-dialog {
+    height: auto !important;
+}
+.woocommerce_page_checkout_form_designer .ui-dialog .ui-dialog-title {
+  	line-height: 20px;
+}
+
+
+/*.select2-drop {
+    z-index: 999999!important;
+}*/

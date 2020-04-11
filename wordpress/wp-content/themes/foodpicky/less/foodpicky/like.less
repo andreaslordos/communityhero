@@ -1,0 +1,83 @@
+@import "variables.less";
+
+.like(@color) {
+    .sl-wrapper {
+        > a {
+            border-bottom: 0;
+            text-decoration: none;    
+            color: @color;
+            &.liked {
+                color: @color;
+            }
+            &.liked:hover, &.liked:active, &.liked:focus {
+                color: @color;
+            }
+            .sl-icon {
+                margin-right: 7px !important;
+                svg {
+                    fill: @color;
+                    width: auto;
+                    height: 12px;
+                    vertical-align: middle;
+                }            
+            }
+        }
+        > span {
+            .loader, .loader:before, .loader:after {
+                background: @color;
+                .vendor(animation, load1 1s infinite ease-in-out);
+                width: .2em;
+                height: .6em;
+            }
+            .loader:before, .loader:after {
+                position: absolute;
+                top: 0;
+                content: '';
+            }
+            .loader:before {
+                left: -.375em;
+                .vendor(animation-delay, -0.32s);
+            }
+            .loader {
+                margin-left: 0.3125em;
+                text-indent: -9999em;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                font-size: 1em;
+                .vendor(transform, translateZ(0));
+                .vendor(animation-delay, -0.16s);
+            }
+            .loader:after {
+                left: .375em;
+            }
+            @-webkit-keyframes load1 {
+                0%,
+                80%,
+                100% {
+                    box-shadow: 0 0 @color;
+                    height: .6em;
+                }
+                40% {
+                    box-shadow: 0 -.3em @color;
+                    height: 1em;
+                }
+            }
+            @keyframes load1 {
+                0%,
+                80%,
+                100% {
+                    box-shadow: 0 0 @color;
+                    height: .6em;
+                }
+                40% {
+                    box-shadow: 0 -.3em @color;
+                    height: 1em;
+                }
+            }
+        }
+    }    
+}
+
+
+.like(@black-lighter);

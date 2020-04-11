@@ -1,0 +1,193 @@
+.cmb-form .validation-error {
+    color: red;
+    font-size: 85%;
+}
+
+
+.cmb-form .cmb2-wrap input.cmb2-datepicker {
+    width: 200px;
+    float: left;
+}
+
+.cmb-form .cmb2-wrap input.cmb2-timepicker {
+    width: 100px;
+    float: left;
+    margin-left: 10px;
+}
+
+.cmb-form .cmb2-wrap textarea {
+    width: 100%;
+}
+
+.cmb-form .cmb-field-list .cmb-row {
+    margin-bottom: 20px;
+}
+
+.cmb-form .cmb-row .cmb-th {
+    float: none;
+    padding: 0;
+    width: auto;
+}
+
+.cmb-form .cmb-row .cmb-td {
+    float: none;
+    padding: 0;        
+}
+
+
+.cmb-form .cmb-repeatable-group > .cmb-row{
+    margin: 0;
+}
+
+.cmb-form .cmb-repeatable-group > .cmb-row:first-child {
+    border: none;
+}
+
+
+.cmb-repeatable-group > .cmb-row > .cmb-th{
+    width: auto;
+    float: none;
+}
+
+.cmb-form .cmb-repeat-group-wrap .cmb-repeatable-grouping {
+    padding: 0;
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+.cmb-form .cmb-repeat-group-wrap .cmb-repeatable-grouping .cmb-group-title, .cmb-form .cmb-repeat-group-wrap .cmb-repeatable-grouping .cmbhandle, .cmb-form .cmb-repeat-group-wrap .cmb-repeatable-grouping .cmb-remove-group-row:not(.button) {
+    display: none;
+}    
+
+.cmb-form .cmb-repeatable-grouping .inside .cmb-row {
+    float: left;
+    width: 25%;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cmb-form .cmb-repeatable-grouping .inside::after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.cmb-form .cmb-repeatable-grouping .inside .cmb-row .cmb-th, .cmb-form .cmb-repeatable-grouping .inside .cmb-row .cmb-td{
+    width: auto;
+    float: none;
+}
+
+.wp-editor-container {
+    border: 1px solid #ededed;
+}
+
+
+.cmb-field-list ul.ui-tabs-nav li {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+}
+
+.cmb-field-list ul.ui-tabs-nav li a {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cmb-type-file-list .cmb2-media-status .img-status {
+    margin-bottom: 0;
+}
+
+.azl-map-wrapper {
+    position: relative;
+}
+
+.azl-map-wrapper .controls {
+    position: absolute;
+}
+
+.azl-map {
+    height: 500px;
+}
+
+.map-marker {
+    cursor: pointer;
+}
+
+.map-marker .icon{
+    position: relative;
+    width: 42px;
+    height: 50px;
+}
+
+.map-marker .icon::before{
+    position: absolute;
+    content: '';
+    background-color: white;
+    border-radius: 100%;
+    left: 6px;
+    right: 6px;
+    bottom: 16px;
+    top: 4px;
+    z-index: 0;
+}
+
+.map-marker .icon .cat{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 8px;
+    z-index: 1;
+    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+    -khtml-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+}
+
+#main.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
+
+#main.fixed #primary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    display: block;
+}
+
+#main.fixed #tertiary {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
+#main.fixed #content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.ui-resizable-e {
+    width: 5px;
+    cursor: e-resize;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;    
+}

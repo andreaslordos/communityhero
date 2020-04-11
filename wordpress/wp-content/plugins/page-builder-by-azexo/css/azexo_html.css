@@ -1,0 +1,1000 @@
+.azh-structure {
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+
+.azh-library {
+    padding-right: 5px;
+    margin-top: 10px;    
+}
+
+.azh-library .azh-elements {
+    display: none;
+}
+
+.azh-library-filters, .azh-elements-filters {
+    display: flex;
+}
+
+.azh-library-filters select, .azh-elements-filters select {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.azh-add-section {
+    margin: 10px 0;
+    display: block;
+    text-align: center;
+}
+
+.azh-actions {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.azh-actions a {
+    margin-right: 3px;
+    font-size: 12px;
+    color: lightgray;
+}
+
+.azh-actions a:last-child {
+    margin-right: 0;
+}
+
+.azh-structure .azh-section-path {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: whitesmoke; 
+    cursor: move;
+    position: relative;
+}
+
+.azh-section-path .azh-remove {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.azh-section-path .azh-remove::after {
+    font-family: dashicons;
+    content: "\f182";
+}
+
+.azh-sections {
+    margin-top: 10px; 
+    overflow-y: scroll;
+    max-height: 600px;    
+}
+
+.azh-sections .azh-section {
+    cursor: pointer;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: whitesmoke;
+    margin-top: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.azh-sections .azh-section.no-image {
+    font-size: 20px;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.azh-sections .azh-section:not(.no-image) {
+    margin-top: 30px;
+    position: relative;
+}
+.azh-sections .azh-section:not(.no-image) div {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    bottom: 100%;   
+    left: 0;
+    right: 0;
+    background: cadetblue;
+    line-height: 20px;
+    color: white;
+}
+
+.azexo-html-editor {
+    min-height: 300px;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.azh-empty-html {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0 50px;
+    transform: translate(-50%, -50%);
+    color: lightgray;
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+.azh-switcher {
+    cursor: pointer;
+}
+
+.azh-lines {
+
+}
+
+.azh-line {
+
+}
+
+.azh-id[contenteditable="false"] {
+    display: none;
+}
+
+.azh-hover {
+    pointer-events: none;
+    position: fixed;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    z-index: 100000;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+
+    line-height: 200px !important;
+    background-color: white;
+    font-size: 150px !important;
+    text-align: center;
+}
+
+.azh-image {
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+.azh-link:not(.azh-inline) {
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+}
+.azh-inline.azh-link > .azh-line:not(.azh-open-line) .azh-content.azh-editable{
+    color: blue;
+}
+
+.azh-content {
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.azh-content.azh-empty {
+    display: block;
+}
+
+.azh-content.azh-empty::before {
+    color: green;
+    content: attr(placeholder);
+    display: block;
+}
+
+.azh-open-line .azh-content {
+    color: #777;
+}
+
+.azh-icon {
+    color: black;
+    background-color: yellow;
+    cursor: pointer;    
+}
+
+.azh-hide {
+    display: none;
+}
+
+.azh-transparent:checked ~ input[type="color"] {
+    display: none;
+}
+.azh-transparent + label{
+    user-select: none; 
+}
+
+.azh-clearfix::after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.azh-wrapper::after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.azh-wrapper > .azh-line:first-child, .azh-wrapper > .azh-line:last-child {
+    clear:both;
+}
+
+.azh-open-line .azh-control {
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: top;
+    outline: 1px dotted rgba(0,0,0,0.1);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.azh-dropdown select {
+}
+
+.ui-sortable-helper {
+    background-color: whitesmoke;
+}
+
+.ui-sortable-helper > .azh-controls {
+    display: block;
+}
+
+.azh-placeholder {
+    background-image: 
+        -webkit-repeating-linear-gradient(45deg,
+        rgba(0,0,0,0.1) 0px, 
+        rgba(0,0,0,0.1) 5px, 
+        transparent 5px, 
+        transparent 10px) !important;
+    background-image: 
+        repeating-linear-gradient(45deg,
+        rgba(0,0,0,0.1) 0px, 
+        rgba(0,0,0,0.1) 5px, 
+        transparent 5px, 
+        transparent 10px) !important;
+}
+
+.azh-cloneable {
+    padding: 5px;
+    border: 3px dashed lightgray;
+}
+
+.azh-cloneable::after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+
+.azh-cloneable > div:not(.azh-controls) {
+    position: relative;
+    padding-left: 5px;
+}
+
+.azh-cloneable > div:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.azh-cloneable > div:hover > .azh-controls:first-child {
+    display: block;
+}    
+
+.azh-cloneable.azh-inline > div {
+    display: inline-block;
+    vertical-align: top;
+    outline: 1px dotted rgba(0,0,0,0.1);
+}
+
+.azh-cloneable.azh-inline > .azh-empty {
+    min-width: 100px;    
+}
+
+
+
+.azh-wrapper.azh-inline div {
+    display: inline;
+}
+
+.azh-wrapper.azh-inline::after {
+    content: none;
+}
+
+.azh-wrapper.azh-inline .azh-wrapper::after {
+    content: none;
+}
+
+.azh-wrapper.azh-inline {
+    display: inline;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0, 0, 0, 0.05) 2px, rgba(0, 0, 0, 0.05) 5px);
+    position: relative;
+}
+
+.azh-wrapper.azh-inline.azh-styles {
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 2px, rgba(0, 0, 0, 0.1) 2px, rgba(0, 0, 0, 0.1) 5px);
+}
+
+.azh-wrapper.azh-inline:hover > .azh-open-line {
+    display: block;
+}
+.azh-wrapper.azh-inline > .azh-open-line {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 5px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    white-space: nowrap;
+    z-index: 11;
+}
+.azh-wrapper.azh-inline > .azh-open-line div {
+    display: block;
+}
+.azh-wrapper.azh-inline > .azh-open-line div.azh-control {
+    display: inline-block;
+}
+
+.azh-wrapper.azh-inline .azh-description:not(:empty) {
+    margin-right: 5px;
+}
+
+.azh-section {
+    position: relative;
+}
+
+.azh-section:hover > .azh-controls:first-child {
+    display: block;
+    right: 0;
+    top: 0;     
+    left: auto;
+    bottom: auto;
+}  
+
+.azh-section textarea {
+    width: 100%;
+    resize: vertical;
+    height: 300px;
+}
+
+.azh-helper::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 6px;
+    border-color: transparent transparent transparent green;
+    display: block;    
+    right: calc(100% - 18px);
+    top: 50%;    
+    transform: translate(0, -50%);
+}
+
+.azh-helper::before {
+    content: "?";
+    color: white;
+    background-color: green;
+    cursor: pointer;
+    text-align: center;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+}
+
+.azh-helper {
+    display: block !important;
+    position: absolute;
+    right: 100%;
+    top: 50%;    
+    transform: translate(0, -50%);
+    white-space: nowrap;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 11;
+}
+
+.azh-helper:hover .azh-helper-text {
+    display: block !important;
+}
+
+.azh-helper-text {
+    display: none !important;
+    position: absolute;
+    border: 1px solid green;
+    left: 0;
+    top: 100%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 10px;
+}
+
+div.azh-controls {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 100%;     
+    white-space: nowrap;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.azh-controls > div {    
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;    
+    font-family: dashicons;
+    cursor: pointer;
+}
+
+.azh-move {
+    cursor: move !important;
+}
+.azh-move::after {
+    content: "\f545";
+}
+.azh-add::after {
+    content: "+";
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.azh-clone, .azh-remove, .azh-upload, .azh-edit, .azh-done, .azh-filters {
+    cursor: pointer;
+}
+
+.azh-clone::after {
+    content: "\f463";
+}
+
+.azh-remove::after {
+    content: "\f153";
+}
+
+.azh-upload::after {
+    content: "\f317";
+}
+
+.azh-edit::after {
+    content: "\f464";
+}
+
+.azh-done::after {
+    content: "\f147";
+}
+
+.azh-filters::after {
+    content: "\f323";
+}
+
+.azh-cloneable > .azh-wrapper {
+    position: relative;
+}
+.azh-cloneable > .azh-wrapper::before {
+    position: absolute;
+    right: calc(100% - 8px);
+    top: 0;
+    font-family: dashicons;
+    content: "\f140";
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.azh-cloneable.azh-inline > .azh-wrapper::before {
+    content: none;
+}
+
+
+.azh-collapsed:not(.azh-element-wrapper) {
+    display: block;
+    min-height: 20px !important;
+    margin: 1px 0;    
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0, 255, 0, 0.1) 2px, rgba(0, 255, 0, 0.1) 15px);    
+}
+.azh-collapsed:not(.azh-element-wrapper) > :not(:nth-child(1)) {
+    display: none;
+}
+
+
+.azh-tags-dialog {
+    position: absolute;
+    left: 100%;
+    top: 0; 
+    display: block !important;
+    width: 200px !important;
+    height: 200px !important;
+    background-color: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1;
+}
+
+.azh-tags-dialog textarea {
+    display: block;
+    margin-bottom: 10px;
+    height: 165px;
+    resize: both;
+    width: 100%;
+}    
+
+.azh-row {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.azh-row > .azh-open-line{
+    display: table-caption;
+}
+
+.azh-grid {
+    display: block;
+    width: auto;    
+}
+
+/*.azh-row > .azh-line:first-child, .azh-row > .azh-line:last-child {
+    padding-left: 5px;
+}*/
+
+[class*="azh-col-"] > .azh-column-controls {
+    display: block;
+    background-color: white;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);       
+    position: absolute;
+    white-space: nowrap;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 10;    
+}
+
+[class*="azh-col-"] > .azh-column-controls > div {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-family: dashicons;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+
+.azh-responsive::after {
+    content: "\f472";
+}
+
+.azh-responsive-dialog {
+    position: fixed;
+    background-color: white;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    z-index: 560000;
+}
+
+.azh-responsive-dialog table{
+    width: 100%;
+}
+.azh-responsive-dialog table td{
+    text-align: center;
+}
+
+.azh-responsive-dialog table input{
+    width: 50px;
+}
+
+.azh-column, .azh-col-1, .azh-col-2, .azh-col-3, .azh-col-4, .azh-col-5, .azh-col-6, .azh-col-7, .azh-col-8, .azh-col-9, .azh-col-10, .azh-col-11, .azh-col-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+}
+
+.azh-column, .azh-col-1 > *, .azh-col-2 > *, .azh-col-3 > *, .azh-col-4 > *, .azh-col-5 > *, .azh-col-6 > *, .azh-col-7 > *, .azh-col-8 > *, .azh-col-9 > *, .azh-col-10 > *, .azh-col-11 > *, .azh-col-12 > * {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.azh-column {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.azh-col-12 {
+    width: 100%;
+}
+.azh-col-11 {
+    width: 91.66666667%;
+}
+.azh-col-10 {
+    width: 83.33333333%;
+}
+.azh-col-9 {
+    width: 75%;
+}
+.azh-col-8 {
+    width: 66.66666667%;
+}
+.azh-col-7 {
+    width: 58.33333333%;
+}
+.azh-col-6 {
+    width: 50%;
+}
+.azh-col-5 {
+    width: 41.66666667%;
+}
+.azh-col-4 {
+    width: 33.33333333%;
+}
+.azh-col-3 {
+    width: 25%;
+}
+.azh-col-2 {
+    width: 16.66666667%;
+}
+.azh-col-1 {
+    width: 8.33333333%;
+}
+
+.azh-col-offset-12 {
+    margin-left: 100%;
+}
+.azh-col-offset-11 {
+    margin-left: 91.66666667%;
+}
+.azh-col-offset-10 {
+    margin-left: 83.33333333%;
+}
+.azh-col-offset-9 {
+    margin-left: 75%;
+}
+.azh-col-offset-8 {
+    margin-left: 66.66666667%;
+}
+.azh-col-offset-7 {
+    margin-left: 58.33333333%;
+}
+.azh-col-offset-6 {
+    margin-left: 50%;
+}
+.azh-col-offset-5 {
+    margin-left: 41.66666667%;
+}
+.azh-col-offset-4 {
+    margin-left: 33.33333333%;
+}
+.azh-col-offset-3 {
+    margin-left: 25%;
+}
+.azh-col-offset-2 {
+    margin-left: 16.66666667%;
+}
+.azh-col-offset-1 {
+    margin-left: 8.33333333%;
+}
+.azh-col-offset-0 {
+    margin-left: 0;
+}
+
+
+.azh-group {
+    padding: 10px;
+    border: 1px solid lightgray;    
+    position: relative;
+    padding-top: 40px;
+    margin: 10px;
+}
+
+.azh-group.edit {
+    padding-top: 10px;
+}
+
+.azh-group .azh-group-title-control {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(0, 255, 0, 0.1);
+    padding: 5px 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.azh-group.azh-collapsed {
+    border: none;
+    padding: 0;
+}
+
+.azh-control {
+    padding: 5px;
+}
+
+.azh-description {
+    color: green;
+}
+
+
+
+.azh-shortcode {
+    display: block;
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    line-height: 1.4;
+}
+.azh-shortcode em {
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+
+.azh-cloneable > [class*="azh-col"] > .azh-width-resizer {
+    display: none;
+}
+
+[class*="azh-col"] .azh-width-resizer {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: dashicons;
+    cursor: ew-resize;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, 0);
+    z-index: 1;
+}
+
+[class*="azh-col"] .azh-width-resizer::after {
+    content: "\f229";
+}
+
+
+.azh-wrapper.azh-section.azh-section-collapsed {
+    padding-top: 10px;
+}
+
+
+.azh-wrapper.azh-section.edit > .azh-controls .azh-section-collapse, 
+.azh-wrapper.azh-section.edit > .azh-controls .azh-section-expand {
+    display: none;
+}
+
+.azh-wrapper.azh-section.azh-section-collapsed > .azh-controls .azh-section-collapse {
+    display: none;
+}
+
+.azh-wrapper.azh-section:not(.azh-section-collapsed) > .azh-controls .azh-section-expand {
+    display: none;
+}
+
+.azh-wrapper.azh-section .azh-section-collapse::after {
+    content: "\f506";
+}
+.azh-wrapper.azh-section .azh-section-expand::after {
+    content: "\f211";
+}
+.azh-wrapper.azh-section .azh-section-copy::after {
+    content: "\f481";
+}
+
+.azh-element-wrapper {
+    position: relative;
+}
+
+.azh-element-wrapper.azh-element-collapsed > :not(.azh-controls):not(.azh-element-preview),
+.azh-wrapper.azh-section.azh-section-collapsed > :not(.azh-controls):not(.azh-section-preview) {
+    display: none;
+}
+
+.azh-element-preview, .azh-section-preview {
+    cursor: pointer;
+    padding: 10px;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0, 0, 0, 0.03) 2px, rgba(0, 0, 0, 0.03) 15px);    
+}
+
+.azh-element-preview .azh-image, .azh-section-preview .azh-image {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.azh-section-preview .azh-image {
+    width: 100px;
+    height: 100px;
+}
+
+
+.azh-element-preview .azh-title, .azh-section-preview .azh-title {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.azh-element-wrapper.azh-empty {
+    line-height: 1;
+    cursor: pointer;
+}
+
+.azh-element-wrapper.azh-empty::after {
+    content: "+";
+    text-align: center;
+    display: block;
+    color: rgba(0, 0, 0, 0.05);
+    font-size: 50px;
+    font-weight: 900;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.azh-element-wrapper.azh-element-collapsed > .azh-controls .azh-element-collapse {
+    display: none;
+}
+
+.azh-element-wrapper:not(.azh-element-collapsed) > .azh-controls .azh-element-expand {
+    display: none;
+}
+
+.azh-element-wrapper.azh-empty > .azh-controls .azh-upload,
+.azh-element-wrapper.azh-empty > .azh-controls .azh-element-collapse,
+.azh-element-wrapper.azh-empty > .azh-controls .azh-element-expand,
+.azh-element-wrapper.azh-empty > .azh-controls .azh-element-clear,
+.azh-element-wrapper.azh-empty > .azh-controls .azh-element-copy {
+    display: none;
+}
+.azh-element-wrapper .azh-element-clear::after {
+    content: "\f218";
+}
+.azh-element-wrapper .azh-element-copy::after {
+    content: "\f481";
+}
+.azh-element-wrapper .azh-element-paste::after {
+    content: "\f340";
+}
+.azh-element-wrapper .azh-element-collapse::after {
+    content: "\f506";
+}
+.azh-element-wrapper .azh-element-expand::after {
+    content: "\f211";
+}
+
+.azh-element-wrapper.azh-editing .azh-controls:last-child {
+    display: none;
+}
+
+.azh-element-wrapper:hover > .azh-controls:last-child {
+    display: block;
+}
+
+.azh-element-wrapper > .azh-controls:last-child {
+    display: none;
+    left: auto;
+    bottom: auto;
+    right: 0;
+    top: 0;
+}
+
+.azh-element-wrapper > .azh-controls:last-child > div {
+    cursor: pointer;
+}
+
+
+.azh-elements-filters {
+    margin-bottom: 10px;
+}
+
+.azh-overlay {
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.azh-general-sections {
+    white-space: nowrap;
+}
+
+.azh-general-sections .azh-section {
+    display: inline-block;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 50px;
+    min-width: 100px;
+    margin: 0 5px 25px 5px;
+    position: relative;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1500px) {
+    .azh-general-sections .azh-section {
+        min-height: 25px;
+        min-width: 70px;
+    }
+}
+
+.azh-general-sections .azh-section:hover div {
+    background-color: whitesmoke;
+}
+
+.azh-general-sections .azh-section div {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0;
+    padding: 5px 0;
+    font-size: 10px;
+    line-height: 15px;
+    position: absolute;
+    top:100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.azh-section-paste {
+    font-family: dashicons;
+    color: #aaa;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    display: inline-block;
+    min-height: 70px;
+    min-width: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative;
+}
+@media (max-width: 1500px) {
+    .azh-section-paste {
+        min-height: 50px;
+        min-width: 70px;
+    }
+}
+
+.azh-section-paste:hover {
+    background-color: whitesmoke;
+}
+.azh-section-paste::after {
+    content: "\f346";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

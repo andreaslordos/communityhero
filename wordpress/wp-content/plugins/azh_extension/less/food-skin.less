@@ -1,0 +1,4799 @@
+@import "variables.less";
+
+body:not(.azen-food-header-fixed) {
+    div.azen.azen1.azen2.azen3 {
+        @media (min-width: 935px) {
+            .azen-food-header {
+                > div{
+                    background-image: none !important;
+                }
+            }
+        }
+    }
+}
+body.azen-food-header-fixed {
+    div.azen.azen1.azen2.azen3 {
+        @media (min-width: 935px) {
+            .azen-food-header {
+                height: 91px;
+
+                > div{
+                    background-repeat: repeat;
+                    background-position: top left;
+                    > div{
+                        &:first-child{
+                            display: block;
+
+                        }
+                    }
+                    .vendor(transition, all .3s linear);
+                    position: fixed !important;
+                    top: 0;
+                    left: 0 !important;
+                    right: 0;
+                    z-index: 11;
+                }
+            }
+        }
+    }
+}   
+div.azen.azen1.azen2.azen3 {
+    /*mini-thypography-foodpicky*/
+    .azh-text-styles(){
+        img{
+            &.alignleft {
+                display: inline;
+                float: left;
+                margin: 0 41px 20px 0;
+            }
+
+            &.alignright {
+                display: inline;
+                float: right;
+                margin: 0 0 20px 41px;
+            }
+
+            &.aligncenter {
+                display: block;
+                margin-bottom: 20px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+        a {
+            color: @black-dark;
+            &:hover {
+                color: @brand-color;
+            }
+        }
+    }
+    /*slider-nav*/
+    .azen-owl(){
+        width: 56px;
+        height: 23px;
+        border: 2px solid @gray-dark;
+        border-radius: 9px;
+        background-color: transparent;
+        position: relative;
+        display: inline-block;
+        .vendor(transition, all 0.2s linear 0s);
+        .af-bf(){
+            content: "";
+            top: 50%;
+            .vendor(transform, translate(0, -50%));
+            position: absolute;
+            .vendor(transition, all 0.2s linear 0s);
+        }
+        .af-before(){
+            .af-bf();
+            background-color: @gray-dark;
+            width: 100%;
+            height: 2px;
+        }
+        .af-after(){
+            .af-bf();
+            border: 4px solid transparent;
+        }
+        span, a{
+            width: 23px;
+            position: absolute;
+            height: 6px;
+            font-size: 0;
+            display: inline-block;
+            .vendor(transition, all 0.2s linear 0s);
+            padding: 10px 0;
+            top: 50%;
+            left: 50%;
+            .vendor(transform, translate(-50%, -50%));
+        }
+        &.az-owl-prev, &.az-flex-prev{
+            margin-right: 5px;
+            span, a{
+                &:before{
+                    .af-before();
+                    right: 0;
+                }
+                &:after{
+                    .af-after();
+                    left: -5px;
+                    border-right: 5px solid @gray-dark;
+                }
+            }
+        } 
+        &.az-owl-next, &.az-flex-next{
+            margin-left: 5px;
+            span, a{
+                &:before{
+                    .af-before();
+                    left: 0;
+                }
+                &:after{
+                    .af-after();
+                    right: -5px;
+                    border-left: 5px solid @gray-dark;
+                }
+            }
+        }
+        &:hover{
+            background-color: @brand-color;
+            border-color: @brand-color;
+            span, a{
+                &:before{
+                    background-color: @white-lighter;
+                }
+            }
+            &.az-owl-prev, &.az-flex-prev{
+                span, a{
+                    &:after{
+                        border-right-color: @white-lighter;
+                    }
+                }
+
+            }
+            &.az-owl-next, &.az-flex-next{
+                span, a{
+                    &:after{
+                        border-left-color: @white-lighter;
+                    }
+                }
+
+            }
+        }
+    }
+    /*font*/
+    @font-size-small: 11px;
+    @font-size-base: 15px;
+    @font-size-large: 18px;
+    .font-fa(){
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .font-thfy(){
+        font-family: 'themify';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    /*()*/
+    .after-clear(){
+        &:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+    .text-center(){
+
+        text-align: center;
+    }
+    .bg-max(){
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .img(){
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        max-height: 100%;
+    }
+    .horizontal-list(@width, @offset) {
+        font-size: 0;
+        margin-left: -@offset !important;
+        margin-right: -@offset !important;
+        > * {
+            box-sizing: border-box;
+            display: inline-block;
+            vertical-align: top;
+            width: @width;
+            padding-left: @offset !important;
+            padding-right: @offset !important;
+            font-size: @font-size-base;
+            margin-bottom:  @offset * 2 !important;
+        }
+        @media (max-width: 768px) {
+            display: block;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            > * {
+                display: block;
+                width: 100% !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;            
+                margin-bottom:  @offset * 2 !important;
+            }
+        }
+    }
+    .icons(){
+        .text-center();
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        margin: 0 7px 15px 0;
+        color: @white-lighter;
+        border-radius: 100%;
+        .vendor(transition, all .2s linear 0s);
+        .vendor(transform, translate(0, 0));
+        span.fa{
+            font-family: 'FontAwesome';
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: @font-size-large;
+        }
+        &:hover{
+            opacity: .6;
+            .vendor(transform, translate(0, -5px));
+        }
+    }
+    .buttons(){
+        background-color: @bg-color;
+        border: @one-px solid @border-color;
+    }
+    .flex(@dipslay, @justify-content, @box-lines, @flex-wrap, @box-align, @align-items){
+        .vendor(display, @dipslay);
+        .vendor(justify-content, @justify-content);
+        .vendor(box-lines, @box-lines);
+        .vendor(flex-wrap, @flex-wrap);
+        .vendor(box-align, @box-align);
+        .vendor(align-items, @align-items);
+    }
+    .js-hid(){
+        visibility: hidden;
+        opacity: 0;
+        &.az-full-width{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .absolute(){
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .get-content(){
+        .azen-content-title{
+            .text-style-droid(@black-dark, @font-size-large + 32px, 400, 55px);
+            margin-bottom: 44px;
+        }
+        .azen-content-fields{
+            > div{
+                margin-bottom: 27px;
+                &:last-child{
+                    margin: 0;
+                }
+                span, a{
+                    display: block;
+                }
+
+                span:first-child{
+                    .text-style-roboto(@gray-darker, @font-size-base, 500, 20px);
+                    margin-bottom: 6px;
+                }
+                a, span:last-child{
+                    .text-style-klara(@black, @font-size-base + 10px, 400, 30px);
+
+                }
+                a{
+                    color: @accent-1-color;
+                }
+            }
+        }
+
+    }
+    .background(){
+        background-color: inherit;
+    }
+    .menu-item(@mb, @color1, @font-size1, @wt1, @color2, @font-size2, @wt2, @color3, @font-size3, @wt3){
+        margin-bottom: @mb;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        > div{
+            position: relative;
+            .background();
+            margin-bottom: 10px;
+            &:after{
+                content: " ";
+                position: absolute;
+                //bottom: -1px;
+                right: 0;
+                left: 0;
+                z-index: 1;
+                height: 12px;
+                top: 9px;
+                /* background: red; */
+                background-image: -webkit-repeating-radial-gradient(center center, @black-darker, @black-darker 1px, transparent 1px, transparent 100%);
+                background-image: repeating-radial-gradient(center center, @black-darker, @black-darker 1px, transparent 1px, transparent 100%);
+                background-size: 10px 12px;
+                background-repeat-y: no-repeat;
+            }
+            > div{
+                .background();
+                .flex(flex, space-between, single, nowrap, stretch, flex-start);
+                position: relative;
+                > div, > span:first-child, > span:last-child, > a{
+                    display: inline-block;
+                    .background();
+                    position: relative;
+                    z-index: 2;
+                    .vendor(transition, all .3s linear 0s);
+                }
+                > div, > span:first-child, > a{
+                    .text-style-klara(@color1, @font-size1, @wt1, 20px);
+                    padding-right: 10px;
+                }
+                > span:last-child{
+                    .text-style-klara(@color2, @font-size2, @wt2, 20px);
+                    padding-left: 25px;
+                    margin-left: 30px;
+                    text-align: right;
+                }
+            }
+        }
+        > span{
+            .text-style-klara(@color3, @font-size3, @wt3, 20px);
+        }
+        &:hover{
+            > div{
+                > div{
+
+                    > div, > span:first-child, > a{
+
+                        color: @brand-color;
+                    }
+                }
+            }
+        }
+    }
+    .menu-mix(@mix){
+        .menu-item(@mix, @black-dark, @font-size-large, 600, @brand-color, @font-size-large + 3px, 600, @black, @font-size-base + 1px, 400);
+    }
+    .linear(@px, @color, @width){
+        content: " ";
+        .absolute();
+        width: @width;
+        border-bottom: @px solid @color;
+    }
+    .menu-creo(@margin-bottom){
+        .background();
+        margin-bottom: @margin-bottom;
+        &:first-child{
+            padding-top: 36px;
+        }
+        + div{
+            > div{
+                > div{
+                    > div{
+                        > span{
+                            span{
+                                display: none;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+        > div{
+            .background();
+            position: relative;
+            margin-bottom: 9px;
+            &:after{
+                content: " ";
+                position: absolute;
+                //bottom: 3px;
+                right: 0;
+                left: 0;
+                z-index: 1;
+                height: 6px;
+                top: 21px;
+                /* background: red; */
+                background-image: -webkit-repeating-radial-gradient(center center, @black-lighter, @black-lighter 1px, transparent 1px, transparent 100%);
+                background-image: repeating-radial-gradient(center center, @black-lighter, @black-lighter 1px, transparent 1px, transparent 100%);
+                background-size: 6px 6px;
+                background-repeat-y: no-repeat;
+            }
+            > div{
+                .background();
+                .flex(flex, space-between, single, nowrap, stretch, flex-start);
+                > a, > span, > div{
+                    display: inline-block;
+                    .background();
+                    position: relative;
+                    z-index: 2;
+                    .vendor(transition, all .3s linear 0s);
+                }
+                > a, > span{
+                    .text-style-allura(@black-darker, @font-size-large + 14px, 400, 22px);
+                    padding-right: 10px;
+                    .vendor(align-self, flex-end);
+                }
+                > div{
+                    padding-left: 9px;
+                    min-width: 130px;
+                    span{
+                        .text-style-allura(@black, @font-size-large + 3px, 400, 30px);
+                    }
+                    > span{
+                        position: relative;
+                        font-weight: 600;
+                        &:first-child{
+                            margin-right: 17px;
+                        }
+                        &:last-child{
+                            margin-left: 17px;
+                        }
+                        span{
+                            position: absolute;
+                            top: -36px;
+                            left: 50%;
+                            .vendor(transform, translate(-50%, 0));
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
+        > span{
+            .text-style-klara(@black, @font-size-base, 400, 20px);
+            display: block;
+        }
+    }
+    .images-creo(){
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 1;
+        width: 100%;
+        > div{
+            .absolute();
+            width: ~"calc(50% - 111px)";//148px
+            left: auto;
+            overflow: hidden;
+            .height(){
+                height: ~"calc(50% - 15px)";
+            }
+            > div{
+                display: inline-block;
+                width: ~"calc(50% - 15px)";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                .media(){
+                    @media screen and (max-width: 992px){
+                        .height();
+                    }
+                    @media screen and (max-width: 480px){
+                        width: ~"calc(50% - 15px)";
+                        right: @right;
+                        left: @left;
+                        height: 100%;
+                        top: 0;
+                        height: 100%;
+                        bottom: 0;
+                    } 
+                }
+                .h1(@right, @left){
+                    height: ~"calc(60% - 15px)";
+                    .media();
+
+                }
+                .h2(@right, @left){
+                    height: ~"calc(40% - 15px)";
+                    .media();
+                }
+                &:first-child{
+                    left: 0;
+                    > div{
+                        &:first-child{
+                            .h1(auto, 0);
+                        }
+                        &:last-child{
+                            .h2(0, auto);
+                        }
+                    }
+                    @media screen and (max-width: 992px){
+                        right: 0;
+                        .height();
+                        left: auto;
+                        bottom: auto;
+                    }
+                }
+                &:last-child{
+                    right: 0;
+                    > div{
+                        &:first-child{
+                            .h2(0, auto);
+                        }
+                        &:last-child{
+                            .h1(auto, 0);
+                        }
+                    }
+                    @media screen and (max-width: 992px){
+                        .height();
+                        top: auto;
+                    }
+                }
+                > div{
+                    .bg-max();
+                    .absolute();
+                    &:first-child{
+                        bottom: auto;
+                    }
+                    &:last-child{
+                        top: auto;
+                    }
+                }
+                .after-clear();
+                @media screen and (max-width: 992px){
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width: 992px){
+                width: 214px;
+            }
+            @media screen and (max-width: 480px){
+                top: 0;
+                height: 400px;
+                width: 100%;
+                left: 0;
+            }
+        }
+        @media screen and (max-width: 480px){
+            z-index: 3;
+        }
+    }
+    .delicious-content(@float){
+        display: inline-block;
+        float: @float;
+        .background();
+        .azen-content-title{
+            margin-bottom: 27px;
+            span{
+                .text-style-play(@black-dark, @font-size-large + 25px, 700, 40px);
+                font-style: italic;
+                display: inline-block;
+                position: relative;
+                padding-bottom: 27px;
+                &:after{
+                    .linear(3px, @black-dark, 57px);
+                }
+            }
+        }
+        .azen-content-list{
+            .background();
+
+            > div{
+                .background();
+                .azen-list-menu{
+                    max-width: 500px;
+                    .menu-creo(16px);
+                    @media screen and (max-width: 768px){
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .herr(){
+        span{
+            display: inline-block;
+            .background();
+            position: relative;
+        }
+        > span{
+            span{
+                .text-style-herr(@brand-color, @font-size-large + 30px, 400, 60px);
+                padding: 0 13px 0 8px;
+                max-width: 600px;
+                z-index: 1;
+            }
+            &::after{
+                .linear(1px, @brand-color, auto);
+                right: -102px;
+                left: -102px;
+                top: 50%;
+                bottom: auto;
+            }
+        }
+    }
+    .media-flex-reverse(){
+        @media screen and (max-width: 1200px){
+            max-width: 33.333%;
+            width: 33.333%;
+        }
+        @media screen and (max-width: 992px){
+            max-width: 50%;
+            width: 50%;
+        }
+        @media screen and (max-width: 580px){
+            max-width: 100%;
+            width: 100%;
+            .flex();
+        }
+    }
+    .pe(@do){
+        pointer-events: @do;
+    }
+
+    /*LESS*/
+    /*it was do*/
+    .azen-food-best-food{
+        &[ data-darken-background="true"]{
+            .azen-best-wrapper{
+                > div{
+                    > div:first-child{
+                        &:before{
+                            .pe(none);
+                            content: " ";
+                            .absolute();
+                            background-color: fade(@black-darker, 60%);
+                        }
+                    }
+                }
+            }
+        }
+        .azen-best-wrapper{
+            .flex(flex, center, multiple, wrap, flex-start, flex-start);
+            > div{
+                width: 100%/3;
+                position: relative;
+                &:hover{
+                    > div:last-child{
+                        > div{
+                            a, span:first-child{
+                                color: @brand-color;
+                            }
+                        }
+                    }
+                }
+                > div{
+                    &:first-child{
+                        .bg-max();
+                        .absolute();
+                        z-index: 1;
+                    }
+                    &:last-child{
+                        padding: 37px 47px 31px 47px;
+                        display: table;
+                        width: 100%;
+                        min-height: 414px;
+                        height: 1px;
+                        box-sizing: border-box;
+                        position: relative;
+                        z-index: 2;
+                        .pe(none);
+                        > div{
+                            display: table-cell;
+                            vertical-align: bottom;
+                            position: relative;
+                            > a, > span{
+                                .pe(all);
+                            }
+                            a, span:first-child{
+                                .text-style-droid(@white-lighter, @font-size-large + 10px, 600, 30px);
+                                margin-bottom: 7px;
+                                display: block;
+                                .vendor(transition, all .3s linear 0s);
+                            }
+                            span{
+                                .text-style-poppins(@white-lighter, @font-size-base, 400, 30px);
+                            }
+                        }
+                        @media screen and (max-width: 375px){
+                            padding-right: 15px;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+                @media screen and (max-width: 992px){
+                    width: 50%;
+                }
+                @media screen and (max-width: 768px){
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .azen-food-contacts{
+        .azen-contacts-wrapper{
+            padding: 200px 0 60px;
+            > div:first-child{
+                .absolute();
+                bottom: 167px;
+                > div{
+                    .absolute();
+                    height: auto;
+                }
+            }
+            .azen-get-content{
+                background-color: @white-lighter;
+                padding: 43px 68px 55px;
+                border-radius: 4px;
+                position: relative;
+                display: table;
+                width: 100%;
+                box-sizing: border-box;
+                .azen-content-wrapper{
+                    display: table-cell;
+                    width: 50%;
+                    vertical-align: top;
+                    &:last-child{
+                        padding-top: 14px;
+                    }
+                    .azen-content-get{
+                        padding-right: 40px;
+                        .get-content();
+                        .azen-content-title{
+                            margin-bottom: 29px;
+                        }
+                        @media screen and (max-width: 700px){
+                            padding-right: 0;
+                            margin-bottom: 40px;
+                        }
+                    }
+                    .azen-form-title{
+                        .text-style-roboto(@gray-darker, @font-size-base, 500, 20px);
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+                }
+                @media screen and (max-width: 700px){
+                    display: block;
+                    > div.azen-content-wrapper{
+                        display: block;
+                        width: auto;
+                    }
+                }
+                @media screen and (max-width: 480px){
+                    padding: 23px 30px 30px;
+                }
+            }
+        }
+    }
+    .azen-food-daily-specialities-mnu{
+        background-repeat: no-repeat;
+        background-position: 100% 0%, 0 100%, 100% 90%;
+        .azen-daily-wrapper{
+            padding: 96px 0 199px;
+            .text-center;
+            .azen-daily-title{
+                .text-style-droid(@black-dark, @font-size-large + 17px, 400, 40px);
+                display: inline-block;
+                max-width: 600px;
+                position: relative;
+                padding-bottom: 28px;
+                margin-bottom: 57px;
+                &:after{
+                    .linear(3px, @black-dark, 108px);
+                    .vendor(transform, translate(-50%, 0));
+                    left: 50%;
+                    top: auto;
+
+                }
+            }
+            .azen-list-wrapper{
+                text-align: left;
+                .azen-type-list{
+                    display: inline-block;
+                    width: ~"calc(50% - 15px)";
+                    background-color: @white-lighter;
+                    border: 1px dotted @gray-lighter;
+                    padding: 95px 40px;
+                    box-sizing: border-box;
+                    > div{
+                        .background();
+                    }
+                    &:first-child{
+                        float: left;
+                        > div{
+                            .menu-mix(70px);
+                        }
+                    }
+                    &:last-child{
+                        float: right;
+                        > div{
+                            .menu-mix(70px);
+                        }
+                    }
+                    @media screen and (max-width: 992px){
+                        width: auto;
+                        display: block;
+                        &:first-child, &:last-child{
+                            float: none;
+                        }
+                        &:first-child{
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+                .after-clear();
+            }
+        }
+    }
+    .azen-food-daily-specialities{
+        .azen-specialities-wrapper{
+            padding: 74px 0 94px;
+            .text-center();
+            .azen-specialities-title{
+                max-width: 600px;
+                display: inline-block;
+                margin-bottom: 55px;
+                > span{
+                    .text-style-allura(darken(@brand-color, 20%), @font-size-large + 10px, 400, 25px);
+                    display: block;
+                    opacity: .8;
+                }
+                > div{
+                    position: relative;
+                    .text-style-droid(@black-dark, @font-size-large + 17px, 400, 60px);
+                    padding-bottom: 17px;
+                    &:after{
+                        top: auto;
+                        right: auto;
+                        .linear(3px, darken(@brand-color, 20%), 108px);
+                        left: 50%;
+                        .vendor(transform, translate(-50%, 0));
+                        opacity: .8;
+
+                    }
+                }
+            }
+            .azen-specialities-content{
+                .flex(flex, center, multiple, wrap, start, center);
+                text-align: left;
+                margin-bottom: 58px;
+                .flex(){
+                    .vendor(display, flex);
+                    .vendor(flex-direction, column-reverse);
+                }
+                .azen-content-item{
+                    background-color: @white-lighter;
+                    .vendor(transition, all .3s linear 0s);
+                    &:nth-child(2n + 1){
+                        .flex();
+                    }
+                    max-width: 25%;
+                    width: 25%;
+                    position: relative;
+                    > div{
+                        height: 285px;
+                    }
+                    .azen-item-data{
+                        display: table;
+                        width: 100%;
+                        > div{
+                            padding: 54px 24px;
+                            display: table-cell;
+                            vertical-align: middle;
+                            > div{
+                                margin-bottom: 12px;
+                                a{
+                                    .text-style-droid(@black-dark, @font-size-large + 2px, 400, 28px);
+                                    .vendor(transition, all .3s linear 0s);
+                                    display: block;
+                                }
+                            }
+                            > span{
+                                .text-style-klara(@black, @font-size-base + 1px, 400, 24px);
+                            }
+                        }
+                    }
+                    .azen-item-thumbnail{
+                        position: relative;
+                        overflow: hidden;
+                        > div{
+                            .absolute();
+                            .bg-max();
+                            .vendor(transform, scale(1, 1));
+                            .vendor(transition, all .3s linear 0s);
+                        }
+                    }
+                    &:hover{
+                        .azen-item-data{
+                            > div{
+                                > div{
+                                    a{
+                                        color: @brand-color;
+                                    }
+                                }
+                            }
+                        }
+                        .azen-item-thumbnail{
+                            > div{
+                                .vendor(transform, scale(1.05, 1.05));
+                            }
+                        }
+                    }
+                    .media-flex-reverse();
+                }
+            }
+            .azen-specialities-button{
+                a{
+                    .text-style-klara(@white-lighter, @font-size-large, 400, 50px);
+                    display: inline-block;
+                    padding: 0 40px;
+                    background-color: darken(@brand-color, 20%);
+                    opacity: .8;
+                    .vendor(transition, all .3s);
+                    &:hover{
+                        background-color: darken(@brand-color, 50);
+                    }
+                }
+            }
+        }
+    }
+    .azen-food-delicious-creo{
+        .azen-creo-wrapper{
+            .background();
+            padding: 148px 0 115px;
+            .azen-creo-image{
+                .absolute();
+                width: ~"calc(50% - 200px)";
+                .bg-max();
+                @media screen and (max-width: 768px){
+                    position: relative;
+                    height: 300px;
+                    margin-bottom: 60px;
+                    width: auto;
+                }
+            }
+            .azen-content-wrapper{
+                padding: 0 0 0 100px;
+                .background();
+                @media screen and (max-width: 768px){
+                    padding: 0;
+                }
+            }
+            .azen-creo-content{
+                .delicious-content(right);
+                width: ~"calc(50% + 200px)";
+
+                @media screen and (max-width: 768px){
+                    width: auto;
+                    float: none;
+                    display: block;
+                }
+            }
+            .after-clear();
+        }
+    }
+    .azen-food-delicious-creos{
+        .azen-creo-wrapper{
+            .background();
+            position: relative;
+            .azen-creos-content{
+                padding: 139px 60px 139px 0;
+                .background();
+                .delicious-content(left);
+                width: ~"calc(50% + 60px)";
+                min-width: 400px;
+                z-index: 2;
+                position: relative;
+                .azen-content-wrapper{
+                    .background();
+                }
+                @media screen and (max-width: 480px){
+                    min-width: 100%;
+                    padding-right: 0;
+                    padding-top: 450px;
+                }
+            }
+            .azen-creos-images{
+                .images-creo();
+            }
+            .after-clear();
+        }
+    }
+    .azen-food-easy-tasty{
+        .text-center();
+        .azen-easy-wrapper{
+            padding: 108px 0 112px;
+            > div{
+                .text-style-play(@black-dark, @font-size-large + 40px, 700, 54px);
+                margin-bottom: 61px;
+            }
+            > span{
+                .text-style-klara(@black-dark, @font-size-large + 4px, 400, 36px);
+                display: block;
+                max-width: 800px;
+                margin: 0 auto;
+                margin-bottom: 44px;
+            }
+            a{
+                .text-style-klara(@black-dark, @font-size-base - 1px, 400, 47px);
+                text-transform: uppercase;
+                display: inline-block;
+                padding: 0 43px;
+                border: 1px solid @black-dark;
+                .vendor(transition, all .3s linear 0s);
+                &:hover{
+                    color: @white-lighter;
+                    background-color: @black-dark;
+                }
+            }
+        }
+    }
+    .azen-food-double-cut{
+        &[data-white-background="true"]{
+            background-color: @white-lighter !important;
+            .azen-cut-wrapper{
+                > div{
+                    > div{
+                        &:first-child{
+                            > div{
+                                > div{
+                                    &:first-child{
+                                        a{
+                                            color: @black-dark;
+                                        }
+                                    }
+                                }
+                                > span{
+                                    color: @black-dark;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .azen-cut-wrapper{
+            padding: 61px 0;
+            .flex(flex, center, multiple, wrap, start, center);
+            text-align: left;
+            .flex(){
+                .vendor(display, flex);
+                .vendor(flex-direction, column-reverse);
+            }
+            > div{
+                .vendor(transition, all .3s linear 0s);
+                &:nth-child(2n + 2){
+                    .flex();
+                }
+                max-width: 280px;
+                width: 25%;
+                > div{
+                    height: 280px;
+                    &:first-child{
+                        display: table;
+                        width: 100%;
+                        > div{
+                            display: table-cell;
+                            vertical-align: middle;
+                            padding: 30px 39px;
+                            > div{
+                                &:first-child{
+                                    margin-bottom: 21px;
+                                    a{
+                                        .text-style-mont(@white-lighter, @font-size-large + 8px, 400, 31px);
+                                        .vendor(transition, all .3s linear 0s);
+                                    }
+                                }
+                                &:last-child{
+                                    .text-style-klara(@brand-color, @font-size-large + 8px, 600, 30px);
+
+                                }
+                            }
+                            > span{
+                                .text-style-klara(@white-lighter, @font-size-base, 400, 19px);
+                                display: block;
+                                margin-bottom: 12px;
+                                opacity: .7;
+                                margin-bottom: 27px;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        overflow: hidden;
+                        position: relative;
+                        > div{
+                            .absolute();
+                            .bg-max();
+                            .vendor(transform, scale(1, 1));
+                            .vendor(transition, all .3s linear 0s);
+                            a{
+                                .absolute();
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    > div{
+
+                        &:first-child{
+                            > div{
+                                > div{
+
+                                    &:first-child{
+                                        a{
+                                            color: @brand-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child{
+                            > div{
+
+                                .vendor(transform, scale(1.05, 1.05));
+                            }
+                        }
+                    }
+                }
+                .media-flex-reverse();
+            }
+        }
+    }
+    .azen-food-even-more{
+        .azen-even-wrapper{
+            padding: 79px 0 39px;
+            > div{
+                &:first-child{
+                    .absolute();
+                    width: ~"calc(50% - 113px)";
+                    overflow: hidden;
+                    > div{
+                        width: ~"calc((100% / 3) - 8px)";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        height: 100%;
+                        &:first-child{
+                            left: 0;
+                            @media screen and (max-width: 992px){
+                                bottom: auto;
+                                right: 0;
+                            }
+                            @media screen and (max-width: 700px){
+                                bottom: 0;
+                                right: auto;
+                                left: 0;
+                            }
+                        }
+                        &:nth-child(2){
+                            left: 50%;
+                            .vendor(transform, translate(-50%, 0%));
+                            @media screen and (max-width: 992px){
+                                right: 0;
+                                left: 0;
+                                top: 50%;
+                                .vendor(transform, translate(0, -50%));
+                            }
+                            @media screen and (max-width: 700px){
+                                left: 50%;
+                                .vendor(transform, translate(-50%, 0%));
+                                top: 0;
+                                right: auto;
+                            }
+                            @media screen and (max-width: 480px){
+                                .vendor(transform, translate(0, 0%));
+                                left: auto;
+                            }
+                        }
+                        &:last-child{
+                            right: 0;
+                            @media screen and (max-width: 992px){
+                                top: auto;
+                                left: 0;
+                            }
+                            @media screen and (max-width: 700px){
+                                left: auto;
+                                top: 0;
+                                right: 0;
+                            }
+                        }
+                        div{
+                            .bg-max();
+                            .absolute;
+                        }
+                        @media screen and (max-width: 992px){
+                            width: auto;
+                            height: ~"calc((100% / 3) - 8px)";
+                        }
+                        @media screen and (max-width: 700px){
+                            width: ~"calc((100% / 3) - 8px)";
+                            height: 100%;
+                        }
+                        @media screen and (max-width: 480px){
+                            width: auto;
+                            position: relative;
+                            height: 200px;
+                            margin-bottom: 8px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 992px){
+                        width: ~"calc(50% - 213px)";
+                    }
+                    @media screen and (max-width: 700px){
+                        width: auto;
+                        height: 310px;
+                    }
+                    @media screen and (max-width: 480px){
+                        position: relative;
+                        height: auto;
+                    }
+                }
+                &:last-child{
+                    width: ~"calc(50% + 113px)";
+                    float: right;
+                    @media screen and (max-width: 992px){
+                        width: ~"calc(50% + 213px)";
+                    }
+                    @media screen and (max-width: 700px){
+                        width: auto;
+                    }
+                    > div{
+                        padding-left: 113px;
+                        font-size: @font-size-small - @font-size-small;
+                        @media screen and (max-width: 700px){
+                            padding: 0;
+                            padding-top: 310px;
+                        }
+                        @media screen and (max-width: 480px){
+                            padding-top: 60px;
+                            .text-center();
+                        }
+                        > span{
+                            &:first-child{
+                                .text-style-poppins(@gray-darker, @font-size-base - 1px, 400, 24px);
+                                text-transform: uppercase;
+                                display: inline-block;
+                                margin-bottom: 20px;
+                            }
+                            &:last-child{
+                                display: block;
+                                > span{
+                                    display: block;
+                                    > span{
+                                        display: inline-block;
+                                        max-width: 160px;
+                                        padding-right: 50px;
+                                        float: left;
+                                        margin-bottom: 50px;
+                                        @media screen and (max-width: 480px){
+                                            padding-right: 0;
+                                            max-width: 100%;
+                                            float: none;
+                                        }
+                                        span{
+                                            display: block;
+                                            &:first-child{
+                                                margin-bottom: 26px;
+                                                img{
+                                                    .img();
+                                                }
+                                            }
+                                            &:last-child{
+                                                .text-style-klara(@gray-dark, @font-size-large, 400, 24px);
+                                            }
+                                        }
+                                    }
+                                    .after-clear();
+                                }
+                            }
+                        }
+                        > div{
+                            margin-bottom: 68px;
+                            a, span{
+                                .text-style-play(@black-dark, @font-size-large + 26px, 400, 54px);
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+            .after-clear();
+        }
+    }
+    .azen-food-every{
+        .azen-every-wrapper{
+            padding: 85px 0 85px;
+            .text-center();
+            > div{
+                &:first-child{
+                    max-width: 900px;
+                    margin: 0 auto;
+                    > span{
+                        .text-style-poppins(@gray-darker, @font-size-base + 1px, 400, 30px);
+                        text-transform: uppercase;
+                        display: inline-block;
+                        letter-spacing: 2px;
+                        margin-bottom: 29px;
+                    }
+                    div{
+                        margin-bottom: 69px;
+                        a, span{
+                            .text-style-play(@black-dark, @font-size-large + 33px, 400, 58px);
+                            &[data-accent-font="true"]{
+                                font-style: italic;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    .flex(flex, center, multiple, wrap, flex-strat, center);
+                    margin: 0 -15px;
+                    > div{
+                        width: ~"calc((100% / 3) - 30px)";
+                        padding: 0 15px;
+                        > div{
+                            position: relative;
+                            margin-bottom: 30px;
+                            &:before{
+                                content: " ";
+                                display: table;
+                                clear: both;
+                            }
+                            > div{
+                                .absolute();
+                                .bg-max();
+                                &:before{
+                                    .pe(none);
+                                    content: " ";
+                                    .absolute();
+                                    .vendor(transition, all .3s linear 0s);
+                                    z-index: 0;
+                                }
+                            }
+                            a{
+                                position: relative;
+                                .text-style-play(@white-lighter, @font-size-large + 8px, 600, 50px);
+                                display: block;
+                                padding: 0 30px;
+                                margin: 75px 0;
+                                .after-clear();
+                            }
+                            &:hover{
+                                > div{
+                                    &:before{
+                                        background-color: fade(@black-darker, 30%);
+                                    }
+                                }
+                            }
+                            .after-clear();
+                        }
+                        @media screen and (max-width: 992px){
+                            width: ~"calc((100% / 2) - 30px)";
+                        }
+                        @media screen and (max-width: 768px){
+                            width: ~"calc((100% / 1) - 30px)";
+                        }
+                    }
+                }
+            }
+            .after-clear();
+        }
+    }
+    .azen-food-footer-one{
+        .azen-footer-wrapper{
+            > div{
+                &:first-child{
+                    position: relative;
+                    > div{
+                        &:first-child{
+                            .absolute();
+                            .bg-max();
+                        }
+                        &:last-child{
+                            margin: 0 auto;
+                            .text-center();
+                            padding: 105px 0 125px;
+                            position: relative;
+                            .pe(none);
+                            > *{
+                                .pe(all);
+                            }
+                            > div{
+                                .text-style-klara(@white-lighter, @font-size-large + 2px, 400, 30px);
+                                margin-bottom: 15px;
+                            }
+                            a, span{
+                                .text-style-klara(@white-lighter, @font-size-base, 400, 24px);
+                                display: inline-block;
+                                text-transform: uppercase;
+                                text-decoration: underline;
+                                letter-spacing: 1px;
+                                &:hover{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    margin: 0 auto;
+                    padding: 29px 0 36px;
+                    > div{
+                        span, div{
+                            .text-style-klara(@black-light, @font-size-small + 1px, 400, 24px);
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .azen-footer-line{
+                border-bottom: 1px solid @black-dark;
+            }
+            .azen-footer-data{
+                margin: 0 auto;
+                padding: 84px 0 15px;
+                > div{
+                    margin-bottom: 60px;
+                    &:first-child{
+                        > div{
+                            &:first-child{
+                                div{
+                                    span{
+                                        .text-style-open(@white-lighter, @font-size-large, 400, 30px);
+                                    }
+                                }
+                                > span{
+                                    .text-style-open(@black-light, @font-size-small + 1px, 400, 30px);
+                                    text-transform: uppercase;
+                                }
+                            }
+                            &:last-child{
+                                > a, span{
+                                    .text-style-klara(@white-lighter, @font-size-base - 1px, 400, 30px);
+                                    .vendor(transition, all 0.1s linear 0s);
+                                    &:hover{
+                                        color: @brand-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.azen-food-about{
+                        > div{
+                            margin-bottom: 13px;
+                            font-size: @font-size-small - @font-size-small;
+                            a, span{
+                                .text-style-klara(@white-lighter, @font-size-small, 400, 15px);
+                                text-transform: uppercase;
+                                display: inline-block;
+                                opacity: .8;
+                                .vendor(transition, all 0.1s linear 0s);
+                                &:hover{
+                                    color: @brand-color;
+                                }
+                            }
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        > div{
+                            .text-style-klara(@white-lighter, @font-size-large, 400, 24px);
+                            margin-bottom: 21px;
+                        }
+                        form{
+                            > div{
+                                &:first-child{
+                                    margin-bottom: 16px;
+                                }
+                                > *{
+                                    .text-style-open(@white-lighter, @font-size-small + 1px, 400, 42px);
+                                    border-radius: 4px;
+                                    .vendor(transition, all 0.3s linear 0s);
+                                }
+                                input{
+                                    padding: 6px 15px;
+                                    background-image: none;
+                                    box-shadow: none;
+                                    box-sizing: border-box;
+                                    letter-spacing: 0;
+                                    .vendor(appearance, none)  !important;
+                                    display: block;
+                                    .placeholder(color, @black-light);
+                                    .placeholder(font-size, @font-size-small + 1px);
+                                    .placeholder(font-family, "@{google-font-family-Open-Sans}");
+                                    width: 100%;
+                                    background-color: @black-dark;
+                                    height: 42px;
+                                    box-sizing: border-box;
+                                    &:focus {
+                                        background-color: @white-lighter;
+                                        .placeholder(color, @black-dark);
+                                        color: @black-dark;
+                                        border-color: @white-lighter;
+                                        .vendor(outline, none);
+                                        ~ span{
+                                            visibility: hidden;
+                                            opacity: 0;
+                                        }
+                                    }
+                                }
+                                button{
+                                    padding: 0 55px;
+                                    display: inline-block;
+                                    background-color: @brand-color;
+                                    text-transform: uppercase;
+                                    cursor: pointer;
+                                    &:hover{
+                                        background-color: @white-lighter;
+                                        color: @brand-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .azen-food-middle-one{
+        .bg-max();
+        &[data-darken-background="true"]{
+            &:before{
+                content: " ";
+                .absolute();
+                background-color: fade(@black-darker, 70%);
+                z-index: 1;
+            }
+        }
+        .azen-middle-wrapper{
+            padding: 155px 0 152px;
+            display: table;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            > div{
+                display: table-cell;
+                vertical-align: bottom;
+                *{
+                    color: @white-lighter;
+                }
+                > span{
+                    display: block;
+                    margin-bottom: 13px;
+                    span{
+                        display: inline-block;
+                    }
+                    &:first-of-type{
+                        span{
+                            .text-style-klara(inherit, @font-size-small + 1px, 600, 20px);
+                            text-transform: uppercase;
+                        }
+                    }
+                    &:last-of-type{
+                        span{
+                            .text-style-droid(inherit, @font-size-large + 33px, 400, 60px);
+                        }
+                    }
+                }
+                > div{
+                    > *{
+                        .text-style-klara(inherit, @font-size-base + 1px, 600, 40px);
+                        &:after{
+                            content: "/";
+                            display: inline;
+                            padding: 0 10px;
+                        }
+                        &:last-child{
+                            &:after{
+                                content: none;
+                            }
+
+                        }
+                    }
+                    a{
+                    }
+                    span{
+                    }
+                }
+            }
+        }
+    }
+    .azen-food-orders-new{
+        &[data-white-background="true"]{
+            background-color: @white-lighter !important;
+            .azen-orders-wrapper{
+                > div{
+                    > div{
+                        > div{
+                            &:first-child{
+                                > div{
+                                    &:first-child{
+                                        a{
+                                            color: @black-dark;
+                                        }
+                                    }
+                                }
+                                > span{
+                                    color: @black-dark;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .azen-orders-wrapper{
+            padding: 46px 0 40px;
+            > div{
+                > div{
+                    margin-bottom: 30px;
+                    > div{
+                        &:first-child{
+                            max-width: 210px;
+                            margin-bottom: 14px;
+                            .orders-text(){
+                                .text-style-klara(@white-lighter, @font-size-large, 600, 30px);
+                            }
+                            > div{
+                                &:first-child{
+                                    margin-bottom: 7px;
+                                    a{
+                                        .orders-text();
+                                        .vendor(transition, all .3s linear 0s);
+                                    }
+                                }
+                                &:last-child{
+                                    .orders-text();
+                                    color: @brand-color;
+                                }
+                            }
+                            > span{
+                                .text-style-klara(@white-lighter, @font-size-base, 400, 18px);
+                                display: block;
+                                margin-bottom: 12px;
+                                opacity: .7;
+                            }
+                        }
+                        &:last-child{
+                            height: 210px;
+                            width: 210px;
+                            .bg-max();
+                            position: relative;
+                            a{
+                                .absolute();
+                            }
+                        }
+                    }
+                    &:hover{
+                        > div{
+
+                            &:first-child{
+                                > div{
+                                    &:first-child{
+                                        a{
+                                            color: @brand-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 768px){
+                        display: inline-block;
+                    }
+                }
+                @media screen and (max-width: 768px){
+                    .text-center();
+                }
+            }
+        }
+    }
+    .azen-food-our-latest-blog-posts{
+        .azen-posts-wrapper{
+            padding: 42px 0 36px;
+            .text-center();
+            font-size: @font-size-small - @font-size-small;
+            > div{
+                &:first-child{
+                    display: inline-block;
+                    position: relative;
+                    margin-bottom: 43px;
+                    padding: 0 0 16px;
+                    span{
+                        .text-style-play(@black-dark, @font-size-large + 30px, 600, 60px);
+                        &[data-accent-font="true"]{
+                            font-style: italic;
+                        }
+                    }
+                    &:after{
+                        .linear(2px, @gray-lighter, 83px);
+                        left: 50%;
+                        .vendor(transform, translate(-50%, 0));
+                    }
+                }
+                &:last-child{
+                    text-align: left;
+                    overflow: hidden;
+                    > div{
+                        > div{
+                            margin-bottom: 50px;
+                            &:hover{
+                                > div{
+                                    &:last-child{
+                                        > div{
+                                            > a, > span{
+                                                color: @brand-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            > div{
+                                &:first-child{
+                                    height: 200px;
+                                    position: relative;
+                                    margin-bottom: 13px;
+                                    a{
+                                        display: block;
+                                        height: 100%;
+
+                                        div{
+                                            .bg-max();
+                                            .absolute();
+                                        }
+                                    }
+                                }
+                                &:last-child{
+                                    > span{
+                                        display: block;
+                                        margin-bottom: 8px;
+                                        span{
+                                            .text-style-klara(@gray, @font-size-base - 1px, 400, 20px);
+                                            display: inline-block;
+                                            padding-right: 10px;
+                                        }
+                                    }
+                                    > div{
+                                        &:first-of-type{
+                                            margin-bottom: 16px;
+                                        }
+                                        > a, > span{
+                                            .text-style-klara(@black, @font-size-large + 3px, 600, 28px);
+                                            display: block;
+                                            .vendor(transition, all .3s linear 0s);
+                                        }
+                                        > div{
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            &:first-child{
+                                                height: 30px;
+                                                width: 30px;
+                                                .bg-max();
+                                                margin: 0 10px 10px 0;
+                                                border-radius: 50%;
+                                            }
+                                            &:last-child{
+                                                margin-bottom: 10px;
+                                                > a, span{
+                                                    .text-style-klara(@black-dark, @font-size-base + 1px, 600, 20px);
+                                                    &:first-child{
+                                                        font-weight: 400;
+                                                        color: @gray;
+                                                    }
+                                                    &:last-child{
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .azen-food-food-price{
+        .background();
+        .azen-price-wrapper{
+            padding: 130px 0 148px;
+            .background();
+            .azen-price-type{
+                .background();
+                display: inline-block;
+                box-sizing: border-box;
+                width: ~"calc(50% - 85px)";
+                &:first-child{
+                    float: left;
+                }
+                &:last-child{
+                    float: right;
+                }
+                &[data-content-revers="true"]{
+                    .azen-type-title{
+                        margin-bottom: 73px;
+                    }
+                    .azen-type-wrapper{
+                        .vendor(display, flex);
+                        .vendor(flex-direction, column-reverse);
+                        .azen-type-image{
+                            + .azen-type-list{
+                                margin-bottom: 93px;
+                            }
+                        }
+                    }
+                }
+                &[data-content-revers="false"]{
+                    .azen-type-wrapper{
+                        .azen-type-list{
+                            > div{
+
+                                > div{
+                                    &:after{
+                                        content: none;
+                                    }
+                                    > span:last-child{
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .azen-type-title{
+                    margin-bottom: 63px;
+                    span{
+                        .text-style-droid(@black, @font-size-large + 8px, 400, 40px);
+                        display: inline-block;
+                        position: relative;
+                        padding-bottom: 9px;
+                        &:after{
+                            .linear(3px, @brand-color, ~"calc(100% - px)");
+                        }
+                    }
+                }
+                .azen-type-wrapper{
+                    .background();
+                    .azen-type-image{
+                        margin-bottom: 54px;
+                        img{
+                            .img();
+                        }
+                    }
+                    .azen-type-list{
+                        .background();
+                        > div{
+                            .background();
+                            .menu-mix(70px);
+                        }
+                    }
+                }
+                @media screen and (max-width: 992px){
+                    width: auto;
+                    display: block;
+                    &:first-child, &:last-child{
+                        float: none;
+                    }
+                    &:first-child{
+                        margin-bottom: 80px;
+                    }
+                }
+            }
+            .after-clear();
+        }
+    }
+    .azen-food-square-price{
+        overflow: hidden;
+        .azen-square-wrapper{
+            .flex(flex, center, multiple, wrap, flex-strat, center);
+            padding-left: 1px;
+            margin: 0 -3px;//[1]+[1]+[-1]
+            > div{
+                width: ~"calc((100% / 3) - 2px)";
+                border-right: 1px solid @white-dark;
+                border-left: 1px solid @white-dark;
+                margin-left: -1px;
+                > div{
+                    &:first-child{
+                        overflow: hidden;
+                        div{
+                            height: 340px;
+                            .bg-max();
+                            position: relative;
+                            .vendor(transform, scale(1, 1));
+                            .vendor(transition, all .2s linear 0s);
+                            a{
+                                .absolute();
+                                &:before{
+                                    content: " ";
+                                    .absolute();
+                                    .vendor(transition, all .2s linear 0s);
+                                }
+                            }
+                        }
+                    }
+                    &:last-child{
+                        margin: 37px 0 30px;
+                        padding: 0 30px;
+                        .text-center();
+                        a, span{
+                            .text-style-klara(@black-dark, @font-size-large + 10px, 600, 30px);
+                            display: block;
+                            margin-bottom: 13px;
+                            .vendor(transition, all .2s linear 0s);
+                        }
+                        > div{
+                            .text-style-poppins(@gray-darker, @font-size-large, 400, 30px);
+                        }
+                    }
+                }
+                &:hover{
+                    > div{
+                        &:first-child{
+                            div{
+                                .vendor(transform, scale(1.05, 1.05));
+                                a{
+                                    &:before{
+                                        background-color: fade(@brand-color, 20%);
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child{
+                            a, span{
+                                color: @brand-color;
+                            }
+                        }
+                    }
+                }
+                @media screen and (max-width: 992px){
+                    width: ~"calc((100% / 2)  - 2px)";
+                }
+                @media screen and (max-width: 768px){
+                    width: ~"calc((100% / 1)  - 2px)";
+                }
+            }
+        }
+    }
+    .azen-food-testimonials{
+        .azen-testimonials-wrapper{
+            padding: 141px 0 133px;
+            > div{
+                width: 50%;
+                &:first-child{
+                    background-repeat: no-repeat;
+                    background-position: 0% 100%;
+                    background-size: auto;
+                    .absolute;
+                    left: auto;
+                    @media screen and (max-width: 992px){
+                        position: relative;
+                        width: auto;
+                        height: 563px;
+                        margin-bottom: 35px;
+                    }
+                }
+                &:last-child{
+                    > div{
+                        padding-right: 100px;
+                        .text-center();
+                        > div{
+                            &:first-child{
+                                margin-bottom: 35px;
+                                a, span{
+                                    .text-style-play(@black-dark, @font-size-large + 30px, 600, 50px);
+                                    display: block;
+                                }
+                            }
+                            &:nth-child(2){
+                                margin-bottom: 26px;
+                                > span{
+                                    .text-style-klara(@black-dark, @font-size-large + 14px, 400, 40px);
+                                    letter-spacing: .5px;
+                                    position: relative;
+                                    span{
+                                        font-size: @font-size-small;
+                                        color: @gray;
+                                        position: absolute;
+                                        top: 0;
+                                        left: -36px;
+                                    }
+                                }
+                            }
+                            &:last-child{
+                                .text-style-poppins(@gray, @font-size-base + 1px, 400, 30px);
+                            }
+                        }
+                        @media screen and (max-width: 992px){
+                            padding: 0;
+                        }
+                    }
+                    @media screen and (max-width: 992px){
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+    .azen-food-get-in-touch{
+        .azen-get-wrapper{
+            padding: 188px 0 162px;
+            @media screen and (max-width: 768px){
+                .text-center();
+                padding: 300px 0 63px;
+            }
+            .azen-get-map{
+                .absolute();
+                width: ~"calc(50% + 100px)";
+                > div{
+                    height: auto !important;
+                    .absolute();
+
+                }
+                @media screen and (max-width: 992px){
+                    width: 50%;
+                }
+                @media screen and (max-width: 768px){
+                    width: auto;
+                    z-index: 1;
+                }
+
+            }
+            .azen-get-content{
+                display: inline-block;
+                float: right;
+                width: ~"calc(50% - 163px)";
+                vertical-align: middle;
+                padding-left: 63px;
+                .get-content();
+                @media screen and (max-width: 992px){
+                    width: ~"calc(50% - 63px)";
+                }
+                @media screen and (max-width: 768px){
+                    text-align: left;
+                    position: relative;
+                    z-index: 2;
+                    float: none;
+                    background-color: @white-lighter;
+                    width: auto;
+                    padding: 53px 63px;
+                    max-width: 600px;
+                }
+                @media screen and (max-width: 480px){
+                    padding: 53px 30px;
+                }
+            }
+            .after-clear();
+        }
+    }
+    .azen-food-home-slider{
+        .azen-slider-wrapper{
+            .container(){
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                .vendor(transform, translate(0, -50%));
+                margin: 0 auto;
+            }
+            .azen-slider-wrapper{
+                > div{
+                    &:first-child{
+                        div{
+                            .bg-max();
+                            height: ~"calc(100vh - 100px)";
+                        }
+                    }
+                    &:last-child{
+                        .container();
+                        color: @white-lighter;
+                        .text-center();
+                        > *{
+                            padding: 0 40px;
+                            @media screen and (max-width: 480px){
+                                padding: 0;
+                            }
+                        }
+                        > div{
+                            margin-bottom: 4px;
+                            .text-style-allura(inherit, @font-size-large + 100px, 600, 150px);
+                            letter-spacing: 4px;
+                            @media screen and (max-width: 480px){
+                                font-size: @font-size-large + 50px;
+                            }
+                            a{
+                                display: block;
+                            }
+                        }
+                        span{
+                            .text-style-mont(inherit, @font-size-large + 16px, 400, 40px);
+                        }
+
+                    }
+                }
+            }
+            .az-owl-nav{
+                .absolute();
+                top: 50%;
+                bottom: auto;
+                .vendor(transform, translate(0, -50%));
+                margin: 0 auto;
+                @media screen and (max-width: 480px){
+                    display: none;
+                }
+                > div{
+                    span{
+                        .font-thfy();
+                        color: @white-lighter;
+                        &:before{
+                            font-size: @font-size-large + 8px;
+                            font-weight: 600;
+                        }
+
+                    }
+                    &:first-child{
+                        float: left;
+                        span{
+                            &:before{
+                                content: "\e64a";
+                            }
+
+                        }
+
+                    }
+                    &:last-child{
+                        float: right;
+                        span{
+                            &:before{
+                                content: "\e649";
+                            }
+
+                        }
+
+                    }
+                }
+
+            }
+            .az-owl-dots{
+                counter-reset: section;
+                .container();
+                bottom: 59px;
+                top: auto;
+                .vendor(transform, none);
+                display: block;
+                height: 40px;
+                overflow: hidden;
+                /*                .abs(@top, @left, @bottom){
+                                    position: absolute;
+                                    top: @top;
+                                    left: @left;
+                                    bottom: @bottom;
+                                }*/
+                .colors(@large-px){
+                    .text-style-os(@gray, @font-size-large + @large-px, 500, 20px);
+                }
+                > div{
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    .vendor(transition, all .3s linear 0s);
+                    /*                    .abs(auto, 0, 0);*/
+                    &.active{
+                        visibility: visible;
+                        opacity: 1;
+                        position: relative;
+                        display: inline-block;
+                    }
+                    &:before{
+                        display: inline;
+                        padding-right: 4px;
+                        .text-style-os(@white-lighter, @font-size-large + 26px, 600, 38px);
+                        //content: counter(chapter_counter);
+                        counter-increment: section;            /* Increments only this instance
+                                            of the section counter */
+                        content: counter(section); 
+                    }
+                    &:after{
+                        padding-right: 4px;
+                        display: inline;
+                        .colors(4px);
+                        content: "/";
+                        /*                    .abs(auto, 25px, 0);*/
+                    }
+                }
+
+                &:after{
+                    .colors(5px);
+                    /*                    .abs(auto, 39px, 0);*/
+                    font-weight: 700;
+                    content: counter(section); 
+                    clear: both;
+                    letter-spacing: -2px;
+                    display: inline-block;
+
+                }
+
+            }
+        }
+    }
+    .azen-food-info-from-us{
+        .azen-info-wrapper{
+            padding: 86px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+            .text-center();
+            span:first-child{
+                .text-style-klara(@brand-color, @font-size-base + 1px, 400, 30px);
+                display: inline-block;
+                text-transform: uppercase;
+                margin-bottom: 28px;
+            }
+            .azen-info-us-title{
+                .text-style-droid(@black-dark, @font-size-large + 48px, 400, 80px);
+                margin-bottom: 40px;
+                display: block;
+                .vendor(transition, all .3s linear 0s);
+                &:hover{
+                    color: @brand-color;
+                }
+                @media screen and (max-width: 768px){
+                    font-size: @font-size-large + 28px;
+                    line-height: 60px;
+                }
+            }
+            img{
+                display: inline-block;
+                .img();
+            }
+        }
+    }
+    .azen-food-info-we-starts{
+        &[data-darken-background="true"]{
+            background-color: @black-dark !important;
+            .azen-starts-wrapper{
+                .azen-starts-content{
+                    > div{
+                        a, div{
+                            color: @white-lighter;
+                        }
+                    }
+                    .azen-content-description{
+                        color: @black-light;
+                    }
+
+                }
+                .azen-starts-image{
+                    > div{
+                        background-image: -webkit-repeating-radial-gradient(center center, @brand-color, @brand-color 1px, transparent 3px, transparent 100%);
+                    }
+                }
+            }
+        }
+        .azen-starts-wrapper{
+            padding: 145px 0 106px;
+            .flex(flex, space-between, single, nowrap, stretch, center);
+            > div{
+                box-sizing: border-box;
+                &:first-child{
+                    .vendor(align-self, flex-start);
+                    .vendor(flex-grow, 1);
+                }
+                &:last-child{
+                    .vendor(flex-grow, 1);
+                }
+            }
+            .azen-starts-content{
+                > span{
+                    .text-style-klara(@black-dark, @font-size-base + 1px, 400, 30px);
+                    display: inline-block;
+                    &:first-child{
+                        color: @brand-color;
+                        text-transform: uppercase;
+                        margin-bottom: 28px;
+                    }
+                }
+                > div{
+                    margin-bottom: 43px;
+                    .text-style-droid(@black-dark, @font-size-large + 40px, 400, 54px);
+                    max-width: 600px;
+                    .vendor(transition, all .3s linear 0s);
+                    a, span{
+                        &:hover{
+                            color: @brand-color;
+                        }
+                    }
+                }
+                .azen-content-description{
+                    margin-bottom: 43px;
+                    max-width: 470px;
+                    display: block;
+                    line-height: 28px;
+                }
+                img{
+                    max-width: 207px;
+                }
+            }
+            .azen-starts-image{
+                text-align: right;
+                > div{
+                    background-image: -webkit-repeating-radial-gradient(center center, @black-darker, @black-darker 1px, transparent 3px, transparent 100%);
+                    background-image: repeating-radial-gradient(center center, @black-darker, @black-darker 1px, transparent 3px, transparent 100%);
+                    background-size: 40px 40px;
+                    height: 406px;
+                    width: 365px;
+                    display: inline-block;
+                    margin-right: 75px;
+                    margin-top: 101px;
+                    > div{
+                        height: 406px;
+                        .bg-max();
+                        .vendor(transform, translate(75px, -101px));
+                    }
+                }
+                @media screen and (max-width: 992px){
+                    margin-bottom: 40px;
+                    display: table;
+                    width: 100%;
+                    > div{
+                        width: 100%;
+                        box-sizing: border-box;
+                        margin: 0;
+                        > div{
+                            transform: none;
+                        }
+                    }
+                }
+                @media screen and (max-width: 480px){
+                    //display: none;
+                }
+            }
+            @media screen and (max-width: 992px){
+                .vendor(flex-wrap, wrap);
+                .vendor(box-lines, multiple);
+                .vendor(flex-direction, column-reverse);
+            }
+            .after-clear();
+        }
+    }
+    .azen-food-lonely{
+        .azen-lonely-wrapper{
+            padding: 161px 0 195px;
+            @media screen and (max-width: 768px){
+                .text-center();
+            }
+            .azen-lonely-text{
+                width: 50%;
+                > div{
+                    margin-bottom: 21px;
+                    max-width: 400px;
+                    .text-style-droid(@black-dark, @font-size-large + 40px, 600, 1.2);
+                    @media screen and (max-width: 768px){
+                        max-width: 100%;
+                    }
+                }
+                span{
+                    .text-style-klara(@black-lighter, @font-size-large + 1px, 400, 1.45);
+                }
+                @media screen and (max-width: 992px){
+                    width: auto;
+                }
+            }
+            .azen-lonely-images{
+                .text-center();
+                .absolute();
+                left: auto;
+                width: 50%;
+                @media screen and (max-width: 992px){
+                    position: relative;
+                    width: auto;
+                    height: 529px;
+                    margin-bottom: 40px;
+                }
+                .azen-images-wrapper{
+                    .absolute();
+                    background-position: 0 50%;
+                    background-repeat: no-repeat;
+                    background-size: auto;
+                    @media screen and (max-width: 992px){
+                        background-position: 50% 50%;
+
+                    }
+
+
+                }
+            }
+        }
+    }
+    .azen-food-lunch-steaks{
+        .azen-steaks-wrapper{
+            .background();
+            padding: 87px 0 125px;
+            .azen-steaks-image{
+                .absolute();
+                width: 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center left;
+                @media screen and (max-width: 992px){
+                    width: ~"calc(50% - 100px)";
+                }
+                @media screen and (max-width: 768px){
+                    height: 300px;
+                    width: auto;
+                    background-position: center;
+                }
+            }
+            .azen-steaks-menu{
+                .background();
+                float: right;
+                width: ~"calc(50% - 58px)";
+                @media screen and (max-width: 992px){
+                    width: ~"calc(50% + 48px)";
+                }
+                @media screen and (max-width: 768px){
+                    width: auto;
+                    float: none;
+                    padding-top: 294px;
+                }
+                .azen-menu-title{
+                    .text-style-droid(@black-dark, @font-size-large + 20px, 400, 40px);
+                    position: relative;
+                    padding-bottom: 23px;
+                    margin-bottom: 45px;
+                    &:after{
+                        top: auto;
+                        right: auto;
+                        .linear(3px, @black-dark, 108px);
+                    }
+                }
+                .azen-menu-content{
+                    .background();
+                    .azen-content-item{
+                        .background();
+                        .menu-mix(31px);
+
+                    }
+                }
+            }
+            .after-clear();
+        }
+        .after-clear();
+    }
+    .azen-food-memory-slider{
+        .azen-slider-wrapper{
+            padding: 87px 0 77px;
+            .azen-memory-title{
+                .text-center();
+                margin-bottom: 52px;
+                > div, span:first-child{
+                    margin-bottom: 23px;
+                }
+                > div{
+                    .text-style-droid(@black-dark, @font-size-large + 32px, 400, 1.17);
+                }
+                span{
+                    display: inline-block;
+                    max-width: 450px;
+                    &:first-child{
+                        .text-style-play(@brand-color, @font-size-large + 4px, 400, 1);
+                        font-style: italic;
+                    }
+                    &:last-child{
+                        .text-style-klara(@black, @font-size-large + 1px, 400, 1.17);
+                    }
+                }
+            }
+            .az-carousel.az-owl-carousel{
+                position: relative;
+
+                .az-owl-nav{
+                    position: absolute;
+                    display: block;
+                    bottom: 0;
+                    left: -21px;
+                    right: -21px;
+                    height: 30px;
+                    top: 153px;
+                    .vendor(transform, translate(0, -50%));
+                    @media screen and (max-width: 800px){
+                        left: 41px;
+                        right: 41px;
+                    }
+                    > div{
+                        position: absolute;
+                        top: 50%;
+                        > span{
+                            .font-thfy();
+                            display: block;
+                            color: @gray-dark;
+                            &:before{
+                                font-size: @font-size-large + 10px;
+                            }
+                            @media screen and (max-width: 800px){
+                                color: @white-lighter;
+                            }
+                        }
+                        &.az-owl-prev{
+                            .vendor(transform, translate(-50%, -50%));
+                            left: 0;
+                            span{
+                                padding-right: 10px;
+                                &:before{
+                                    content: "\e64a";
+                                }
+                            }
+                        }
+                        &.az-owl-next{
+                            .vendor(transform, translate(50%, -50%));
+                            right: 0;
+                            span{
+                                padding-left: 10px;
+                                &:before{
+                                    content: "\e649";
+                                }
+                            }
+                        }
+                    }
+                }
+                .az-owl-dots{
+                    display: block;
+                    .text-center();
+                    margin-top: 69px;
+                    .az-owl-dot{
+                        display: inline-block;
+                        border-radius: 50%;
+                        margin-right: 20px;
+                        position: relative;
+                        vertical-align: middle;
+                        margin-bottom: 20px;
+                        span{
+                            display: inline-block;
+                            .font-fa();
+                            line-height: 1;
+                            color: @gray-dark;
+                            display: block;
+                            &:before{
+                                content: "\f111";
+                                font-size: @font-size-small - 4px;
+                            }
+                            &:after{
+                                color: @brand-color;
+                                content: "\f10c";
+                                font-size: @font-size-base + 1px;
+                                opacity: 0;
+                                visibility: hidden;
+                                position: absolute;
+                            }
+                        }
+                        &.active{
+                            span{
+                                &:before{
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    position: absolute;
+                                }
+                                &:after{
+                                    opacity: 1;
+                                    position: relative;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .azen-memory-wrapper{
+                &:hover{
+                    .azen-memory-entry{
+                        .azen-entry-data{
+                            .azen-data-title{
+                                a{
+                                    color: @brand-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                .azen-memory-entry{
+                    .azen-entry-thumbnail{
+                        margin-bottom: 31px;
+                        .azen-thumbnail-image{
+                            .bg-max();
+                            height: 306px;
+
+                        }
+                    }
+                    .azen-entry-data{
+                        padding: 0 30px;
+                        .text-center();
+                        .azen-data-title{
+                            a{
+                                .text-style-mont(@black-dark, @font-size-large + 1px, 400, 1);
+                                display: block;
+                                .vendor(transition, all .3s linear 0s);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .azen-food-menu-of-the-day{
+        visibility: hidden;
+        opacity: 0;
+        &.az-full-width{
+            visibility: visible;
+            opacity: 1;
+        }
+        .azen-day-image{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            .bg-max();
+            &:before{
+                .pe(none);
+                content: " ";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(to left, fade(@black-darker, 0), fade(@black-darker, 65%) 45%, fade(@black-darker, 100%) 95%);
+                @media screen and (max-width: 680px){
+                    background: linear-gradient(to left, fade(@black-darker, 0) -20%, fade(@black-darker, 65%) 25%, fade(@black-darker, 100%) 75%);
+                }
+            }
+            @media screen and (max-width: 680px){
+                width: auto;
+                right: 0;
+            }
+        }
+        .azen-menu-wrapper{
+            .pe(none);
+            position: relative;
+            .vendor(display, flex);
+            .vendor(align-items, center);
+            padding: 77px 0 57px;
+            .flex-grow(){
+                .vendor(flex, 1);
+                .vendor(flex-grow, 1);
+            }
+            @media screen and (max-width: 680px){
+                display: block;
+            }
+            .azen-menu-title-creotive{
+                .flex-grow();
+                text-align: left;
+                @media screen and (max-width: 680px){
+                    margin-bottom: 50px;
+                }
+                .azen-creotive-wrapper{
+                    .text-center();
+                    max-width: 350px;
+                    margin: 0 auto;
+                    padding: 0 15px;
+                    > div{
+                        .pe(all);
+                        .text-style-droid(@white-lighter, @font-size-large + 34px, 400, 1.2);
+                        margin-bottom: 22px;
+                    }
+                    span{
+                        .pe(all);
+                        display: block;
+                        &:first-child{
+                            .text-style-klara(@white-lighter, @font-size-large, 600, 1);
+                            text-transform: uppercase;
+                            opacity: .6;
+                            margin-bottom: 35px;
+                        }
+                        &:last-child{
+                            .text-style-klara(@white-lighter, @font-size-large + 1px, 400, 1.5);
+                            opacity: .8;
+                            padding: 0 53px;
+                        }
+                    }
+                }
+            }
+            .azen-menu-price-creotive{
+                .pe(all);
+                .flex-grow();
+                .text-center();
+                .azen-price-wrapper{
+                    overflow: hidden;
+                    padding-left: 21px;
+                    .vendor(display, flex);
+                    .vendor(justify-content, space-around);
+                    .vendor(box-lines, multiple);
+                    .vendor(flex-wrap, wrap);
+                    .vendor(box-align, start);
+                    .vendor(align-items, center);
+                    @media screen and (max-width: 1200px){
+                        display: block;
+                    }
+                    @media screen and (max-width: 680px){
+                        padding-left: 0;
+                    }
+                    .azen-wrapper-inner{
+                        max-width: 210px;
+                        display: inline-block;
+                        margin-bottom: 50px;
+                        padding: 0 15px;
+                        @media screen and (max-width: 680px){
+                            padding: 0 20px;
+                        }
+                        &:hover{
+                            .azen-price-entry{
+                                .azen-entry-thumbnail{
+                                    .azen-thumbnail-image{
+                                        &:before{
+                                            .vendor(transform, translate(0, 0));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .azen-price-entry{
+                            .azen-entry-thumbnail{
+                                margin-bottom: 34px;
+                                .azen-thumbnail-title{
+                                    .text-style-klara(@white-lighter, @font-size-large, 600, 20px);
+                                    margin-bottom: 32px;
+                                }
+                                .azen-thumbnail-image{
+                                    position: relative;
+                                    .bg-max();
+                                    height: 260px;
+                                    overflow: hidden;
+                                    &:before{
+                                        .pe(none);
+                                        content: " ";
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        left: 0;
+                                        .vendor(transform, translate(-210px, 0));
+                                        background: linear-gradient(to left, fade(@black-darker, 0), fade(@black-darker, 100%) 300%);
+                                        .vendor(transition, all .3s linear 0s);
+                                    }
+                                }
+                            }
+                            .azen-entry-data{
+                                div{
+                                    a{
+                                        .text-style-klara(@white-lighter, @font-size-base - 3px, 600, 28px);
+                                        text-transform: uppercase;
+                                        border: 1px solid @brand-color;
+                                        border-radius: 30px;
+                                        padding: 0 36px;
+                                        display: inline-block;
+                                        letter-spacing: 1px;
+                                        .vendor(transition, all .3s linear 0s);
+                                        &:hover{
+                                            background-color: @brand-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .azen-food-most-good-food{
+        .azen-good-wrapper{
+            padding: 88px 0 110px;
+            .background();
+            .text-center();
+            .azen-goof-subtitle{
+                margin-bottom: 10px;
+                .background();
+                overflow: hidden;
+                .herr();
+                > span{
+                    > span{
+                        line-height: 60px;
+                    }
+                }
+
+            }
+            .azen-good-title{
+                max-width: 800px;
+                margin: 0 auto;
+                margin-bottom: 49px;
+                > span{
+                    display: inline-block;
+
+
+                    span{
+                        .text-style-play(@black-dark, @font-size-large + 40px, 700, 64px);
+                        &[data-accent-font="true"]{
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+            .azen-good-iamge{
+                height: 355px;
+                .bg-max();
+                max-width: 800px;
+                margin: 0 auto;
+                margin-bottom: 40px;
+            }
+            > span{
+                .text-style-klara(@black, @font-size-large + 3px, 400, 36px);
+                display: block;
+                max-width: 700px;
+                margin: 0 auto;
+                margin-bottom: 45px;
+            }
+            a, > span:last-child{
+                .text-style-klara(@brand-color, @font-size-base - 1px, 400, 47px);
+                display: inline-block;
+                border: 1px solid @brand-color;
+                padding: 0 43px;
+                text-transform: uppercase;
+                .vendor(transition, all .3s linear 0s);
+                &:hover{
+                    color: @white-lighter;
+                    background-color: @brand-color;
+                }
+            }
+        }
+    }
+    .azen-food-organic-growing{
+        .azen-organic-wrapper{
+            padding: 73px 0 75px;
+            .text-center();
+            .azen-organic-text{
+                > span{
+                    display: inline-block;
+                    max-width: 500px;
+                    &:first-child{
+                        .text-style-mont(@black-lighter, @font-size-small - 1px, 600, 20px);
+                        text-transform: uppercase;
+                        margin-bottom: 5px;
+                        letter-spacing: 2.5px;
+                    }
+                    &:last-child{
+                        .text-style-klara(@black-lighter, @font-size-base + 1px, 400, 21px);
+                        margin-bottom: 63px;
+                    }
+                }
+                > div{
+                    margin-bottom: 21px;
+                    a, span{
+                        .text-style-mont(@white-lighter, @font-size-large + 42px, 600, 60px);
+                        .vendor(transition, all .3s linear 0s);
+                        &[data-brand-color="true"]{
+                            color: @brand-color;
+                        }
+                    }
+                    &:hover{
+                        > *{
+                            color: @brand-color;
+                        }
+                    }
+                }
+            }
+            .azen-organic-images{
+                .flex(flex, center, multiple, wrap, flex-start, flex-start);
+                margin-bottom: 23px;
+                overflow: hidden;
+                margin-right: -6.5px;
+                margin-left: -6.5px;
+                > a{
+                    width: ~"calc((100% / 3) - 13px)";
+                    padding: 0 6.5px;
+                    margin-bottom: 13px;
+                    .azen-organic-image{
+                        height: 191px;
+                        .bg-max();
+                    }
+                    @media screen and (max-width: 768px){
+                        width: 100%;
+                        .azen-organic-image{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .azen-organic-link{
+                a, > span{
+                    display: inline-block;
+                    color: @white-lighter;
+                    font-size: @font-size-large + 9px;
+                    line-height: 27px;
+                }
+            }
+        }
+    }
+    .azen-food-our-menu{
+        .azen-menu-wrapper{
+            padding: 55px 0 67px;
+            .background();
+            .text-center();
+            .azen-menu-subtitle{
+                overflow: hidden;
+                .background();
+                .herr();
+            }
+            .azen-menu-title{
+                .text-style-play(@white-lighter, @font-size-large + 50px, 400, 68px);
+                margin-bottom: 77px;
+            }
+            .azen-menu-items{
+                .flex(flex, center, multiple, wrap, flex-start, flex-start);
+                margin: 0 -8.5px;
+                > div{
+                    width: ~"calc(25% - 17px)";
+                    margin: 0 8.5px;
+                    .azen-item-menu{
+                        margin-bottom: 30px;
+                        a{
+                            display: block;
+                            .vendor(transition, all .3s linear 0s);
+                            &:hover{
+                                .vendor(transform, translate(0, -30px));
+                            }
+                            div{
+                                height: 309px;
+                                .bg-max();
+                            }
+                        }
+                        > div{
+                            padding: 22px 20px;
+                            span{
+                                display: block;
+                                .text-style-klara(@white-lighter, @font-size-base - 1px, 600, 20px);
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 992px){
+                        width: ~"calc(50% - 17px)";
+                    }
+                    @media screen and (max-width: 580px){
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+                @media screen and (max-width: 580px){
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .azen-food-our-startes{
+        .azen-startes-images{
+            background-repeat: no-repeat;
+            background-position: 0% 0%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            pointer-events: none;
+            @media screen and (max-width: 768px){
+                display: none;
+            }
+        }
+        .azen-startes-wrapper{
+            padding: 60px 0 75px;
+            position: relative;
+            z-index: 1;
+            .background();
+            .azen-startes-title{
+                margin-bottom: 28px;
+                .text-center();
+                span{
+                    display: inline-block;
+                }
+                > span{
+                    max-width: 550px;
+                    .text-style-klara(@black, @font-size-base + 1px, 400, 30px);
+                    &:first-child{
+                        text-transform: uppercase;
+                        margin-bottom: 2px;
+                    }
+                    &:last-child{
+                        color: @black-light;
+                        line-height: 19px;
+                    }
+                }
+                div{
+                    margin-bottom: 25px;
+                    span{
+                        padding-bottom: 17px;
+                        .text-style-play(@black-dark, @font-size-large + 30px, 400, 55px);
+                        position: relative;
+                        &:after{
+                            .linear(3px, @black-dark, 108px);
+                            .vendor(transform, translate(-50%, 0));
+                            left: 50%;
+                        }
+                    }
+                }
+            }
+            .azen-startes-price{
+                .background();
+                > div{
+                    .background();
+                    > div{
+                        display: inline-block;
+                        width: ~"calc(50% - 65px)";
+                        .background();
+                        padding: 55px 0 55px 0;
+                        box-sizing: border-box;
+                        .medi-float(){
+                            @media screen and (max-width: 992px){
+                                float: none;
+                                padding-bottom: 0;
+                            }
+                        }
+                        &:first-child{
+                            float: left;
+                            .medi-float();
+                        }
+                        &:last-child{
+                            float: right;
+                            .medi-float();
+                        }
+                        > div{
+                            .background();
+                            margin-bottom: 31px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            > div{
+                                display: inline-block;
+                                vertical-align: middle;
+                                &:first-child{
+                                    width: 64px;
+                                    height: 64px;
+                                    .bg-max();
+                                    border-radius: 50%;
+                                }
+                                &:last-child{
+                                    width: ~"calc(100% - 96px)";
+                                    padding-left: 32px;
+                                    .background();
+                                    .menu-item(30px, @black, @font-size-base + 1px, 400, @black-dark, @font-size-base + 1px, 600, @black-lighter, @font-size-base, 400);
+                                    > div{
+                                        margin-bottom: 8px;
+                                        &:after{
+                                            background-image: -webkit-repeating-radial-gradient(center center, @black-lighter, @black-lighter 1px, transparent 1px, transparent 100%);
+                                            background-image: repeating-radial-gradient(center center, @black-lighter, @black-lighter 1px, transparent 1px, transparent 100%);
+                                            background-size: 6px 6px;
+                                            bottom: -3px;
+                                        }
+                                        > div{
+                                            > span:first-child, > a{
+                                                text-transform: uppercase;
+                                                padding-right: 7px;
+                                            }
+                                            > span:last-child{
+                                                padding-left: 14px
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        @media screen and (max-width: 992px){
+                            display: block;
+                            width: auto;
+                        }
+                    }
+                    .after-clear();
+                }
+
+            }
+            .after-clear();
+            @media screen and (max-width: 992px){
+                padding-bottom: 130px;
+            }
+        }
+    }
+    .azen-food-people{
+        overflow: hidden;
+        padding-top: 120px;
+        padding-bottom: 104px;
+        .offsets(){
+        }
+        > div{
+        }
+        .azen-people-content{
+            background-color: @black-dark;
+            max-width: 320px;
+            position: relative;
+            &:before{
+                content: " ";
+                position: absolute;
+                width: 91px;
+                height: 1px;
+                background-color: @black-lighter;
+                top: -20px;
+            }
+            .azen-content-wrapper{
+                .azen-inner-wrapper{
+                    line-height: 1.165;
+                    margin-bottom: 50px;
+                    span{
+                        .text-style-droid(@gray-darker, @font-size-large + 44px, 600, 1xx);
+                        display: block;
+                    }
+                }
+                > div:last-child{
+                    .text-style-allura(@brand-color, @font-size-large + 13px, 400, 1);
+                    .vendor(transform, rotate(-7deg));
+                    margin: 40px 0;
+
+
+
+                }
+            }
+            .after-clear();
+            @media screen and (max-width: 992px){
+                .text-center();
+                max-width: 100%;
+            }
+        }
+        .azen-people-images{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            background-color: @white-lighter;
+            .azen-images-wrapper{
+                > *{
+                    &:first-child{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 1;
+                        > div{
+                            background-position: 140px center;
+                            //margin: 0 auto;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            background-repeat: no-repeat;
+                            bottom: 0;
+                            left: 0;
+                            width: auto !important;
+                        }
+                    }
+                    &:last-child{
+                        max-width: 369px;
+                        position: relative;
+                        z-index: 1;
+                        position: absolute;
+                        top: 50%;
+                        .vendor(transform, translate(-50%, -50%));
+                    }
+                }
+            }
+            @media screen and (max-width: 1200px){
+                width: 45%;
+            }
+            @media screen and (max-width: 992px){
+                display: none;
+            }
+        }
+        .after-clear();
+    }
+    .azen-food-mostived{
+        .meadia(){
+            display: block;
+            width: auto;
+            padding: 0;
+        }
+        .azen-foodpicky-wrapper{
+            .vendor(display, flex);
+            @media screen and (max-width: 992px){
+                display: block;
+            }
+            .azen-mostived-image-width-text{
+                .vendor(flex-grow, 1);
+                text-align: left;
+                display: flex;
+                position: relative;
+                padding-right: 40px;
+                .vendor(align-items, center);
+                > .azen-mostived-image{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-size: auto;
+                    background-repeat: no-repeat;
+                    background-position: right center;
+                    @media screen and (max-width: 600px){
+                        display: none;
+                    }
+                }
+                .azen-mostived-wrapper{
+                    position: relative;
+                    z-index: 1;
+                    max-width: 320px;
+                    margin-top: -40px;
+                    .text-center();
+                    @media screen and (max-width: 600px){
+                        max-width: 100%;
+                        .text-center();
+                    }
+                    .azen-mostived-img{
+                        margin-bottom: 29px;
+                        img{
+                            .img();
+                        }
+                    }
+                    .azen-mostived-title{
+                        .text-style-droid(@black-dark, @font-size-base + 40px, 400, 1.08);
+                        margin-bottom: 24px;
+                    }
+                    .azen-mostived-description{
+                        .text-style-klara(@black-light, @font-size-large + 3px, 400, 1.45);
+                        margin-bottom: 55px;
+                    }
+                    .azen-mostived-button{
+                        margin-top: 55px;
+                        a{
+                            .text-style-mont(@white-lighter, @font-size-small + 1px, 600, 50px);
+                            background-color: @brand-color;
+                            border-radius: 30px;
+                            text-transform: uppercase;
+
+                            display: inline-block;
+                            padding: 0 55px;
+                            letter-spacing: 1.5px;
+                            .vendor(transition, all .3s linear 0s);
+                            &:hover{
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 1200px){
+                        padding: 75px 0;
+                        margin-top: 0;
+
+                    }
+                    @media screen and (max-width: 600px){
+                        padding-bottom: 0;
+
+                    }
+                }
+                @media screen and (max-width: 992px){
+                    display: block;
+                    width: auto;
+                    margin-bottom: 40px;
+                }
+                @media screen and (max-width: 600px){
+                    margin-bottom: 50px;
+                    padding-right: 0;
+                    padding-bottom: 0;
+                }
+            }
+            .azen-mostived-content{
+                .vendor(flex-grow, 1);
+                padding: 45px 0 45px 40px;
+                .azen-content-entry{
+                    margin-bottom: 32px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    .azen-entry-thumbnail{
+                        width: 155px;
+                        display: inline-block;
+                        box-sizing: border-box;
+                        vertical-align: middle;
+                        font-size: 0;
+                        img{
+                            .img();
+                        }
+                        @media screen and (max-width: 768px){
+                            .meadia();
+                        }
+                        @media screen and (max-width: 768px){
+                            margin-bottom: 30px;
+                        }
+                    }
+                    .azen-entry-data{
+                        width: ~"calc(100% - 216px)";
+                        display: inline-block;
+                        box-sizing: border-box;
+                        vertical-align: middle;
+                        padding-left: 50px;
+                        .azen-data-header{
+                            .text-style-klara(@black-dark, @font-size-large, 600, 1.17);
+                            display: table;
+                            width: 100%;
+                            margin-bottom: 10px;
+                            div{
+                                display: table-cell;
+                                width: 70%;
+                                a{
+                                }
+                            }
+                            span{
+                                text-align: right;
+                                display: table-cell;
+                                width: 30%;
+                                @media screen and (max-width: 768px){
+                                    position: absolute;
+                                    top: 0;
+                                    left: 50%;
+                                    .vendor(transform, translate(-50%, 0));
+                                    width: auto;
+                                }
+                            }
+                            @media screen and (max-width: 768px){
+                                position: relative;
+                                padding-top: 40px;
+                            }
+                        }
+                        .azen-data-description{
+                            width: 60%;
+                            .text-style-klara(@black-light, @font-size-base + 1px, 400, 1.2);
+                        }
+                        @media screen and (max-width: 768px){
+                            .meadia();
+                            .azen-data-header{
+                                > div{
+                                    width: auto;
+                                }
+                            }
+                            .azen-data-description{
+                                width: auto;
+                            }
+                        }
+                        @media screen and (max-width: 768px){
+                            width: auto;
+                        }
+                    }
+                    &:hover{
+                        .azen-entry-data{
+                            .azen-data-header{
+                                span{
+                                    color: @accent-1-color;
+                                }
+                            }
+                        }
+
+                    }
+                    @media screen and (max-width: 768px){
+                        .text-center();
+                        margin-bottom: 70px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                @media screen and (max-width: 992px){
+                    .meadia();
+                    padding: 40px 0 100px;
+                }
+            }
+        }
+    }
+    .azen-food-reservation{
+        .js-hid();
+        .azen-reservation-wrapper{
+            padding-top: 117px;
+            padding-bottom: 130px;
+            .azen-reservation-form{
+                width: ~"calc(50% + 111px)";
+                > div{
+                    &:first-child{
+                        margin-bottom: 40px;
+                        span{
+                            display: inline-block;
+                            .text-style-droid(@white-lighter, @font-size-large * 2px, 400, 50px);
+                        }
+                    }
+                    &:last-child{
+                        .text-style-mont(@black-light, @font-size-small + .5px, 400, 30px);
+                    }
+                }
+                form{
+                    margin-bottom: 0;
+                    > div{
+                        .flex(flex, space-around, multiple, wrap, start, center);
+                        @media screen and (max-width: 580px){
+                            display: block;
+                        }
+                        > div:not(.azen-wrapper-button){
+                            .vendor(flex-grow, 1);
+                            padding-right: 30px;
+                            width: 33%;
+                            @media screen and (max-width: 680px){
+                                &:nth-child(2n + 2){
+                                }
+                            }
+                            @media screen and (max-width: 580px){
+                                padding-right: 0;
+                                width: auto;
+                            }
+                        }
+                        .azen-wrapper-button{
+                            margin-top: 6px;
+                            position: relative;
+                            width: 100%;
+                        }
+                    }
+
+                }
+                @media screen and (max-width: 992px){
+                    width: ~"calc(40% + 111px)";
+                }
+                @media screen and (max-width: 680px){
+                    z-index: 2;
+                    position: relative;
+                    width: auto;
+                }
+            }
+            .azen-reservation-image{
+                -webkit-backface-visibility: visible !important;
+                position: absolute;
+                transform-origin: left center !important;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: ~"calc(50% - 192px)";//111px + 81px
+                .bg-max();
+                background-position: right;
+                &:before{
+                    .pe(none);
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: fade(@black-darker, 45%);
+                    @media screen and (max-width: 680px){
+                        background-color: fade(@black-dark, 95%);
+                    }
+                }
+                @media screen and (max-width: 992px){
+                    width: ~"calc(60% - 192px)";
+                }
+                @media screen and (max-width: 680px){
+                    width: auto;
+                    z-index: 1;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+    }
+    .azen-food-restaurant-delicious{
+        .azen-delicious-wrapper{
+            .azen-delicious-entry{
+                &:first-child{
+                    padding-bottom: 346px;
+                    > div{
+                        .flex(flex, space-between, multiple, wrap, stretch, center);
+                        padding: 66px 0 96px;
+                        > div{
+                            display: table-cell;
+                            vertical-align: middle;
+                            width: ~"calc(50% - 46px)";
+                            @media screen and (max-width: 768px){
+                                display: block;
+                                width: auto;
+                                &:first-child{
+                                    margin-bottom: 92px;
+                                }
+                            }
+                            @media screen and (max-width: 580px){
+                                .text-center();
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    div{
+                        .bg-max();
+                        .absolute();
+                        top: auto;
+                        height: 346px;
+                    }
+
+                }
+                .azen-entry-title{
+                    text-align: right;
+                    position: relative;
+                    span{
+                        .text-style-play(@black-dark, @font-size-large + 40px, 900, 70px);
+                        font-style: normal;
+                        &[data-accent-font="true"]{
+                            font-weight: 700;
+                            font-style: italic;
+                        }
+                    }
+                    &:after{
+                        .linear(3px, @black-dark, 108px);
+                        right: 0;
+                        left: auto;
+                        top: auto;
+                        bottom: -30px;
+                        @media screen and (max-width: 580px){
+                            left: 50%;
+                            .vendor(transform, translate(-50%, 0));
+                        }
+                    }
+                }
+                .azen-entry-description{
+                    .text-style-klara(@black-dark, @font-size-base + 1px, 400, 26px);
+                }
+            }
+        }
+    }
+    .azen-food-restaurant-dishes{
+        .azen-dishes-wrapper{
+            .background();
+            .azen-dishes-entry{
+                width: ~"calc(50% - 37px)";//148px
+                &:first-child{
+                    .background();
+                    position: relative;
+                    padding: 194px 37px 200px 0;
+                    z-index: 2;
+                    min-width: 400px;
+                    .azen-entry-title{
+                        margin-bottom: 34px;
+                        &:hover{
+                            > *{
+                                color: @brand-color;
+                            }
+                        }
+                        a, span{
+                            .text-style-play(@black-dark, @font-size-large + 43px, 900, 75px);
+                            font-style: normal;
+                            .vendor(transition, all .3s linear 0s);
+                            &[data-accent-font="true"]{
+                                font-weight: 700;
+                                font-style: italic;
+                            }
+                        }
+                    }
+                    .azen-entry-description{
+                        .text-style-klara(@black, @font-size-base + 1px, 400, 24px);
+                        margin-bottom: 44px;
+                    }
+                    .azen-entry-footer{
+                        > div{
+                            &:first-child{
+                                margin-bottom: 14px;
+                                .text-style-klara(@black, @font-size-large, 600, 24px);
+                            }
+                            &:last-child{
+                                > div{
+                                    .text-style-klara(@black, @font-size-base + 1px, 400, 24px);
+                                    padding-bottom: 4px;
+                                    &:last-child{
+                                        padding-bottom: 0;
+                                    }
+                                    span{
+                                        &[data-brand-color="true"]{
+                                            color: @brand-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media screen and (max-width: 480px){
+                        min-width: 100%;
+                        padding-right: 0;
+                        .text-center();
+                        padding-top: 430px;
+                    }
+                }
+                &:last-child{
+                    .images-creo();
+
+                }
+            }
+        }
+    }
+    .azen-food-square-foods{
+        .azen-square-wrapper{
+            padding: 60px 0;
+            .flex(flex, center, multiple, wrap, flex-start, flex-start);
+            > div{
+                width: 100%/3;
+                position: relative;
+                &:hover{
+                    > div{
+                        &:last-child{
+                            > div{
+                                > div{
+                                    &:last-child{
+                                        a{
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                }
+                            }  
+                        }
+                    }
+                }
+                > div{
+                    &:first-child{
+                        .bg-max();
+                        .absolute();
+                    }
+                    &:last-child{
+                        .pe(none);
+                        padding: 37px 40px;
+                        display: table;
+                        width: 100%;
+                        min-height: 501px;
+                        height: 1px;
+                        box-sizing: border-box;
+                        > div{
+                            display: table-cell;
+                            vertical-align: bottom;
+                            position: relative;
+                            > div{
+                                display: inline-block;
+                                vertical-align: middle;
+                                &:first-child{
+                                    width: ~"calc(100% - 90px)";
+                                    > a, > span{
+                                        .pe(all);
+                                        .text-style-klara(@black-dark, @font-size-large + 24px, 600, 37px);
+                                        margin-bottom: 14px;
+                                        display: block;
+                                    }
+                                    > div{
+                                        .pe(all);
+                                        .text-style-klara(@black-dark, @font-size-large + 6px, 600, 30px);
+                                    }
+                                    @media screen and (max-width: 480px){
+                                        width: 100%;
+                                        margin-bottom: 30px;
+                                    }
+                                }
+                                &:last-child{
+                                    a{
+                                        .pe(all);
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        display: inline-block;
+                                        width: 57px;
+                                        height: 57px;
+                                        border: 2px solid @black-dark;
+                                        border-radius: 50%;
+                                        line-height: 60px;
+                                        position: relative;
+                                        .text-center();
+                                        .vendor(transition, all .1s linear 0s);
+                                        span{
+                                            width: 28px;
+                                            height: 17px;
+                                            display: inline-block;
+                                            position: relative;
+                                            &:before, &:after{
+                                                content: " ";
+                                            }
+                                            &:before{
+                                                width: 28px;
+                                                height: 2px;
+                                                background-color: @black-dark;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 0;
+                                                right: 0;
+                                                .vendor(transform, translate(0, -50%));
+                                            }
+                                            &:after{
+                                                width: 10px;
+                                                height: 10px;
+                                                border: 2px solid @black-dark;
+                                                right: 0;
+                                                position: absolute;
+                                                top: 50%;
+                                                .vendor(transform, translate(0, -50%) rotate(45deg));
+                                                border-bottom: 0;
+                                                border-left: 0;
+                                                will-change: transform;
+                                            }
+                                        }
+                                        @media screen and (max-width: 480px){
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
+                                    }
+                                    @media screen and (max-width: 480px){
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                @media screen and (max-width: 1200px){
+                    width: 100%/2;
+                }
+                @media screen and (max-width: 992px){
+                    width: 100%/1;
+                }
+            }
+        }
+    }
+    .azen-food-header{
+        position: relative;
+        width: 100%;
+        z-index: 5;
+        box-sizing: border-box;
+        min-height: 90px;
+        @spacing: 91px;
+        @menu-item-h-padding: 30px;
+        @menu-item-padding:  15px;
+        background-repeat: repeat;
+        background-position: top left;
+        &[data-over-content="true"]{
+            margin-bottom: -@spacing;
+            background-image: none !important;
+        }
+        /*        > div{
+                    > div{
+                        &:first-child{
+                            background-repeat: repeat-x;
+                            .absolute();
+                            background-position: top, left;
+                            .vendor(transform, rotate(180deg) translate(0, -15px));
+                            display: none;
+                        }
+                    }
+                }*/
+        .azen-menu-wrapper{
+            position: relative;
+            margin: 0 auto;
+            > a{
+                display: inline-block;
+                line-height: @spacing;
+                img{
+                    display: inline-block;
+                    .vendor(transition, all 0.5s ease-out);
+                    max-height: @spacing;
+                    width: auto;
+                    max-width: none;
+                    border: 0;
+                    height: auto;
+                    max-width: 100px + @spacing;
+                    vertical-align: middle;
+                }
+            }
+            .azen-mobile-menu-button {
+                display: none;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                .vendor(transform, translate(0, -50%));
+                left: auto;
+                width: 17px; height: 17px;
+                color: @white-lighter;
+                text-align: center;
+                cursor: pointer;
+                @media (max-width: 1100px) {
+                    display: block;
+                }
+                .az-icon {
+                    display: block;
+                }
+            }
+            .azen-menu-checkbox {
+                display: none;
+                user-select: none;
+            }
+            @media (max-width: 1100px) {
+                .azen-menu-checkbox:checked + .azen-primary-navigation {
+                    visibility: visible;
+                    opacity: 1;
+                    .vendor(transform, translate(0, 0px));
+                }
+            }
+            > div{
+                float: right;
+                .vendor(display, flex);
+                width: ~"calc(100% - 191px)";
+                .vendor(justify-content, flex-end);
+                > div{
+                    &:last-of-type{
+                        float: right;
+                        position: relative;
+                        margin-left: 30px;
+                        line-height: @spacing;
+                        a{
+                            color: @white-lighter;
+                            line-height: 36px;
+                            height: 40px;
+                            font-size: @font-size-base - 1px;
+                            background-color: transparent;
+                            border-radius: 3px;
+                            border: 2px dashed @white-lighter;
+                            padding: 0 15px;
+                            display: inline-block;
+                            text-align: center;
+                            font-weight: 300;
+                            box-sizing: border-box;
+                            min-width: 110px;
+                        }
+                        @media (max-width: 1100px) {
+                            display: none;
+                        }
+                    }
+                    &:first-of-type{
+                        line-height: @spacing;
+                        &.azen-primary-navigation { 
+                            pointer-events: none;
+                            display: inline-block;
+                            float: right;   
+                            max-width: ~"calc(100% - 110px)";
+                            @media screen and (max-width: 1100px){
+                                max-width: 100%;
+                                background-color: @white-lighter;
+                            }
+                            .azen-nav-menu {
+                                > .azen-menu-item {
+                                    pointer-events: all;
+                                    &.azen-menu-item-has-children > a.azen-menu-link::after, &.azen-mega > a.azen-menu-link::after {
+                                        font-size: @font-size-base - 1px;
+                                        content: "\f107";
+                                        line-height: @spacing;
+                                        display: inline-block;
+                                        vertical-align: top;
+                                        margin-left: 10px;
+                                        font-family: FontAwesome;
+                                        @media screen and (max-width: 1100px){
+                                            line-height: 45px;
+                                        }
+                                    }
+                                    &.azen-current-menu-item, &.azen-current-menu-ancestor {
+                                        > a.azen-menu-link {
+                                            color: @brand-color;
+                                            font-weight: 700;
+                                            @media screen and (max-width: 1100px){
+                                                font-weight: 400;
+                                            }
+                                        }
+                                    }
+                                }     
+                                &::after {
+                                    content:"";
+                                    display:table;
+                                    clear:both;
+                                    line-height: 0;
+                                }
+                            }
+                            .azen-nav-menu, .azen-sub-menu {
+                                display: block;
+                                list-style:none;
+                                position:relative;
+                                margin:0;
+                                padding:0;
+                                @media screen and (max-width: 1100px){
+                                    padding: 0 30px;
+                                }
+                                > .azen-menu-item {
+                                    position:relative;
+                                    float: left;
+                                    margin: 0;
+                                    padding: 0;
+                                    &:hover > .azen-sub-menu, &:hover > .azen-page {
+                                        visibility:visible;
+                                        opacity:1;
+                                        .vendor(transition, all .2s linear);
+                                        @media screen and (max-width: 1100px){
+                                            visibility: hidden;
+                                            opacity: 0;
+                                        }
+                                    }
+                                    &:hover a.azen-menu-link {
+                                        color: @brand-color;
+                                    }
+                                    @media screen and (max-width: 1100px){
+                                        display: block;
+                                        float: none;
+                                        line-height: normal;
+                                        &:before{
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            right: 0;
+                                            top: 0;
+                                            height: 1px;
+                                            background-color: @white-dark;
+                                        }
+                                    }
+                                    position: relative;
+                                    > .azen-menu-link {
+                                        position: relative;
+                                        color: @white-lighter;
+                                        display: block;
+                                        text-decoration: none;
+                                        line-height: @spacing;
+                                        padding: 0 @menu-item-padding;
+                                        font-family: 'Montserrat', sans-serif;
+                                        font-size: @font-size-small + 1px;
+                                        text-transform: uppercase;
+                                        letter-spacing: 0.1em;
+                                        .fa, [class*="icon"] {
+                                            margin-right: 8px;
+                                            line-height: inherit;
+                                            vertical-align: top;
+                                        }
+                                        @media screen and (max-width: 1100px){
+                                            color: @black-dark;
+                                            display: inline;
+                                            padding: 0;
+                                            line-height: 45px;
+                                            ~ label{
+                                                line-height: 45px;
+                                                display: inline-block;
+                                                width: 10px;
+                                                height: 20px;
+                                                background: transparent;
+                                                margin-left: -10px;
+                                                margin-bottom: -6px;
+                                                position: relative;
+                                                z-index: 9;
+
+                                            }
+                                            ~ .azen-menu-checkbox:checked + .azen-sub-menu {
+                                                visibility: visible;
+                                                opacity: 1;
+                                                display: block;
+                                                position: relative;
+                                            }
+                                        }
+                                    }
+                                    > .azen-page {
+                                        visibility:hidden;
+                                        opacity:0;
+                                        box-sizing: border-box;
+                                        position: absolute;
+                                        top: 100%;
+                                        left: 0;
+                                        background-color: @white-lighter;
+                                        border: 1px solid @white;
+                                        line-height: 20px;
+                                        will-change: visibility, opacity;
+                                    }            
+                                    .azen-sub-menu {             
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        position:absolute;
+                                        top: 100%;
+                                        left: -15px;
+                                        background-color: @white-lighter;
+                                        padding: 0;
+                                        text-align: left;
+                                        will-change: visibility, opacity;
+                                        min-width: 220px;
+                                        border: 1px solid @gray-lighter;
+                                        @media screen and (max-width: 1100px){
+                                            display: none;
+                                            border: 0;
+                                            float: none;
+                                            line-height: normal;
+                                            &:before{
+                                                content: "";
+                                                position: absolute;
+                                                left: 15px;
+                                                right: 15px;
+                                                top: 0;
+                                                height: 1px;
+                                                background-color: #f2f1f3;
+                                            }
+                                        }
+                                        > .azen-menu-item {
+                                            float:none;
+                                            &:before{
+                                                right: 15px;
+                                                left: 15px;
+                                            }
+                                            &.azen-menu-item-has-children::after {
+                                                font-size: @font-size-base;
+                                                content: "\f105";
+                                                position: absolute;
+                                                top: 50%;
+                                                right: 15px;
+                                                color: @black;
+                                                letter-spacing: 0;
+                                                line-height: 20px;
+                                                display: inline-block;
+                                                vertical-align: middle;
+                                                font-family: FontAwesome;
+                                                .vendor(transform, translateY(-50%));
+                                                .vendor(transition, color 0.2s ease);
+                                            }
+                                            &:hover {
+                                                > a.azen-menu-link {
+                                                    color: @brand-color;
+                                                }
+                                                &.azen-menu-item-has-children::after {
+                                                    color: @brand-color;
+                                                }
+                                            }
+                                            &:last-of-type {
+                                                > a::after { 
+                                                    display: none;
+                                                }
+                                            }
+                                            > a.azen-menu-link {
+                                                padding: 15px @menu-item-h-padding;
+                                                display: block;
+                                                font-weight: 400;
+                                                white-space: nowrap;
+                                                position: relative;
+                                                line-height: 2;
+                                                text-transform: none;
+                                                letter-spacing: normal;
+                                                color: @black-dark;
+                                                &::after {
+                                                    content: "";
+                                                    position: absolute;
+                                                    height: 1px;
+                                                    left: @menu-item-h-padding;
+                                                    right: @menu-item-h-padding;
+                                                    bottom: 0;
+                                                    background-color: @gray-lighter;
+                                                }
+                                                &:hover {
+                                                    color: @brand-color;
+                                                }
+                                                @media screen and (max-width: 1100px){
+                                                    padding: 15px @menu-item-h-padding;
+                                                    font-weight: 400;
+                                                    white-space: nowrap;
+                                                    position: relative;
+                                                    color: @black;
+                                                    &:after{
+                                                        content: none;
+                                                    }
+                                                }
+                                            }
+                                            > .azen-sub-menu {
+                                                top: -1px; 
+                                                left: 100%;
+                                            }
+                                        }
+                                    }    
+                                }
+                            }
+                            .description {
+                                display: none;
+                            }
+                            @media (max-width: 1100px) {
+                                position: absolute;
+                                top: 91px;
+                                right: 0;
+                                left: 0;
+                                visibility: hidden;
+                                opacity: 0;
+                                .vendor(transform, translate(0, 30px));
+                                .vendor(transition, all .65s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s);
+                            }
+                            &:empty {
+                                height: 66px;
+                            }
+                        }
+                    }
+                }
+                .after-clear();
+            }
+        }
+    }
+    .azen-food-foodpicky-footer{
+        color: @gray-dark;
+        font-weight: 300;
+        padding: 90px 0 50px;
+        background-repeat: repeat;
+        background-position: top left;
+        > div{
+            &:first-of-type{
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -15px;
+                height: 16px;
+                background-repeat: repeat-x;
+                background-position: top left;
+            }
+        }
+        .azen-footer-wrapper{
+            .style-h4-strong(@bottom, @display){
+                .text-style-roboto-slab(@white-lighter, @font-size-large + 3px, 300, inherit);
+                margin-bottom: @bottom;
+                display: @display;
+            }
+            > div{
+                > div{
+                    > a{
+                        .style-h4-strong(15px, block);
+                    }
+                }
+                margin-top: 70px;
+                &:first-child {
+                    margin-top: 0;
+                }
+                div[class*="col-"] {
+                    margin-bottom: 30px;
+                }
+                .azen-hasimg{
+                    padding: 6px 0;
+                    margin: 10px 0;
+                    .text-style-open(@gray-darker, @font-size-base - 1px, 300, 1.8);
+                }
+                img{
+                    max-width: 100%;
+
+                }
+                &:first-child{
+                    > div{
+                        > div{
+                            &.azen-two-columns {
+                                &::after {
+                                    content: "";
+                                    display: table;
+                                    clear: both;
+                                }
+                                > div {
+                                    width: 50%;
+                                    float: left;
+                                    @media (max-width: 480px) {
+                                        float: none;
+                                        width: auto;
+                                    }
+                                }
+                            }
+                            > div{
+
+
+                                > a{
+                                    .text-style-open(@gray-darker, @font-size-base - 1px, 300, 1.8);
+                                    display: block;
+                                    padding: 5px 0;
+                                    &:hover {
+                                        color: @brand-color;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    > div{
+                        > div{
+                            &:first-of-type{
+                                margin: 10px 0;
+                                .text-style-open(@gray-darker, @font-size-base - 1px, 300, 1.8);
+                            }
+                            > img{
+
+                            }
+                            .azen-strong, .azen-highlighted{
+                                display: inline;
+                            }
+                            .azen-strong{
+                                .style-h4-strong(0, inline);
+
+                            }
+                            .azen-highlighted{
+                                color: @brand-color;
+                                font-size: 21px;
+                                font-weight: 600;
+                                vertical-align: -1px;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+/*    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }*/
+/*    @keyframes spin {
+        0% {
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }*/
+    .azen-food-preloader {
+        position: fixed;
+        z-index: 100500;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: @white-lighter;
+        .azen-status {
+            position: absolute;
+            z-index: 1001;
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: 100px;
+            height: 100px;
+            margin-top: -50px;
+            margin-left: -50px;
+            .vendor(animation, spin 2.5s infinite linear);
+            border: 3px solid transparent;
+            border-top-color: @brand-color;
+            border-radius: 50%;
+            &::before, &::after {
+                position: absolute;
+                content: '';
+                border-radius: 50%;
+            }
+            &::before {
+                top: 5px;
+                right: 5px;
+                bottom: 5px;
+                left: 5px;
+                .vendor(animation, spin 2s infinite linear);
+                border: 3px solid transparent;
+                border-top-color: @accent-1-color;
+            }
+            &::after {
+                top: 15px;
+                right: 15px;
+                bottom: 15px;
+                left: 15px;
+                .vendor(animation, spin 1s infinite linear);
+                border: 3px solid transparent;
+                border-top-color: @accent-2-color;
+            }
+        }
+    }    
+    /*elm*/
+    .azen-foodpicky-text{
+        font-family: "@{google-font-family-Karla}";
+    }
+    .font-default(){
+        color: @color;
+        font-size: @font;
+        font-weight: @weight;
+        line-height: @line;
+    }
+    .text-style-klara(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Karla}";
+    }
+    .text-style-droid(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Droid-Serif}";
+    }
+    .text-style-mont(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Montserrat}";
+    }
+    .text-style-allura(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Allura}";
+    }
+    .text-style-play(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Playfair-Display}";
+    }
+    .text-style-roboto(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Roboto}";
+    }
+    .text-style-lora(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Lora}";
+    }
+    .text-style-herr(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Herr-Von-Muellerhoff}";
+    }
+    .text-style-poppins(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Poppins}";
+    }
+    .text-style-open(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Open-Sans}";
+    }
+    .text-style-os(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Oswald}";
+    }
+    .text-style-roboto-slab(@color, @font, @weight, @line){
+        .font-default();
+        font-family: "@{google-font-family-Roboto-Slab}";
+    }
+    /*sections-eve*/
+    .azen-food-form-field() {
+        .field-style(){
+            position: relative;
+            span{
+                position: absolute;
+                top: 50%;
+                right: 23px;
+                .vendor(transform, translate(0, -50%));
+                color: @black-light;
+                &:before{
+                    font-size: @font-size-base + 1px;
+                }
+                visibility: hidden;
+                opacity: 0;
+                &.fa:not(.fa-check){
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            &.az-filled{
+                textarea, input:not([type="checkbox"]):not([type="radio"]), select{
+                    color: @white-lighter;
+                    &:focus {
+                        color: @black-dark;
+                        .vendor(outline, none);
+                        ~ span{
+                            visibility: hidden;
+                            opacity: 0;
+                        }
+                    }
+                }
+                span{
+                    visibility: visible;
+                    opacity: 1;
+                    color: @brand-color;
+                    &.fa:not(.fa-check){
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .azen-food-form-field{
+            margin-bottom: 25px;
+            &[data-white="true"]{
+                .azen-form-wrapper{
+                    &.az-filled{
+                        textarea, input:not([type="checkbox"]):not([type="radio"]), select{
+                            color: @black-darker;
+                            &:focus{
+                                color: @white-lighter;
+                            }
+                        }
+                    }
+                    textarea, input:not([type="checkbox"]):not([type="radio"]), select{
+                        background-color: @white-lighter;
+                        color: @black-dark;
+                        .placeholder(color, @black-dark);
+                        border-color: @black-dark;
+                        &:focus {
+                            .placeholder(color, @white-lighter);
+                            background-color: @black-dark;
+                            .placeholder(color, @white-light);
+                            color: @white-lighter;
+                            border-color: @white-lighter;
+                            .vendor(outline, none);
+                            ~ span{
+                                visibility: hidden;
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .azen-form-wrapper{
+                .field-style();   
+            }
+            .azen-label-wrapper{
+                margin-bottom: 9px;
+                label{
+                    .text-style-mont(@black-light, @font-size-small + 1px, 400, 20px);
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                }
+            }
+            input:not([type="checkbox"]):not([type="radio"]){
+                max-width: 100%;
+            }
+            input{
+                &[type="checkbox"]{
+                    &:not(checked) {
+                        position: absolute;
+                        opacity: 0;
+                    }
+                    &:checked {
+                        + label {                
+                            &::before {
+                                content: "";
+                                background-size: 11px;
+                                background-position: 5px 5px;
+                                background-repeat: no-repeat;
+                                z-index: 1000;
+                                border-color: @brand-color;
+                            }
+                        }
+                    }
+                    + label {
+                        .vendor(user-select, none);
+                        cursor: pointer;
+                        display: inline-block;
+                        position: relative;      
+                        padding-left: 40px;
+                        margin-bottom: 0;
+                        margin-top: 0;
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            margin-right: 10px;
+                            width: 20px;
+                            height: 20px;
+                            top: ~"calc(50% - 1px)";
+                            .vendor(transform, translate(0, -50%));
+                            position: absolute;
+                            left: 0;
+                            border-radius: 7px;
+                            border: 1px solid @brand-color;
+                        }
+                    }
+                }
+                &[type="radio"]{
+                    &:not(checked) {
+                        position: absolute;
+                        opacity: 0;
+                    }
+                    &:checked {
+                        + label {                
+                            &::before {
+                                content: "";
+                                .vendor(transform, translate(0, -50%) scale(0.5));
+                                background-color: @brand-color;
+                            }
+                            &::after{
+                                .vendor(transform, translate(0, -50%) scale(1));
+                            }
+                        }
+                    }
+                    + label {
+                        .vendor(user-select, none);
+                        cursor: pointer;
+                        display: inline-block;
+                        position: relative;      
+                        line-height: 1.5;
+                        padding-left: 30px;
+                        margin-bottom: 0;
+                        margin-top: 0;
+                        &::before {
+                            content: "";
+                            margin-right: 10px;
+                            width: 15px;
+                            height: 15px;
+                            top: ~"calc(50% - 1px)";
+                            .vendor(transform, translate(0, -50%));
+                            .vendor(transition, all .1s linear 0s);
+                            position: absolute;
+                            left: 0;
+                            border-radius: 50%;
+                            border: 2px solid @gray-lighter;
+                        }
+                        &:after{
+                            content: "";
+                            width: 15px;
+                            height: 15px;
+                            top: ~"calc(50% - 1px)";
+                            .vendor(transform, translate(0, -50%) scale(0.01));
+                            .vendor(transition, all .1s linear .2s);
+                            position: absolute;
+                            border-radius: 50%;
+                            left: 0;
+                            border: 2px solid @brand-color;
+                        }
+                    }
+                }
+            }
+            .azen-radio, .azen-checkbox{
+                margin: 20px 0;
+                label{
+                }
+            }
+            textarea, input:not([type="checkbox"]):not([type="radio"]), select{
+                padding: 6px 23px;
+                background-image: none;
+                box-shadow: none;
+                box-sizing: border-box;
+                text-transform: capitalize;
+                letter-spacing: 0;
+                .vendor(transition, all 0.3s linear 0s);
+                .vendor(appearance, none)  !important;
+                border-radius: 10px;
+                display: block;
+                .placeholder(color, @black-light);
+                .placeholder(font-size, @font-size-base);
+                .placeholder(font-family, "@{google-font-family-Karla}");
+                width: 100%;
+                background-color: @black-dark;
+                height: 45px;
+                border-radius: 30px;
+                border: 1px solid @black-light;
+                .text-style-klara(@black-light, @font-size-base, 400, 45px);
+                &:focus {
+                    background-color: @white-lighter;
+                    .placeholder(color, @black-dark);
+                    color: @black-dark;
+                    border-color: @white-lighter;
+                    .vendor(outline, none);
+                    ~ span{
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                }
+            }
+            textarea{
+                height: (@font-size-base + 1px) * 10px;
+                line-height: 1.6;
+                padding-top: 16px;
+                overflow: auto;
+                .placeholder(color, @gray-dark);
+            }
+            button{
+                .vendor(transition, all 0.3s linear 0s);
+                text-transform: uppercase;
+                display: inline-block;
+                padding: 0 28px;
+                background-color: @brand-color;
+                border: 1px solid @brand-color;
+                .text-style-mont(@white-lighter, @font-size-small, 600, 37px);
+                border-radius: 30px;
+                cursor: pointer;
+                letter-spacing: 1.5px;
+                &:hover{
+                    background-color: @white-lighter;
+                    color: @brand-color;
+                }
+            }
+            select{
+                line-height: 1;
+            }
+        }
+    }
+
+    .azen-food-form-container{
+        &[data-white="true"] {
+            .azen-univer-form-field{
+                textarea, input:not([type="checkbox"]):not([type="radio"]), select{
+                    background-color: @white-lighter;
+                }
+            }
+        }
+        .azen-food-form-field();
+    }
+
+    .azen-food-form-field();
+    /**/
+    .azen-food-form-white-field(){
+        .azen-food-form-white-field{
+            margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            input:not([type="checkbox"]):not([type="radio"]){
+                max-width: 100%;
+            }
+            input{
+                &[type="checkbox"]{
+                    &:not(checked) {
+                        position: absolute;
+                        opacity: 0;
+                    }
+                    &:checked {
+                        + label {                
+                            &::before {
+                                content: "";
+                                background-size: 11px;
+                                background-position: 5px 5px;
+                                background-repeat: no-repeat;
+                                z-index: 1000;
+                                border-color: @brand-color;
+                            }
+                        }
+                    }
+                    + label {
+                        .vendor(user-select, none);
+                        cursor: pointer;
+                        display: inline-block;
+                        position: relative;      
+                        padding-left: 40px;
+                        margin-bottom: 0;
+                        margin-top: 0;
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            margin-right: 10px;
+                            width: 20px;
+                            height: 20px;
+                            top: ~"calc(50% - 1px)";
+                            .vendor(transform, translate(0, -50%));
+                            position: absolute;
+                            left: 0;
+                            border-radius: 7px;
+                            border: 1px solid @brand-color;
+                        }
+                    }
+                }
+                &[type="radio"]{
+                    &:not(checked) {
+                        position: absolute;
+                        opacity: 0;
+                    }
+                    &:checked {
+                        + label {                
+                            &::before {
+                                content: "";
+                                .vendor(transform, translate(0, -50%) scale(0.5));
+                                background-color: @brand-color;
+                            }
+                            &::after{
+                                .vendor(transform, translate(0, -50%) scale(1));
+                            }
+                        }
+                    }
+                    + label {
+                        .vendor(user-select, none);
+                        cursor: pointer;
+                        display: inline-block;
+                        position: relative;      
+                        line-height: 1.5;
+                        padding-left: 30px;
+                        margin-bottom: 0;
+                        margin-top: 0;
+                        &::before {
+                            content: "";
+                            margin-right: 10px;
+                            width: 15px;
+                            height: 15px;
+                            top: ~"calc(50% - 1px)";
+                            .vendor(transform, translate(0, -50%));
+                            .vendor(transition, all .1s linear 0s);
+                            position: absolute;
+                            left: 0;
+                            border-radius: 50%;
+                            border: 2px solid @gray-lighter;
+                        }
+                        &:after{
+                            content: "";
+                            width: 15px;
+                            height: 15px;
+                            top: ~"calc(50% - 1px)";
+                            .vendor(transform, translate(0, -50%) scale(0.01));
+                            .vendor(transition, all .1s linear .2s);
+                            position: absolute;
+                            border-radius: 50%;
+                            left: 0;
+                            border: 2px solid @brand-color;
+                        }
+                    }
+                }
+            }
+            .azen-radio, .azen-checkbox{
+                margin: 20px 0;
+                label{
+                }
+            }
+            textarea, input:not([type="checkbox"]):not([type="radio"]), select{
+                padding: 6px 19px;
+                background-image: none;
+                box-shadow: none;
+                box-sizing: border-box;
+                text-transform: capitalize;
+                letter-spacing: 0;
+                .vendor(transition, all 0.3s linear 0s);
+                .vendor(appearance, none)  !important;
+                border-radius: 4px;
+                display: block;
+                .placeholder(color, @black-lighter);
+                .placeholder(font-size, @font-size-base);
+                .placeholder(font-family, "@{google-font-family-Karla}");
+                width: 100%;
+                background-color: @white-lighter;
+                height: 60px;
+                border: 1px solid @gray-light;
+                .text-style-klara(@black-lighter, @font-size-base, 400, 60px);
+                color: @gray-dark;
+                &:focus {
+                    .vendor(outline, none);
+                }
+            }
+            textarea{
+                height: 120px;
+                line-height: 1.6;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                overflow: auto;
+                .placeholder(color, @black-lighter);
+                margin-bottom: 30px;
+            }
+            button{
+                .vendor(transition, all 0.3s linear 0s);
+                display: inline-block;
+                padding: 0 28px;
+                background-color: @brand-color;
+                border: 1px solid @brand-color;
+                .text-style-klara(@white-lighter, @font-size-large, 400, 44px);
+                border-radius: 30px;
+                cursor: pointer;
+                &:hover{
+                    background-color: @white-lighter;
+                    color: @brand-color;
+                }
+            }
+            select{
+                line-height: 1;
+            }
+        }
+    }
+
+    .azen-food-form-white-container{
+        .azen-food-form-white-field();
+    }
+
+    .azen-food-form-white-field();
+}

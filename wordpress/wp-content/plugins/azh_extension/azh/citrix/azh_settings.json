@@ -1,0 +1,77 @@
+{
+    "patterns": "",
+    "custom-icons-classes": "",
+    "custom-icons-css": "",
+    "brand-color": "#ff0000",
+    "accent-1-color": "#00ff00",
+    "accent-2-color": "#0000ff",
+    "google-fonts": "Poppins:300,400,500,600,700\r\nCrimson+Text:400,400i,600,600i,700,700i",
+    "prefix": "azen",
+    "container-widths": "768px:750px\r\n992px:970px\r\n1200px:1170px",
+    "tags": {
+        "map.html": "google-map",
+        "tabs.htm": "tabs",
+        "button.htm": "button",
+        "video.html": "video",
+        "feature.htm": "text",
+        "teammate.htm": "person",
+        "about-us.html": "image, text",
+        "accordion.htm": "accordion",
+        "header-1.html": "menu",
+        "icon-link.htm": "links-list",
+        "our-blog.html": "blog",
+        "partners.html": "logo",
+        "slider-1.html": "slider, header",
+        "slider-2.html": "slider, header",
+        "slider-3.html": "slider, header",
+        "slider-4.html": "slider, header",
+        "slider-5.html": "slider, header",
+        "achivement.htm": "icon",
+        "fun-facts.html": "counter",
+        "portfolio.html": "gallery",
+        "promo-box.html": "call-to-action",
+        "citrix-text.htm": "text",
+        "latest-news.htm": "blog",
+        "recent-work.htm": "gallery",
+        "what-we-do.html": "image, icon, text, list",
+        "achivement-1.htm": "icon",
+        "popular-tags.htm": "button",
+        "portfolio-1.html": "gallery",
+        "portfolio-2.html": "gallery",
+        "pricing-plan.htm": "price",
+        "promo-box-1.html": "call-to-action",
+        "introduction.html": "header",
+        "core-features.html": "image, icon, text, list",
+        "call-to-action.html": "call-to-action",
+        "circlebar-skill.htm": "counter",
+        "contact-details.htm": "icon",
+        "under-footer-1.html": "footer",
+        "portfolio-slider.html": "gallery",
+        "why-work-with-us.html": "image, text",
+        "about-us-features.html": "text, list",
+        "introduction-title.htm": "title",
+        "portfolio-isotope.html": "gallery",
+        "portfolio-detailed.html": "project",
+        "testimonials-slider.html": "testimonial",
+        "contact-form-section.html": "form",
+        "paragraph-with-circle.htm": "text, list",
+        "paragraph-with-circle-1.htm": "text, list",
+        "upper-menu-section.html": "header",
+        "forms/form-container.htm": "form"
+    },
+    "child-suggestions": {
+        "forms/form-container.htm": [
+            "forms/checkboxes.htm",
+            "forms/input-field.htm",
+            "forms/big-text-field.htm"
+        ]
+    },
+    "files_settings": {
+        "citrix/form-container.htm": {
+            "wrapper_classes": ["az-bottom-left-controls"]
+        },
+        "citrix/forms/form-container.htm": {
+            "wrapper_classes": ["az-bottom-left-controls"]
+        }
+    }
+}

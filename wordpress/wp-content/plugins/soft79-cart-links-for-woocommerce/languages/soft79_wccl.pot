@@ -1,0 +1,40 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SOFT79 Cart Links for WooCommerce\n"
+"POT-Creation-Date: 2015-11-28 14:58+0100\n"
+"PO-Revision-Date: 2015-11-28 13:54+0100\n"
+"Last-Translator: \n"
+"Language-Team: Soft79 <admin@soft79.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _e;__;_x:1,2c;_n:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: languages\n"
+
+#: soft79-wc-cart-links.php:66
+msgid "Link to this cart:"
+msgstr ""
+
+#: soft79-wc-cart-links.php:136
+#, php-format
+msgid "Unknown product &quot;%d&quot;."
+msgstr ""
+
+#: soft79-wc-cart-links.php:147
+#, php-format
+msgid "Can not add %d &quot;%s&quot; because it is not available."
+msgstr ""
+
+#: soft79-wc-cart-links.php:150
+#, php-format
+msgid "Reduced quantity of &quot;%s&quot; from %d to %d because there's not enough stock."
+msgstr ""
+
+#: soft79-wc-cart-links.php:179
+msgid "Something went wrong populating your cart:"
+msgstr ""

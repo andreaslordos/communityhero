@@ -1,0 +1,32 @@
+@import "variables.less";
+
+
+.archive-header, .page-header {
+    .archive-title, .page-title, .entry-title {
+        font-weight: 400;
+        color: @black;
+        font-family: 'Roboto Slab', serif;
+        margin-bottom: 25px;
+        + .archive-subtitle, + .page-subtitle {
+            margin-top: 10px;
+            margin-bottom: 25px; 
+        }
+    }
+    .archive-subtitle, .page-subtitle {
+        font-size: @font-size-base;
+        font-weight: 400;
+    }
+    .archive-meta {
+        display: none;
+    }
+}
+
+body {
+    &.single {
+        #primary {
+            .page-header {
+                display: none;
+            }
+        }
+    }
+}

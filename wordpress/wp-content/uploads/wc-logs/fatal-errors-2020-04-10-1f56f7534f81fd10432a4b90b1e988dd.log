@@ -1,0 +1,65 @@
+2020-04-10T19:48:32+00:00 CRITICAL Uncaught Error: Call to undefined function curl_init() in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php:95
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(289): wc_maybe_reduce_stock_levels(541)
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(363): do_action('woocommerce_ord...', 541, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#4 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(221): WC_Order->status_transition()
+#5 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(333): WC_Order->save()
+#6 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/gateways/cod/class-wc-gateway-cod.php(326): WC_Order->update_status('processing', 'Payment to be m...')
+ in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php on line 95
+
+2020-04-10T19:49:04+00:00 CRITICAL Uncaught Error: Call to undefined function curl_init() in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php:95
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(289): wc_maybe_reduce_stock_levels(543)
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(363): do_action('woocommerce_ord...', 543, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#4 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(221): WC_Order->status_transition()
+#5 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(333): WC_Order->save()
+#6 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/gateways/cod/class-wc-gateway-cod.php(326): WC_Order->update_status('processing', 'Payment to be m...')
+ in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php on line 95
+
+2020-04-10T19:52:38+00:00 CRITICAL Uncaught Error: Call to undefined function curl_init() in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php:95
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(289): wc_maybe_reduce_stock_levels(545)
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(363): do_action('woocommerce_ord...', 545, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#4 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(221): WC_Order->status_transition()
+#5 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(333): WC_Order->save()
+#6 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/gateways/cod/class-wc-gateway-cod.php(326): WC_Order->update_status('processing', 'Payment to be m...')
+ in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php on line 95
+
+2020-04-10T19:52:51+00:00 CRITICAL Uncaught Error: Call to undefined function curl_init() in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php:95
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(289): wc_maybe_reduce_stock_levels(547)
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(363): do_action('woocommerce_ord...', 547, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#4 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(221): WC_Order->status_transition()
+#5 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(333): WC_Order->save()
+#6 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/gateways/cod/class-wc-gateway-cod.php(326): WC_Order->update_status('processing', 'Payment to be m...')
+ in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php on line 95
+
+2020-04-10T19:53:56+00:00 CRITICAL Uncaught Error: Call to undefined function curl_init() in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php:95
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(289): wc_maybe_reduce_stock_levels(549)
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(363): do_action('woocommerce_ord...', 549, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#4 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(221): WC_Order->status_transition()
+#5 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(333): WC_Order->save()
+#6 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/gateways/cod/class-wc-gateway-cod.php(326): WC_Order->update_status('processing', 'Payment to be m...')
+ in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php on line 95
+
+2020-04-10T21:58:14+00:00 CRITICAL Uncaught Error: Call to a member function get_shipping_address_1() on null in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php:96
+Stack trace:
+#0 /var/www/html/wordpress/wp-includes/class-wp-hook.php(289): wc_maybe_reduce_stock_levels(557)
+#1 /var/www/html/wordpress/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /var/www/html/wordpress/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(363): do_action('woocommerce_ord...', 557, Object(Automattic\WooCommerce\Admin\Overrides\Order))
+#4 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(221): WC_Order->status_transition()
+#5 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/class-wc-order.php(333): WC_Order->save()
+#6 /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/gateways/cod/class-wc-gateway-cod.php(326): WC_Order->update_status('processing', 'P in /var/www/html/wordpress/wp-content/plugins/woocommerce/includes/wc-stock-functions.php on line 96
+

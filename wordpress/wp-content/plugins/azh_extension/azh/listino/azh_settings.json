@@ -1,0 +1,45 @@
+{
+    "patterns": "",
+    "custom-icons-classes": "",
+    "custom-icons-css": "",
+    "brand-color": "#ff0000",
+    "accent-1-color": "#00ff00",
+    "accent-2-color": "#0000ff",
+    "google-fonts": "Open+Sans:800,700,600,400,300,400italic",
+    "prefix": "azen",
+    "container-widths": "768px:750px\r\n992px:970px\r\n1200px:1170px",
+    "tags": {
+        "start.html": "slider, header",
+        "footer.html": "menu",
+        "header.html": "menu",
+        "levels.html": "text, list",
+        "news.html": "text, slider",
+        "partners.html": "logo, slider",
+        "projects.html": "gallery",
+        "info-columns.html": "footer",
+        "team-member.htm": "person",
+        "team-member-slim.htm": "person",
+        "about-us.html": "text, image",
+        "blockquote.html": "testimonial",
+        "video.html": "video",
+        "info-block.htm": "icon, text",
+        "single-portfolio.html": "text, image, progressbar",
+        "follow-us.html": "footer",
+        "footer-feedback.html": "footer",
+        "portfolio.html": "gallery",
+        "portfolio_2.html": "gallery",
+        "section-caption.html": "header",
+        "single-portfolio-2.html": "image, text",
+        "single-portfolio-3.html": "image, text, person",
+        "team.html": "person, gallery",
+        "author-info.htm": "text"
+    },
+    "elements-widths": {
+        "info-block.htm": "400px",
+        "team-member.htm": "400px",
+        "team-member-slim.htm": "300px",
+        "author-info.htm": "400px"
+    }
+}
+
+

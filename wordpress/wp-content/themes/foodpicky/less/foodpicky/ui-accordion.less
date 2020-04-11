@@ -1,0 +1,52 @@
+@import "variables.less";
+
+.ui-accordion-header {
+  border: 1px solid @white-darker;
+  cursor: pointer;
+  outline: none;
+  margin: 0 0 5px;
+  vertical-align: middle;
+  padding: 9px 30px 9px 15px;
+  .vendor(transition, all 0.2s ease);
+  font-size: @font-size-base - 1px;
+  position: relative;
+  &::after {
+    content: "\f107";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: @accent-1-color;
+  }
+  > a {
+    color: @accent-1-color;
+    .title {
+      font-size: @font-size-base - 1px;
+      font-weight: 600;
+    }
+    .icon {
+      margin-right: 10px;
+      color: @brand-color;
+    }
+  }
+  &.ui-accordion-header-active {
+    background-color: @brand-color;
+    border: 1px solid @brand-color;
+    > a {
+      color: @white-lighter;
+    }
+    .icon {
+      color: @white-lighter;
+    }
+    &::after {
+      color: @white-lighter;
+      .vendor(transform, rotate(180deg));
+    }
+  }
+}
+.accordion-section {
+  p {
+    margin: 15px 0; 
+  }
+}

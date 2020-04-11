@@ -1,0 +1,37 @@
+.cmb2-metabox .cmb-repeat-group-wrap {
+    max-width: 100%;
+}
+
+.cmb2-wrap textarea {
+    width: auto;
+}
+
+#forms_repeat .cmb-type-textarea-code .cmb-td textarea {
+    display: none;
+}
+
+.json-editor h3 > span {
+}
+
+.json-editor h3 {
+    margin: 0;
+}
+
+.json-editor h3 > div {
+    margin: 0;
+}
+
+[data-schemapath*="rules"] button.json-editor-btn-edit .ui-button-text {
+    text-indent: -10000px;
+    position: relative;
+}
+
+[data-schemapath*="rules"] button.json-editor-btn-edit .ui-button-text::after {
+    content: "+";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-indent: 0;
+}
