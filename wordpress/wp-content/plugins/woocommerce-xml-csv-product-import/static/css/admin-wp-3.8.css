@@ -1,0 +1,25 @@
+.wpallimport-plugin .woocommerce_options_panel .options_group{
+	overflow: hidden;
+}
+.wpallimport-plugin .woocommerce_options_panel input{
+	/*float: left !important;*/
+}
+.wpallimport-plugin .form-table input.tog, 
+.wpallimport-plugin .form-table input[type="radio"]{
+	/*margin-top: 0px !important;*/
+}
+/*.wpallimport-plugin #woocommerce_attributes label{
+	top:0px !important;
+	margin-bottom: 10px !important;
+}*/
+.wpallimport-plugin .form-table,
+.wpallimport-plugin .form-table td,
+.wpallimport-plugin .form-table th,
+.wpallimport-plugin .form-table td p,
+.wpallimport-plugin .form-wrap label{
+	font-size: 12px !important ;
+}
+.wpallimport-plugin #close_xml_tree{
+	top:0px;
+	right:0px;
+}

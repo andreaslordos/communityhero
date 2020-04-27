@@ -4,7 +4,7 @@ Tags: shipping, stamps, usps, woocommerce, taxes, payment, stripe
 Requires at least: 4.6
 Requires PHP: 5.3
 Tested up to: 5.4
-Stable tag: 1.22.5
+Stable tag: 1.23.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -82,6 +82,13 @@ As of the WooCommerce 3.5 release, WooCommerce Services no longer provides shipp
 7. Checking and exporting the label purchase reports
 
 == Changelog ==
+
+= 1.23.0 - 2020-04-08 =
+* Fix   - Hide paper selection until valid payment method is selected.
+* Tweak - Shipping banner wording improvements.
+* Add   - Link to carrier's schedule pickup page.
+* Add   - Improved shipping service feature descriptions.
+* Add   - Option to mark order complete when label is printed.
 
 = 1.22.5 - 2020-03-17 =
 * Add   - Admin asset API endpoint.

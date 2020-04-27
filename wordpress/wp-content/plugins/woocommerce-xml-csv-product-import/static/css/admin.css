@@ -1,0 +1,553 @@
+.wpallimport-plugin #existing_meta_keys, 
+.wpallimport-plugin #existing_attributes{
+	margin-bottom: 10px;
+	padding: 2px;
+	width: 580px;
+	height:200px;
+}
+
+.wpallimport-plugin #woocommerce-coupon-data ul.wc-tabs li a::before,
+.wpallimport-plugin #woocommerce-product-data ul.wc-tabs li a::before,
+.wpallimport-plugin .woocommerce ul.wc-tabs li a::before {
+	top: 2px;
+    right: 4px;
+    position: relative;
+}
+
+.pmxi_checkbox{
+	position: relative;
+	top: -2px;
+	width: 50px !important;
+}
+.wpallimport-plugin .options_group{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	/*overflow: hidden;*/
+}
+.wpallimport-plugin .options_group .input{
+	padding-left: 8px;
+	margin-top: 10px;	
+}
+.wpallimport-plugin .options_group .input input{
+	width:auto !important;
+}
+.wpallimport-plugin .options_group .input label{
+	/*margin-left: 0;
+	padding-left: 7px;
+	position: relative;
+	top: -3px;
+	width: auto;*/
+}
+.wpallimport-plugin .woocommerce_options_panel label, .wpallimport-plugin .woocommerce_options_panel legend{
+	margin: 0;
+}
+.wpallimport-plugin .woocommerce_options_panel p.form-field{
+	padding-left: 20px !important;
+}
+.wpallimport-plugin .woocommerce_options_panel p.form-field.wpallimport-radio-field{	
+	padding-bottom: 0 !important;
+	padding-top: 0 !important;
+	margin-top: 0 !important;
+}
+.wpallimport-plugin #woocommerce-product-data,
+.wpallimport-plugin .woocommerce-order-data{
+	overflow: hidden;	
+	box-shadow:none;
+}
+.wpallimport-plugin #woocommerce-product-data .hndle,
+.wpallimport-plugin .woocommerce-order-data .hndle{
+	margin-bottom: 0px;
+	cursor: default;
+	padding: 10px;
+	overflow: hidden;
+}
+.wpallimport-plugin .set_with_xpath{	
+	clear: both;
+}
+.wpallimport-plugin .set_with_xpath .wpallimport-slide-content{
+	padding-left: 20px; 
+	/*padding-top: 10px;*/
+	display: block;
+	overflow: hidden;
+	margin: 5px 0;
+}
+.wpallimport-plugin .in_variations select, .wpallimport-plugin .is_visible select, .wpallimport-plugin .is_taxonomy select{
+	float:none !important;
+}
+.wpallimport-plugin .in_variations, .wpallimport-plugin .is_visible, .wpallimport-plugin .is_taxonomy{
+	display: block;
+	float: left;
+	margin: 5px 0 0 5px;
+}
+.wpallimport-plugin .is_create_taxonomy {
+	display: block;
+	float: left;
+	margin: 5px 0 15px 5px;
+}
+.wpallimport-plugin .in_variations label, .wpallimport-plugin .is_visible label, .wpallimport-plugin .is_taxonomy label{
+	width: 80px;
+}
+.wpallimport-plugin .is_create_taxonomy label{
+	width: 115px;
+}
+.wpallimport-plugin .panel{
+	background: #fff;
+	padding-bottom: 20px;
+	min-height: 200px;
+}
+.wpallimport-plugin .wc-tabs{
+	/*width:152px !important;*/
+}
+.wpallimport-plugin ul.wc-tabs li.active a{
+	/*width:120px !important;*/
+	background-color: #fff !important;
+}
+.wpallimport-plugin .fleft{
+	float: left;
+}
+.wpallimport-plugin #woocommerce_attributes{
+	float: right !important;
+	padding-top: 10px;
+	width: 75% !important;
+}
+.wpallimport-plugin .variations_tree{
+	font-family: sans-serif;
+	/*position: absolute;
+	width:100%;
+	top:-155px;*/
+}
+
+.wpallimport-plugin .variations_tag {	
+	background-color: #fff;	
+	/*position: fixed;	*/
+	margin: 5px;			
+	border-top: 1px solid #DFDFDF;
+	-moz-border-radius-topleft: 4px;
+	-webkit-border-top-left-radius: 4px;
+	 border-top-left-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-webkit-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
+	-webkit-box-shadow: 0px 0px 15px #ccc;
+	-moz-box-shadow:    0px 0px 15px #ccc;
+	box-shadow:         0px 0px 15px #ccc;
+}
+.wpallimport-plugin .options .variations_tag{
+	margin-top: 0px;		
+}
+	.wpallimport-plugin .variations_tag .title {
+		font-weight: bold;
+		padding: 6px 8px;
+		color: #464646;
+		background: #fff;
+		font-size: 12px;
+		text-align: center;
+		border: 1px solid #ddd;
+		border-bottom: 1px solid #ddd; 
+		-moz-border-radius-topleft: 4px;
+		-webkit-border-top-left-radius: 4px;
+		 border-top-left-radius: 4px;
+		-moz-border-radius-topright: 4px;
+		-webkit-border-top-right-radius: 4px;
+		border-top-right-radius: 4px;
+		overflow: hidden;
+	}
+	.wpallimport-plugin .variations_tag .xml {
+		max-height: 300px;
+		overflow: auto;
+		border: 1px solid #DFDFDF;
+		border-top:none;
+		-moz-border-radius-bottomright: 4px;
+		-webkit-border-bottom-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+		.wpallimport-plugin .variations_tag .navigation{
+			line-height: 30px;
+		}
+		.wpallimport-plugin .variations_tag .navigation a,
+		.wpallimport-plugin .variations_tag .navigation span{
+			font-weight: bold;
+			padding: 0 12px;
+			text-decoration: none;
+			height: 25px;
+		}
+		.wpallimport-plugin .variations_tag .navigation span.out_of{
+			color:#777;
+			margin-left: 0;
+		}
+		.wpallimport-plugin .variations_tag .navigation .previous_element{
+			float: left;
+			background: url('../img/left_btn.png') 5% 0 no-repeat;
+			margin-top: 4px;
+		}
+		.wpallimport-plugin .variations_tag .navigation .next_element{	
+			float: right;
+			background: url('../img/right_btn.png') 95% 0 no-repeat;
+			margin-top: 4px;
+		}		
+
+@media screen and (max-height: 700px) {  
+	.wpallimport-plugin .variations_tag {
+  		max-height:300px;
+  	}
+  	.wpallimport-plugin .variations_tag .xml {
+  		max-height: 265px;
+  	}
+}
+.wpallimport-plugin .use_parent{
+	display: inline-block;	
+	position: relative;
+}
+
+.wpallimport-plugin table.custom-params label{
+	font-size: 12px;
+	left: 3px;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+	position: relative;
+	top: -4px !important;
+}
+.wpallimport-plugin table.custom-params input[type=text]{
+	font-size: 14px;
+	height: 40px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;	
+	color: #000;
+	font-size: 15px;
+	position: relative;
+	top: 0;
+}
+.wpallimport-plugin table.custom-params input[type=checkbox]{
+	margin: 0 !important;
+}
+.wpallimport-plugin #variations_tag{
+	clear: both;	
+	position: fixed;
+	top: 335px;
+	right: 30%;	
+	width: 300px;	
+	display: none;
+	z-index: 1;
+}
+.wpallimport-plugin .variations_tag .title{
+	cursor: move;
+}
+.wpallimport-plugin .variations_tag{
+	z-index: 999;
+}
+.wpallimport-plugin .variations_tag .xml{
+	padding-left: 20px;
+}
+.wpallimport-plugin .load_options{
+	float: right;
+	height: 0;
+	position: relative;
+	right: 10px;
+	top: -35px;
+}
+.wpallimport-plugin  #dialog, .wpallimport-plugin .ui-dialog{
+	padding: 0px;
+}
+.wpallimport-plugin #variations_console{
+	clear: both;
+	display: block;
+	margin: 15px 0;
+}
+.wpallimport-plugin #variations_console .updated{
+	padding: 10px;
+}
+.wpallimport-plugin #toggle_xml_tree{
+	display: block;
+	left: 10px;
+	margin: 5px 10px;
+	position: relative;
+	float: left;
+	width: 120px;
+}
+.wpallimport-plugin #close_xml_tree{
+	display: block;
+	position: absolute;
+	top: -16px;
+	right: -10px;
+	background: url("../img/ico-remove.png") no-repeat scroll 0 0 transparent;
+	width:16px;
+	height:16px;
+
+}
+.wpallimport-plugin #variable_product_options img{
+	margin: 10px 0;
+}
+.wpallimport-plugin .highlight{
+	background: none repeat scroll 0 0 #CAD2DF;
+	padding: 5px;
+	margin-right: 20px;
+	text-align: center;
+}
+.wpallimport-plugin #regular_price_shedule{
+	line-height: 27px;
+}
+.wpallimport-plugin .options_group .form-field input[type=radio],
+.wpallimport-plugin .options_group .form-field input[type=checkbox]{
+	display: block;
+	float: left;
+	margin: 3px 10px 0 0;
+	position: relative;
+}
+.wpallimport-plugin #add_on_options .form-field label{
+	width: 350px;
+}
+.wpallimport-plugin #woocommerce-product-data .wc-tabs-back,
+.wpallimport-plugin .woocommerce-order-data .wc-tabs-back{
+	height: 2200px;
+}
+.wpallimport-plugin #woocommerce-product-data .form-field,
+.wpallimport-plugin .woocommerce-order-data .form-field{
+	padding-left: 20px;
+}
+.wpallimport-plugin .pmwi_percentage_prices_note,
+.wpallimport-plugin .pmwi_reduce_prices_note{
+	display: none;
+}
+.wpallimport-plugin .pmwi_adjust_prices{
+	display: none;
+}
+.wpallimport-plugin .pmwi_trigger_adjust_prices{
+	cursor: pointer;
+	width: 330px;
+}
+.wpallimport-plugin .advanced_attributes{
+	display: inline-block;
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin: 6px 3px 0px 3px;	
+}
+.wpallimport-plugin .advanced_attributes{ 	
+	font-size: 12px;
+	width:100%;
+	height:25px;	
+	color:#21759B;
+	/*font-family: "Open Sans",​sans-serif;*/
+	padding-top: 2px;
+	text-decoration: underline;	
+	/*margin: 0 auto;	*/
+}
+.wpallimport-plugin .advanced_attributes span{
+	font-size: 16px;
+	position: relative;
+	top: 1px;
+}
+.wpallimport-plugin .advanced_attribute_settings{
+	clear: both;
+	display: none;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.wpallimport-plugin .advanced_attribute_settings div.input{
+	clear: both;
+	vertical-align: top;
+}
+
+.wpallimport-plugin .advanced_attribute_settings>div.input {
+	width: 40%;
+	min-width: 170px;
+	margin-top: 10px;
+}
+
+.wpallimport-plugin .advanced_attribute_settings>div.input:nth-child(3),
+.wpallimport-plugin .advanced_attribute_settings>div.input:nth-child(4){
+	margin-top: 15px;
+}
+
+.wpallimport-plugin .advanced_attribute_settings div.input label{
+	/*width: 100%;*/
+	/*float: right;*/
+	top: -7px !important;
+}
+.wpallimport-plugin .advanced_attribute_settings input[type="text"]{
+	font-size: 12px !important;
+	height: 30px !important;
+	/*float: right;*/
+	/*width: 120px;*/
+}
+
+.wpallimport-plugin .advanced_attribute_settings input[type="radio"]{
+	float: left;
+}
+/*.wpallimport-plugin .shop_order_tabs li a::before{
+	content: "" !important;
+}*/
+.wpallimport-plugin .wpallimport-order-billing-fields{
+	width: 98%;
+}
+.wpallimport-plugin .wpallimport-order-billing-fields input[type="text"]{
+	width: 100% !important;
+}
+.wpallimport-plugin a.add-new-line{
+	position: relative;
+	top:-10px;
+	background: rgba(0, 0, 0, 0) url("../img/add.png") no-repeat scroll 0 3px;
+	padding-left: 15px;
+}
+/*.wpallimport-plugin .woocommerce-order-data a.add-new-line::before{
+	content: "+ ";
+	color: grey;
+}*/
+.wpallimport-plugin .woocommerce-order-data hr{
+	margin: 20px 0;
+}
+.wpallimport-plugin .woocommerce-order-data input[type="text"], 
+.wpallimport-plugin .woocommerce-order-data select{
+	height: 40px !important;
+}
+/* WooCommerce Orders icons */
+.wpallimport-plugin .woocommerce-order-billing-data a::before{
+	content:"\e02d" !important;
+	font-family: WooCommerce !important;
+}
+.wpallimport-plugin .woocommerce-order-shipping-data a::before{
+	content:"\e019" !important;
+	font-family: WooCommerce !important;
+}
+.wpallimport-plugin .woocommerce-order-payment-data a::before{
+	content:"\e01e" !important;
+	font-family: WooCommerce !important;
+}
+.wpallimport-plugin .woocommerce-order-products-data a::before{
+	content:"\e01d" !important;
+	font-family: WooCommerce !important;
+}
+.wpallimport-plugin .woocommerce-order-fees-data a::before{
+	content:"\e01f" !important;
+	font-family: WooCommerce !important;
+}
+.wpallimport-plugin .woocommerce-order-coupons-data a::before{
+	content:"\e600" !important;
+	font-family: WooCommerce !important;
+}
+.wpallimport-plugin .woocommerce-order-shipping-data a::before{
+	content:"\e019" !important;
+	font-family: WooCommerce !important;
+}
+.wpallimport-plugin .woocommerce-order-taxes-data a::before{
+	content:"\e00e" !important;
+	font-family: WooCommerce !important;
+}
+.wpallimport-plugin .woocommerce-order-refunds-data a::before{
+	content:"\e014" !important;
+	font-family: WooCommerce !important;
+}
+.wpallimport-plugin .woocommerce-order-total-data a::before{
+	content:"\e017" !important;
+	font-family: WooCommerce !important;
+}
+
+/* Repeater Styles */
+
+.order-separator-label {
+	width: auto!important;
+}
+
+.order-separator-input {
+	margin-left: 15px!important;
+}
+
+div.wpallimport-collapsed.wpallimport-section.order-imports {
+	margin-top: -1px;
+}
+
+div.wpallimport-content-section.rad4.order-imports {
+	border-left-style: none;
+	border-right-style: none;
+	border-radius: 0;
+	border-color: #eee;
+}
+
+div.wpallimport-collapsed.wpallimport-section.order-imports label.foreach-do {
+	width: auto;
+}
+
+div#order_products.panel.woocommerce_options_panel,
+div#order_fees.panel.woocommerce_options_panel,
+div#order_products.panel.woocommerce_options_panel,
+div#order_coupons.panel.woocommerce_options_panel,
+div#order_shipping.panel.woocommerce_options_panel,
+div#order_taxes.panel.woocommerce_options_panel {
+	padding-bottom: 0;
+}
+.wpallimport-plugin .is_guest_matching_notice,
+.wpallimport-plugin .wpallimport-select-switcher-target{
+	display: none;
+}
+.wpallimport-plugin .wpallimport-billing-user-try-match-selector label{
+	line-height: 40px !important;
+	padding-left: 20px;
+	padding-right: 10px;
+	width: auto;
+}
+.wpallimport-plugin .wpallimport-billing-user-try-match-selector select{
+	width: 130px;
+	font-size: 14px !important;
+}
+#attributes_table .drag-attribute,
+#variation_attributes_table .drag-attribute{
+	overflow: hidden;
+	background: url("../img/drag.png") top right no-repeat;
+	cursor: pointer;
+	padding-left: 25px;
+	background-position: 0 10px;
+}
+#attributes_table .ui-sortable-placeholder,
+#variation_attributes_table .ui-sortable-placeholder {
+	border: 1px dashed #ccc;
+	visibility: visible !important;
+	height: 100px;
+}
+
+/****************/
+/* Free Edition */
+/****************/
+
+.wpallimport-plugin .woo-add-on-free-edition-notice{
+	display: none;
+	margin: 10px;
+	padding: 20px;
+	background-color: #FFB8B8;
+	border: 1px solid #FF8383;
+	text-align:center;
+}
+.wpallimport-plugin .form-table td .woo-add-on-free-edition-notice p{
+	color: #000 !important;
+	font-size: 1.3em !important;
+}
+.wpallimport-plugin .upgrade_woo_link{
+	color: #000 !important;
+	font-size: 1.3em;
+	text-decoration: underline !important;
+}
+.wpallimport-plugin .animate_upgrade{
+	position: relative;
+	z-index: 9999999;
+	display: block;
+}
+
+.wpallimport-plugin .woocommerce-group-label {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.wpallimport-plugin .subscription-billing-settings .subscription-billing-interval,
+.wpallimport-plugin .subscription-billing-settings .subscription-billing-period {
+	float: left;
+	width: 45%;
+	margin-bottom: 10px;
+}
+.wpallimport-plugin .subscription-expiration {
+	margin-bottom: 10px;
+}

@@ -1,0 +1,7 @@
+.wpallimport-plugin .wp_all_import_woocommerce_stock_status_notice_template,
+.wpallimport-plugin .wp_all_import_woocommerce_deprecated_fields_notice_template{
+    display: none;
+}
+.wpallimport-plugin .wp_all_import_deprecated_notice {
+    color: red;
+}

@@ -5166,6 +5166,7 @@ function _doing_it_wrong( $function, $message, $version ) {
 				),
 				E_USER_NOTICE
 			);
+			debug_print_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 5 );
 		} else {
 			if ( is_null( $version ) ) {
 				$version = '';
