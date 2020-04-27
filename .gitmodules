@@ -1,3 +1,18 @@
 [submodule "backend"]
 	path = backend
 	url = http://github.com/cfalas/crowd-delivery-backend
+[submodule "communityhero-landing"]
+	path = communityhero-landing
+	url = https://github.com/cfalas/communityhero-landing
+[submodule "communityhero-smsgateway"]
+	path = communityhero-smsgateway
+	url = https://github.com/cfalas/communityhero-smsgateway
+[submodule "communityhero-websms"]
+	path = communityhero-websms
+	url = https://github.com/cfalas/communityhero-websms
+[submodule "communityhero-backend"]
+	path = communityhero-backend
+	url = https://github.com/cfalas/communityhero-backend
+[submodule "communityhero-delivery"]
+	path = communityhero-delivery
+	url = https://github.com/cfalas/communityhero-delivery
